@@ -5,3 +5,4 @@
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
 <link rel="shortcut icon" href="assets/ico/icono.jpg">
+<link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
