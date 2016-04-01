@@ -15,8 +15,20 @@ Route::get('/', function () {
     return view('pages.index');
 });
 
-Route::get('prueba', function () {
-    return view('pages.about');
+Route::get('/sobre-nosotros', function () {
+	return view('pages.about');
+});
+
+Route::get('/eventos', function () {
+	return view('pages.eventos');
+}):
+
+Route::get('/contacto', function() {
+	return view('pages.contacto');
+});
+
+Route::get('/iniciar-sesion', function() {
+	return view('pages.login');
 });
 
 /*
