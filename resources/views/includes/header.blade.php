@@ -37,11 +37,11 @@
 						</li>
 						
 						<li class="dropdown">
-							<a href="/login" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
 								<i class="fa fa-paperclip"></i><br>Login <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="#.html">Iniciar sesion</a></li>
+								<li><a href="/login">Iniciar sesion</a></li>
 								<li><a href="/registro">Registrate</a></li>
 							</ul>
 							
