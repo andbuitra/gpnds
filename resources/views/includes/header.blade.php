@@ -14,13 +14,13 @@
 				<div class="collapse navbar-collapse" id="top-navbar-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="active">
-							<a href="index.html"><i class="fa fa-home"></i><br>Inicio</a>
+							<a href="/"><i class="fa fa-home"></i><br>Inicio</a>
 						</li>
 						<li>
-							<a href="sobre.html"><i class="fa fa-camera"></i><br>Sobre nosotros</a>
+							<a href="/sobre-nosotros"><i class="fa fa-camera"></i><br>Sobre nosotros</a>
 						</li>
 						<li>
-							<a href="sobre.html"><i class="fa fa-camera"></i><br>Eventos</a>
+							<a href="/eventos"><i class="fa fa-camera"></i><br>Eventos</a>
 						</li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
@@ -33,16 +33,16 @@
 							
 						</li>
 						<li>
-							<a href="contact.html"><i class="fa fa-envelope"></i><br>Contacto</a>
+							<a href="/contacto"><i class="fa fa-envelope"></i><br>Contacto</a>
 						</li>
 						
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
+							<a href="/login" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
 								<i class="fa fa-paperclip"></i><br>Login <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="#.html">Iniciar sesion</a></li>
-								<li><a href="registro.html">Registrate</a></li>
+								<li><a href="/registro">Registrate</a></li>
 							</ul>
 							
 						</li>

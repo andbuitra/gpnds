@@ -31,6 +31,10 @@ Route::get('/iniciar-sesion', function() {
 	return view('pages.login');
 });
 
+Route::get('/registro', function() {
+	return view('pages.registro');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
