@@ -21,7 +21,7 @@ Route::get('/sobre-nosotros', function () {
 
 Route::get('/eventos', function () {
 	return view('pages.eventos');
-}):
+});
 
 Route::get('/contacto', function() {
 	return view('pages.contacto');
