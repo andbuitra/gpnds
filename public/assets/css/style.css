@@ -275,6 +275,24 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #9d426b
     font-size: 18px;
     font-style: italic;
 }
+.buscar-box-text p {
+    line-height: 60px;
+	font-size: 17px;
+}
+
+.buscar-box-text-contact i {
+    padding-right: 7px;
+}
+
+.buscar-box-text-subscribe form {
+	padding-bottom: 10px;
+}
+
+.buscar-box-text-subscribe input[type="text"] {
+	width: 600px;
+	height: 36px;
+	font-size: 17px;
+}
 
 
 /***** Services *****/
