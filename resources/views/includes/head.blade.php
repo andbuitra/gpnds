@@ -16,8 +16,7 @@
 		<link rel="stylesheet" href="{{ asset('assets/flexslider/flexslider.css') }}">        
 		<link rel="stylesheet" href="{{ asset('assets/css/form-elements.css') }}">        
 		<link rel="stylesheet" href="{{ asset('assets/css/form-Login.css') }}">
-		<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">        
-		<link rel="stylesheet" href="{{ asset('assets/css/form-style.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/media-queries.css') }}">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
