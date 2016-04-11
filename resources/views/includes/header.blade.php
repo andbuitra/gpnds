@@ -17,7 +17,7 @@
 							<a href="/"><i class="fa fa-home"></i><br>Inicio</a>
 						</li>
 						<li>
-							<a href="/sobre-nosotros"><i class="fa fa-camera"></i><br>Sobre nosotros</a>
+							<a href="/about"><i class="fa fa-camera"></i><br>Sobre nosotros</a>
 						</li>
 						<li>
 							<a href="/eventos"><i class="fa fa-camera"></i><br>Eventos</a>
