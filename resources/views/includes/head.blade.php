@@ -5,6 +5,7 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
         
@@ -14,7 +15,9 @@
 		<link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">        
 		<link rel="stylesheet" href="{{ asset('assets/flexslider/flexslider.css') }}">        
 		<link rel="stylesheet" href="{{ asset('assets/css/form-elements.css') }}">        
+		<link rel="stylesheet" href="{{ asset('assets/css/form-Login.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">        
+		<link rel="stylesheet" href="{{ asset('assets/css/form-style.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/media-queries.css') }}">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

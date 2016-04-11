@@ -17,10 +17,10 @@
 							<a href="/"><i class="fa fa-home"></i><br>Inicio</a>
 						</li>
 						<li>
-							<a href="/about"><i class="fa fa-camera"></i><br>Sobre nosotros</a>
+							<a href="/about"><i class="fa fa-globe"></i><br>Sobre nosotros</a>
 						</li>
 						<li>
-							<a href="/eventos"><i class="fa fa-camera"></i><br>Eventos</a>
+							<a href="/eventos"><i class="fa fa-list-alt"></i><br>Eventos</a>
 						</li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
@@ -35,10 +35,13 @@
 						<li>
 							<a href="/contacto"><i class="fa fa-envelope"></i><br>Contacto</a>
 						</li>
+						<li>
+							<a href="/blog"><i class="fa fa-bold"></i><br>Blog</a>
+						</li>
 						
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
-								<i class="fa fa-paperclip"></i><br>Login <span class="caret"></span>
+								<i class="fa fa-user"></i><br>Login <span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="/login">Iniciar sesion</a></li>
