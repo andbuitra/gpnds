@@ -11,29 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
-});
+Route::get('/', 'PagesController@inicio');
 
-Route::get('/sobre-nosotros', function () {
-	return view('pages.about');
-});
+Route::get('sobre-nosotros', 'PagesController@sobreNosotros');
 
-Route::get('/eventos', function () {
-	return view('pages.eventos');
-});
+Route::get('eventos', 'PagesController@eventos');
 
-Route::get('/contacto', function() {
-	return view('pages.contacto');
-});
+Route::get('contacto', 'PagesController@contacto');
 
-Route::get('/iniciar-sesion', function() {
-	return view('pages.login');
-});
+Route::get('blog', 'PagesController@blog');
 
-Route::get('/registro', function() {
-	return view('pages.registro');
-});
+Route::get('iniciar-sesion', 'PagesController@login');
+
+Route::get('registro', 'PagesController@registro');
 
 /*
 |--------------------------------------------------------------------------
