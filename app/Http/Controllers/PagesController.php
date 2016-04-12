@@ -8,6 +8,11 @@ use App\Http\Requests;
 
 class PagesController extends Controller
 {
+
+	public function __construct(){
+        $this->middleware('auth');
+    }
+
     public function inicio(){
     	return view('pages.index');
     }
@@ -36,6 +41,11 @@ class PagesController extends Controller
     public function registro(){
     	return view('pages.registro');
     	
+    }
+
+    public function me(){
+    	//return view('pages.me');
+    	return 'Este será el perfil';
     }
 
 }

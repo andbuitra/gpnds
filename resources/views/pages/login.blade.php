@@ -9,60 +9,7 @@
 	</header>
 
         <!-- Top content -->
-		<nav class="navbar" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="index.html">Grupo de Puericultura - Norte de Santander</a>
-				</div>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="top-navbar-1">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="active">
-							<a href="index.html"><i class="fa fa-home"></i><br>Inicio</a>
-						</li>
-						<li>
-							<a href="sobre.html"><i class="fa fa-globe"></i><br>Sobre nosotros</a>
-						</li>
-						<li>
-							<a href="sobre.html"><i class="fa fa-list-alt"></i><br>Eventos</a>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
-								<i class="fa fa-tasks"></i><br>Links de interes</a>
-							</a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="https://scp.com.co/">Sociedad de pediatria de Colombia</a></li>
-								<li><a href="www.acpp.com.co/">Pediatria y puericultua en Colombia</a></li>
-							</ul>
-							
-						</li>
-						<li>
-							<a href="contact.html"><i class="fa fa-envelope"></i><br>Contacto</a>
-						</li>
-						
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
-								<i class="fa fa-user"></i><br>Login <span class="caret"></span>
-							</a>
-							<ul class="dropdown-menu" role="menu">
-								<li><a href="#.html">Iniciar sesion</a></li>
-								<li><a href="registro.html">Registrate</a></li>
-							</ul>
-							
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		
-		
-		
+	
         <div class="top-content">
         	
             <div class="inner-bg">
@@ -72,8 +19,8 @@
                         <div class="col-sm-6 col-sm-offset-3 form-box">
                         	<div class="form-top">
                         		<div class="form-top-left">
-                        			<h3>Inicia sesion en nuestro sitio</h3>
-                            		<p>Entra tu usuario/Correo y tu contraseña para iniciar sesion:</p>
+                        			<h3>Inicia sesión en nuestro sitio</h3>
+                            		<p>Ingresa tu correo electrónico y contraseña para iniciar sesión.</p>
                         		</div>
                         		<div class="form-top-right">
                         			<i class="fa fa-lock"></i>
@@ -81,15 +28,16 @@
                             </div>
                             <div class="form-bottom">
 			                    <form role="form" action="" method="post" class="login-form">
+			                    	{!! csrf_field() !!}
 			                    	<div class="form-group">
-			                    		<label class="sr-only" for="form-username">Usuario/Correo Electronico</label>
-			                        	<input type="text" name="form-username" placeholder="Usuario..." class="form-username form-control" id="form-username">
+			                    		<label class="sr-only" for="form-username">Email</label>
+			                        	<input type="text" name="form-username" placeholder="Email" class="form-username form-control" id="form-username">
 			                        </div>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-password">Contraseña</label>
-			                        	<input type="password" name="form-password" placeholder="Contraseña..." class="form-password form-control" id="form-password">
+			                        	<input type="password" name="form-password" placeholder="Contraseña" class="form-password form-control" id="form-password">
 			                        </div>
-			                        <button type="submit" class="btn">Iniciar Sesion!</button>
+			                        <button type="submit" class="btn">Entrar</button>
 			                    </form>
 		                    </div>
                         </div>

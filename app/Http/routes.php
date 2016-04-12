@@ -25,6 +25,10 @@ Route::get('iniciar-sesion', 'PagesController@login');
 
 Route::get('registro', 'PagesController@registro');
 
+Route::auth();
+
+Route::get('me', 'PagesController@me');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -35,6 +39,8 @@ Route::get('registro', 'PagesController@registro');
 | kernel and includes session state, CSRF protection, and more.
 |
 */
+
+
 
 Route::group(['middleware' => ['web']], function () {
     //
