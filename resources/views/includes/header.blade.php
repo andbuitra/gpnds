@@ -35,7 +35,7 @@
 						<li class="{{ Request::is('contacto') ? 'active' : ''}}">
 							<a href="/contacto"><i class="fa fa-envelope"></i><br>Contacto</a>
 						</li>
-						<li>
+						<li class="{{ Request::is('blog') ? 'active' : ''}}">
 							<a href="/blog"><i class="fa fa-bold"></i><br>Blog</a>
 						</li>
 						
