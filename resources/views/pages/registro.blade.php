@@ -22,8 +22,8 @@
                         		<fieldset>
 		                        	<div class="form-top">
 		                        		<div class="form-top-left">
-		                        			<h3>Paso 1 / 2</h3>
-		                            		<p>Dinos quien eres:</p>
+		                        			<h3>¡Regístrate!</h3>
+		                            		<p>Es gratis.</p>
 		                        		</div>
 		                        		<div class="form-top-right">
 		                        			<i class="fa fa-user"></i>
@@ -31,50 +31,20 @@
 		                            </div>
 		                            <div class="form-bottom">
 				                    	<div class="form-group">
-				                    		<label class="sr-only" for="form-first-name">Nombre</label>
-				                        	<input type="text" name="form-first-name" placeholder="Nombre..." class="form-first-name form-control" id="form-first-name">
+				                    		<label class="sr-only" for="nombre">Nombre</label>
+				                        	<input type="text" name="nombre" placeholder="Nombre" class="form-first-name form-control" id="nombre">
 				                        </div>
 				                        <div class="form-group">
-				                        	<label class="sr-only" for="form-last-name">Apellido</label>
-				                        	<input type="text" name="form-last-name" placeholder="Apellido..." class="form-last-name form-control" id="form-last-name">
+				                        	<label class="sr-only" for="email">Email</label>
+				                        	<input type="email" name="email" placeholder="Correo electrónico" class="form-first-name form-control" id="email">
 				                        </div>
 				                        <div class="form-group">
-				                        	<label class="sr-only" for="form-about-yourself">Dinos algo sobre ti</label>
-				                        	<textarea name="form-about-yourself" placeholder="Cuentanos..." 
-				                        				class="form-about-yourself form-control" id="form-about-yourself"></textarea>
+				                        	<label class="sr-only" for="password">Dinos algo sobre ti</label>
+				                        	<input type="password" name="password" placeholder="Contraseña" class="form-password form-control" id="password">
 				                        </div>
-				                        <button type="button" class="btn btn-next">Siguiente</button>
+				                        <button type="submit" class="btn">Siguiente</button>
 				                    </div>
-			                    </fieldset>
-			                    
-			                    <fieldset>
-		                        	<div class="form-top">
-		                        		<div class="form-top-left">
-		                        			<h3>Paso 2 / 2</h3>
-		                            		<p>Crea tu cuenta:</p>
-		                        		</div>
-		                        		<div class="form-top-right">
-		                        			<i class="fa fa-key"></i>
-		                        		</div>
-		                            </div>
-		                            <div class="form-bottom">
-				                        <div class="form-group">
-				                        	<label class="sr-only" for="form-email">Correo</label>
-				                        	<input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
-				                        </div>
-				                        <div class="form-group">
-				                    		<label class="sr-only" for="form-password">Contraseña</label>
-				                        	<input type="password" name="form-password" placeholder="Contraseña..." class="form-password form-control" id="form-password">
-				                        </div>
-				                        <div class="form-group">
-				                        	<label class="sr-only" for="form-repeat-password">Repetir Contraseña</label>
-				                        	<input type="password" name="form-repeat-password" placeholder="Repetir Contraseña..." 
-				                        				class="form-repeat-password form-control" id="form-repeat-password">
-				                        </div>
-				                        <button type="button" class="btn btn-previous">Anterior</button>
-				                        <button type="submit" class="btn">Registrar!</button>
-				                    </div>
-			                    </fieldset>
+			                    </fieldset>		                    
 			                    
 			                    
 		                    
