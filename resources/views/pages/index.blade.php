@@ -249,5 +249,6 @@
 	<footer>
 		@include('includes.footer')
 	</footer>
+	
 </body>
 </html>

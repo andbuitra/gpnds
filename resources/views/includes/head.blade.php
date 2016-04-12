@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
         
         <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">        
-        <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/font-awesome-min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/font-awesome.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">        
 		<link rel="stylesheet" href="{{ asset('assets/flexslider/flexslider.css') }}">        

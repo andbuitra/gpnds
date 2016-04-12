@@ -57,3 +57,4 @@
                     </div>
                 </div>
             </div>
+            @include('includes.javascriptinclude')
