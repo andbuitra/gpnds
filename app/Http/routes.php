@@ -29,6 +29,8 @@ Route::auth();
 
 Route::get('me', 'PagesController@me');
 
+Route::post('registro', 'FormProcessing@register');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes

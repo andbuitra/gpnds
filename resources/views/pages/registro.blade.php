@@ -10,15 +10,15 @@
 
         <!-- Top content -->
         <div class="top-content">
-        	
+
             <div class="inner-bg">
                 <div class="container">
-                    
+
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3 form-box">
-                        	
-                        	<form role="form" action="" method="post" class="registration-form">
-                        		
+
+                        	<form role="form" method="post" class="registration-form">
+
                         		<fieldset>
 		                        	<div class="form-top">
 		                        		<div class="form-top-left">
@@ -44,21 +44,21 @@
 				                        </div>
 				                        <button type="submit" class="btn">Siguiente</button>
 				                    </div>
-			                    </fieldset>		                    
-			                    
-			                    
-		                    
+			                    </fieldset>
+
+
+
 		                    </form>
-		                    
+
                         </div>
                     </div>
                 </div>
             </div>
-            
+
         </div>
 
 
-        <!-- Javascript 
+        <!-- Javascript
 		Se dejan a lo ultimo para que no se tarde la pagina en cargar
 		-->
         <script src="assets/js/jquery-1.11.1.min.js"></script>
@@ -66,7 +66,7 @@
         <script src="assets/js/jquery.backstretch.min.js"></script>
         <script src="assets/js/retina-1.1.0.min.js"></script>
         <script src="assets/js/steps.js"></script>
-        
+
         <!--[if lt IE 10]>
             <script src="assets/js/placeholder.js"></script>
         <![endif]-->
