@@ -23,9 +23,7 @@ Route::get('blog', 'PagesController@blog');
 
 Route::get('iniciar-sesion', 'PagesController@login');
 
-Route::get('registro', 'PagesController@registro');
 
-Route::auth();
 
 Route::get('me', 'PagesController@me');
 
@@ -43,5 +41,6 @@ Route::get('me', 'PagesController@me');
 
 
 Route::group(['middleware' => ['web']], function () {
-    //
+  Route::get('registro', 'UsersController@create');
+  Route::post('registro', 'UsersController@store');
 });
