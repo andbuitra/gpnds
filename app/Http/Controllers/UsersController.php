@@ -26,6 +26,9 @@ class UsersController extends Controller
       'email' => 'required|email|unique:users,email',
       'password' => 'required',
       'repassword' => 'required|same:password'
+    ],[
+      'email.unique' => 'Este email ya está en uso',
+      'repassword.same' => 'Las contraseñas deben coincidir'
     ]);
     $name = request()->input('name');
     $email = request()->input('email');
