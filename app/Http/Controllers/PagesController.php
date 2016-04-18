@@ -29,6 +29,11 @@ class PagesController extends Controller
     	//return "En construcción";
     }
 
+    public function blogPost()
+    {
+      return view('pages.single-post');
+    }
+
     public function login(){
     	return view('pages.login');
     }

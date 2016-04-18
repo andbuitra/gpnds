@@ -23,6 +23,8 @@ Route::get('blog', 'PagesController@blog');
 
 Route::get('iniciar-sesion', 'PagesController@login');
 
+Route::get('blog/post', 'PagesController@blogPost');
+
 
 
 Route::get('me', 'PagesController@me');
