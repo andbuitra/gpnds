@@ -25,8 +25,8 @@ class PagesController extends Controller
     }
 
     public function blog(){
-    	//return view('pages.blog');
-    	return "En construcción";
+    	return view('pages.blog');
+    	//return "En construcción";
     }
 
     public function login(){
@@ -35,7 +35,7 @@ class PagesController extends Controller
 
     public function registro(){
     	return view('pages.registro');
-    	
+
     }
 
     public function me(){
