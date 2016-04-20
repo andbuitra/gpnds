@@ -59,14 +59,20 @@ class AuthenticationController extends Controller
     $email = request()->input('email');
     $pwd = bcrypt(request()->input('password'));
     $role = 'regularuser';
+    $confirmation_code = str_random(55);
 
     User::create(array(
       'name' => $name,
       'email' => $email,
       'password' => $pwd,
       'role' => $role,
-      'confirmation_code' => str_random(55)
+      'confirmation_code' => $confirmation_code
     ));
+
+    Mail::send('email.verify', $confirmation_code, function() {
+      $message->to($email, explode(' ',trim($name))[0])->subject('Verifica tu correo.');
+    });
+
   }
 
 }
