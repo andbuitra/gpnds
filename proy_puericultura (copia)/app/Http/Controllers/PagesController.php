@@ -34,10 +34,6 @@ class PagesController extends Controller
       return view('pages.single-post');
     }
 
-    public function login(){
-    	return view('pages.login');
-    }
-
     public function registro(){
     	return view('pages.registro');
 

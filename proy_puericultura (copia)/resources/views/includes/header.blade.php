@@ -30,18 +30,18 @@
 								<li><a href="#">Sociedad de pediatria de Colombia</a></li>
 								<li><a href="#">Pediatria y puericultua en Colombia</a></li>
 							</ul>
-							
+
 						</li>
 						<li class="{{ Request::is('contacto') ? 'active' : ''}}">
 							<a href="/contacto"><i class="fa fa-envelope"></i><br>Contacto</a>
 						</li>
-						<li>
+						<li class="{{ Request::is('blog') || Request::is('blog/') ? 'active' : ''}}">
 							<a href="/blog"><i class="fa fa-bold"></i><br>Blog</a>
 						</li>
-						
+
 						@if (Auth::check())
 						<li class="{{ Request::is('me') ? 'active' : ''}}">
-							<<a href="/me"><i class="fa fa-user"></i><br>{{ Auth::user()->name }}</a>
+							<a href="/me"><i class="fa fa-user"></i><br>{{ Auth::user()->name }}</a>
 						</li>
 
 						@else
@@ -53,7 +53,7 @@
 								<li><a href="/iniciar-sesion">Iniciar sesion</a></li>
 								<li><a href="/registro">Registrate</a></li>
 							</ul>
-							
+
 						</li>
 						@endif
 					</ul>

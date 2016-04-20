@@ -9,12 +9,12 @@
 	</header>
 
         <!-- Top content -->
-	
+
         <div class="top-content">
-        	
+
             <div class="inner-bg">
                 <div class="container">
-                    
+
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3 form-box">
                         	<div class="form-top">
@@ -27,15 +27,15 @@
                         		</div>
                             </div>
                             <div class="form-bottom">
-			                    <form role="form" action="" method="post" class="login-form">
+			                    <form role="form" method="post" class="login-form">
 			                    	{!! csrf_field() !!}
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">Email</label>
-			                        	<input type="text" name="form-username" placeholder="Email" class="form-username form-control" id="form-username">
+			                        	<input type="text" name="email" placeholder="Email" class="form-username form-control" id="form-username">
 			                        </div>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-password">Contraseña</label>
-			                        	<input type="password" name="form-password" placeholder="Contraseña" class="form-password form-control" id="form-password">
+			                        	<input type="password" name="password" placeholder="Contraseña" class="form-password form-control" id="form-password">
 			                        </div>
 			                        <button type="submit" class="btn">Entrar</button>
 			                    </form>
@@ -60,11 +60,11 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
 
 
-        <!-- Javascript 
+        <!-- Javascript
 		Se dejan a lo ultimo para que no se tarde la pagina en cargar
 		-->
         <script src="assets/js/jquery-1.11.1.min.js"></script>
