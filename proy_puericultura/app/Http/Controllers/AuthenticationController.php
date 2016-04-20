@@ -64,7 +64,8 @@ class AuthenticationController extends Controller
       'name' => $name,
       'email' => $email,
       'password' => $pwd,
-      'role' => $role
+      'role' => $role,
+      'confirmation_code' => str_random(55)
     ));
   }
 
