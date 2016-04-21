@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Models\User;
 use Auth;
 use Mail;
+use Laracasts\Flash;
 
 class AuthenticationController extends Controller
 {
@@ -21,12 +22,18 @@ class AuthenticationController extends Controller
 
   public function login()
   {
-    $email = request()->input('email');
-    $password = request()->input('password');
-    if (Auth::attempt(['email' => $email, 'password' => $password], true)) {
+    $credentials = [
+      'email' => request()->input('email'),
+      'password' => request()->input('password'),
+      'confirmed' => 1
+    ];
+    if (Auth::attempt(credentials, true)) {
       return redirect()->intended('/');
+    }else{
+      return Redirect::back()->withInput()->withErrors([
+        'credentials' => 'Error al logear'
+      ]);
     }
-    dd(Auth::attempt(['email' => $email, 'password' => $password]));
   }
 
   public function logout()
@@ -70,14 +77,30 @@ class AuthenticationController extends Controller
       'confirmation_code' => $confirmation_code
     ));
 
-    /* Soon.
-    * The technology just isn't there yet
 
-    Mail::send('email.verify', $confirmation_code, function() {
-      $message->to($email, explode(' ',trim($name))[0])->subject('Verifica tu correo.');
+    #* The technology just isn't there yet
+
+    Mail::send('email.verify', ['confirmation_code' => $confirmation_code], function($message) {
+      $message->from('test@gpnds.com', 'GPNDS')->to(request()->input('email'), explode(' ',trim(request()->input('name')))[0])->subject('Verifica tu correo.');
     });
 
-    */
+  }
+
+  public function confirm($confirmation_code){
+    if(!$confirmation_code){
+      dd('No hay codigo de confirmación');
+    }
+    $user = User::where('confirmation_code', $confirmation_code)->first();
+    if(!$user){
+      dd('No hay codigo de confirmación');
+    }
+    $user->confirmed = 1;
+    $user->confirmation_code = null;
+    $user->save();
+
+    Flash::message('You have successfully verified your account.');
+
+    return Redirect::route('login_path');
 
   }
 
