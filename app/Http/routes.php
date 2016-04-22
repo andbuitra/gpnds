@@ -38,7 +38,9 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('iniciar-sesion', 'PagesController@login');
 
   Route::get('blog/post', 'PagesController@blogPost');
-
+  
+  Route::get('profile', 'PagesController@profile');
+    
   //Login Routes
   Route::get('iniciar-sesion', 'AuthenticationController@showLoginForm');
   Route::post('iniciar-sesion', 'AuthenticationController@login');

@@ -38,6 +38,10 @@ class PagesController extends Controller
     	return view('pages.registro');
 
     }
+	public function profile(){
+    	return view('pages.profile');
+
+    }
 
     public function me(){
     	//return view('pages.me');
