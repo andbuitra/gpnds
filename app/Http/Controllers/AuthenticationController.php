@@ -27,10 +27,10 @@ class AuthenticationController extends Controller
       'password' => request()->input('password'),
       'confirmed' => 1
     ];
-    if (Auth::attempt(credentials, true)) {
+    if (Auth::attempt($credentials, true)) {
       return redirect()->intended('/');
     }else{
-      return Redirect::back()->withInput()->withErrors([
+      return redirect()->back()->withInput()->withErrors([
         'credentials' => 'Error al logear'
       ]);
     }
@@ -68,13 +68,15 @@ class AuthenticationController extends Controller
     $pwd = bcrypt(request()->input('password'));
     $role = 'regularuser';
     $confirmation_code = str_random(55);
+    $profileID = rand(1000000, 9999999);
 
     User::create(array(
       'name' => $name,
       'email' => $email,
       'password' => $pwd,
       'role' => $role,
-      'confirmation_code' => $confirmation_code
+      'confirmation_code' => $confirmation_code,
+      'profileID' => $profileID
     ));
 
 
