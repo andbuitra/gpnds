@@ -14,8 +14,8 @@ class UserProfileController extends Controller
 {
     public function show($profileID){
       $user = User::where('profileID', $profileID)->firstOrFail();
-      return view('pages.editProfile', compact($user));
-      //return ('Aquí va el perfil');
+      // return view('pages.profile', compact($user));
+      return ('Aquí va el perfil')
     }
 
     public function showEditForm($profileID){

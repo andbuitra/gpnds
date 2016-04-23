@@ -38,18 +38,4 @@ class PagesController extends Controller
     	return view('pages.registro');
 
     }
-
-    public function editMyProfile(){
-      return view('pages.profile');
-    }
-
-    # PENDIENTE DE REVISIÓN PARA MEJORAR UX.
-    public function me(){
-      return view('pages.profile');
-    }
-
-    public function getThisProfile($profileID){
-      
-    }
-
 }
