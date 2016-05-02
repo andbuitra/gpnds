@@ -17,7 +17,7 @@
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3 form-box">
 
-                        	<form role="form" method="post" class="registration-form">
+                        	<form role="form" method="post">
 														{!! csrf_field() !!}
                         		<fieldset>
 		                        	<div class="form-top">

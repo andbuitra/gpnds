@@ -38,4 +38,26 @@ class PagesController extends Controller
     	return view('pages.registro');
 
     }
+	
+	public function profile(){
+    	return view('pages.profile');
+
+    }
+	
+	
+	public function questions(){
+    	return view('pages.questions');
+
+    }
+    public function chatp(){
+        return view('pages.chatp');
+
+    }
+	
+
+    public function me(){
+    	//return view('pages.me');
+    	return 'Este será el perfil';
+    }
+
 }

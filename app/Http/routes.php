@@ -38,8 +38,14 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('iniciar-sesion', 'PagesController@login');
 
   Route::get('blog/post', 'PagesController@blogPost');
-
+  
   Route::get('profile', 'PagesController@profile');
+  
+  Route::get('questions', 'PagesController@questions');
+  
+  Route::get('chatp', 'PagesController@chatp');
+
+  
 
   //Login Routes
   Route::get('iniciar-sesion', 'AuthenticationController@showLoginForm');
@@ -49,23 +55,8 @@ Route::group(['middleware' => ['web']], function () {
   //Register Routes
   Route::get('registro', 'AuthenticationController@showRegistrationForm');
   Route::post('registro', 'AuthenticationController@register');
-
-  # Ruta de verificación de email
-  Route::get('register/verify/{confirmationCode}', [
-    'as' => 'confirmation_path',
-    'uses' => 'AuthenticationController@confirm'
-  ]);
-
 });
 
 Route::group(['middleware' => ['web', 'auth']], function(){
-  # RUTA DE PRUEBA EN DESARROLLO. ELIMINAR EN PRODUCCIÓN.
-  Route::get('profile/edit', 'PagesController@editMyProfile');
-
-  # Grupo de rutas de perfil.
-  Route::get('profile/me', 'UserProfileController@me'); # Ingresa al perfil de la persona que está logeada actualmente.
-  Route::get('profile/{profileID}', 'UserProfileController@show'); # Ingresa al perfil de dado id.
-  Route::get('profile/{profileID}/edit', 'UserProfileController@showEditForm'); # Edita el perfil de determinado id.
-
-
+  Route::get('me', 'PagesController@me');
 });
