@@ -42,6 +42,7 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('profile', 'PagesController@profile');
 
   Route::get('questions', 'PagesController@questions');
+  Route::get('library', 'PagesController@library');
 
   Route::get('chatp', 'PagesController@chatp');
   Route::get('tpost', 'PagesController@tpost');

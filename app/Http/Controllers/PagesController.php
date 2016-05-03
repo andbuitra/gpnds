@@ -58,6 +58,10 @@ class PagesController extends Controller
         return view('pages.tpost');
 
     }
+    public function library(){
+        return view('pages.library');
+
+    }
 
     public function chatp(){
         return view('pages.chatp');

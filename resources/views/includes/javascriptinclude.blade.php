@@ -1,4 +1,6 @@
 <!-- Javascript -->
+        <script src="assets/js/pagination.js"></script>
+        <script src="assets/js/slidep.js"></script>
         <script src="assets/js/jquery-1.11.1.min.js"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
