@@ -55,7 +55,7 @@ Route::group(['middleware' => ['web']], function () {
   Route::post('registro', 'AuthenticationController@register');
 
   //Verification by email routes
-  Route::get('register/verify/{confirmationCode}', [
+  Route::get('registro/verify/{confirmationCode}', [
     'as' => 'confirmation_path',
     'uses' => 'AuthenticationController@confirm'
   ]);

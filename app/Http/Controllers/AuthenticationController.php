@@ -95,21 +95,19 @@ class AuthenticationController extends Controller
 
   }
 
-  public function confirm($confirmation_code){
-    if(!$confirmation_code){
-      dd('No hay codigo de confirmación');
+  public function confirm($confirmationCode){
+    if(!$confirmationCode){
+      dd('No hay codigo de confirmación en la URL');
     }
-    $user = User::where('confirmation_code', $confirmation_code)->first();
+    $user = User::where('confirmation_code', $confirmationCode)->first();
     if(!$user){
-      dd('No hay codigo de confirmación');
+      dd('No hay codigo de confirmación encontrado en base de datos');
     }
     $user->confirmed = 1;
     $user->confirmation_code = null;
     $user->save();
 
-    Flash::message('You have successfully verified your account.');
-
-    return Redirect::route('login_path');
+    return redirect('iniciar-sesion');
 
   }
 
