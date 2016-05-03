@@ -2364,3 +2364,46 @@ html[xmlns] .clearfix { display: block; }
   height: 0;
 
 }
+
+/*Welcome*/
+.hero {
+  text-align: center;
+  position: relative;
+  height: auto;
+  padding-bottom: 80px;
+  background: url(../img/welcome.jpg) center top no-repeat;
+  background-size: cover;
+  color: #fff;
+  overflow: hidden;
+}
+.hero h1 {
+  margin: 50px 0 20px;
+  font-family: 'Lobster', sans-serif;
+  font-size: 35px;
+  color: #444;
+}
+.hero h1 span {
+  font: 700 60px/1 'Lobster', cursive;
+  display: block;
+  color: #444;
+}
+.hero h2 {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 20px;
+  color: #444;
+}
+@media only screen and (min-width: 37.5em) {
+  .hero h1 {
+    font-size: 50px;
+  }
+  .hero h1 span {
+    font-size: 76px;
+  }
+  .hero h2 {
+    width: 76%;
+    font-size: 18px;
+  }
+}

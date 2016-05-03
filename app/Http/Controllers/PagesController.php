@@ -49,6 +49,11 @@ class PagesController extends Controller
     	return view('pages.questions');
 
     }
+    public function cemail(){
+        return view('pages.cemail');
+
+    }
+
     public function chatp(){
         return view('pages.chatp');
 
