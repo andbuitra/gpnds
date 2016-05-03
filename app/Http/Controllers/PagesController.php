@@ -54,6 +54,11 @@ class PagesController extends Controller
 
     }
 
+     public function tpost(){
+        return view('pages.tpost');
+
+    }
+
     public function chatp(){
         return view('pages.chatp');
 

@@ -769,7 +769,7 @@ footer {
 .contact-form input[type="text"] { width: 95%; height: 34px; }
 .contact-form input[type="password"] { width: 95%; height: 34px; }
 
-.contact-form textarea { width: 95%; height: 170px; padding-top: 6px; padding-bottom: 6px; }
+.contact-form textarea { width: 95%; height: 100%; padding-top: 6px; padding-bottom: 6px; }
 .contact-form label { font-size: 13px; font-weight: 400; }
 .contact-form label .error-label { font-style: italic }
 .contact-form button { margin-top: 5px; padding: 0 45px; }
@@ -904,9 +904,15 @@ footer {
 }
 
 .form-bottom form textarea {
-	height: 100px;
-}
+	height: 800px;
+    width: 100%
+    margin-top: 100px;
 
+}
+.alinee{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 .form-bottom form button.btn {
 	width: 100%;
 }
@@ -2407,3 +2413,59 @@ html[xmlns] .clearfix { display: block; }
     font-size: 18px;
   }
 }
+
+/*Library*/
+figure.thumb {
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.thumb h2, 
+.thumb p {
+  margin: 0;
+}
+
+.thumb h2 {
+  font-weight: 700;
+  font-size: 18px;
+  color: rgba(0,0,0,.75);
+  margin-top: 20px;
+}
+
+.thumb .author {
+  font-size: 14px;
+  margin-top: 5px;
+  color: rgba(0,0,0,.55);
+  font-weight: 400;
+}
+
+.cover {
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 10px 20px -8px;
+  margin-right: 0px;
+}
+
+.cover:after {
+  content: '';
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  
+  
+}
+
+
+.cover img {
+  height: 200px;
+  display: block;
+  position: relative;
+}
+
+/*Post blog*/
+
+
+

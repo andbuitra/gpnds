@@ -24,11 +24,19 @@
 						</li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
-								<i class="fa fa-tasks"></i><br>Links de interes</a>
+								<i class="fa fa-tasks"></i><br>Herramientas</a>
 							</a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="#">Sociedad de pediatria de Colombia</a></li>
-								<li><a href="#">Pediatria y puericultua en Colombia</a></li>
+								<li><a href="#">Biblioteca publica</a></li>
+								<li><a href="/questions">Consulta con especialistas</a></li>
+								<li><a href="#">Foro publico</a></li>
+									<li class="dropdown-submenu">
+	                					<a tabindex="-1" href="#">Links de interes</a>
+			                				<ul class="dropdown-menu">                  				
+			                 					<li><a href="#">Sociedad de pediatria de Colombia</a></li>
+												<li><a href="#">Pediatria y puericultua en Colombia</a></li>
+			                				</ul>
+	              					</li>
 							</ul>
 
 						</li>

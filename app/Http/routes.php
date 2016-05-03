@@ -44,6 +44,7 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('questions', 'PagesController@questions');
 
   Route::get('chatp', 'PagesController@chatp');
+  Route::get('tpost', 'PagesController@tpost');
 
   //Login Routes
   Route::get('iniciar-sesion', 'AuthenticationController@showLoginForm');
@@ -53,6 +54,7 @@ Route::group(['middleware' => ['web']], function () {
   //Register Routes
   Route::get('registro', 'AuthenticationController@showRegistrationForm');
   Route::post('registro', 'AuthenticationController@register');
+
 
   //Verification by email routes
   Route::get('registro/verify/{confirmationCode}', [
