@@ -45,8 +45,6 @@ Route::group(['middleware' => ['web']], function () {
 
   Route::get('chatp', 'PagesController@chatp');
 
-  Route::get('cemail', 'PagesController@cemail');
-
   //Login Routes
   Route::get('iniciar-sesion', 'AuthenticationController@showLoginForm');
   Route::post('iniciar-sesion', 'AuthenticationController@login');

@@ -86,6 +86,13 @@ class AuthenticationController extends Controller
       $message->from('test@gpnds.com', 'GPNDS')->to(request()->input('email'), explode(' ',trim(request()->input('name')))[0])->subject('Verifica tu correo.');
     });
 
+    $returnThisData = array(
+      'name' => $name,
+      'email' => $email
+    );
+
+    return view('pages.cemail')->with($returnThisData);
+
   }
 
   public function confirm($confirmation_code){
