@@ -28,6 +28,7 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('/', 'PagesController@inicio');
 
   Route::get('sobre-nosotros', 'PagesController@sobreNosotros');
+  Route::get('puericultura', 'PagesController@puericultura');
 
   Route::get('eventos', 'PagesController@eventos');
 
@@ -38,6 +39,8 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('iniciar-sesion', 'PagesController@login');
 
   Route::get('blog/post', 'PagesController@blogPost');
+
+  Route::get('galeria', 'PagesController@galeria');
 
   Route::get('profile', 'PagesController@profile');
 

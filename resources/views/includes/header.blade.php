@@ -16,8 +16,21 @@
 						<li class="{{ Request::is('/') ? 'active' : ''}}">
 							<a href="/"><i class="fa fa-home"></i><br>Inicio</a>
 						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
+								<i class="fa fa-tasks"></i><br>About</a>
+							</a>
+							<ul class="dropdown-menu" role="menu">
 						<li class="{{ Request::is('sobre-nosotros') ? 'active' : ''}}">
-							<a href="/sobre-nosotros"><i class="fa fa-globe"></i><br>Sobre nosotros</a>
+							<a href="/sobre-nosotros">Sobre nosotros</a>
+						</li>
+						<li class="{{ Request::is('puericultura') ? 'active' : ''}}">
+							<a href="/puericultura">¿Que es puericultura?</a>
+						</li>
+							<li class="{{ Request::is('faq') ? 'active' : ''}}">
+							<a href="/faq">Preguntas frecuentes</a>
+						</li>
+						</ul>
 						</li>
 						<li class="{{ Request::is('eventos') ? 'active' : ''}}">
 							<a href="/eventos"><i class="fa fa-list-alt"></i><br>Eventos</a>
@@ -45,6 +58,9 @@
 						</li>
 						<li class="{{ Request::is('blog') || Request::is('blog/') ? 'active' : ''}}">
 							<a href="/blog"><i class="fa fa-bold"></i><br>Blog</a>
+						</li>
+						<li class="{{ Request::is('galeria') || Request::is('galeria/') ? 'active' : ''}}">
+							<a href="/galeria"><i class="fa fa-bold"></i><br>Galeria</a>
 						</li>
 
 						@if (Auth::check())

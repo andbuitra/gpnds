@@ -15,6 +15,9 @@ class PagesController extends Controller
     public function sobreNosotros(){
     	return view('pages.about');
     }
+    public function puericultura(){
+        return view('pages.puericultura');
+    }
 
     public function eventos(){
     	return view('pages.eventos');
@@ -32,6 +35,9 @@ class PagesController extends Controller
     public function blogPost()
     {
       return view('pages.single-post');
+    }
+    public function galeria(){
+        return view('pages.galeria');
     }
 
     public function registro(){
