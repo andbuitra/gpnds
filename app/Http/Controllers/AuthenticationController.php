@@ -97,11 +97,11 @@ class AuthenticationController extends Controller
 
   public function confirm($confirmationCode){
     if(!$confirmationCode){
-      dd('No hay codigo de confirmación en la URL');
+      dd('No se encontró ningún código de verificación en la URL');
     }
     $user = User::where('confirmation_code', $confirmationCode)->first();
     if(!$user){
-      dd('No hay codigo de confirmación encontrado en base de datos');
+      dd('Lo sentimos. Este código de confirmación ya ha sido usado.');
     }
     $user->confirmed = 1;
     $user->confirmation_code = null;
