@@ -38,14 +38,14 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('iniciar-sesion', 'PagesController@login');
 
   Route::get('blog/post', 'PagesController@blogPost');
-  
+
   Route::get('profile', 'PagesController@profile');
-  
+
   Route::get('questions', 'PagesController@questions');
-  
+
   Route::get('chatp', 'PagesController@chatp');
 
-  
+
 
   //Login Routes
   Route::get('iniciar-sesion', 'AuthenticationController@showLoginForm');
@@ -59,4 +59,8 @@ Route::group(['middleware' => ['web']], function () {
 
 Route::group(['middleware' => ['web', 'auth']], function(){
   Route::get('me', 'PagesController@me');
+});
+
+Route::group(['middleware' => ['web', 'auth', 'AdminAccess']], function(){
+  Route::get('/new/post', 'PostsController@showNewPostForm');
 });
