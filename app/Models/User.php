@@ -9,4 +9,8 @@ class User extends Authenticatable
     protected $fillable = ['name', 'email', 'password', 'role', 'confirmation_code', 'profileID'];
     protected $hidden = ['password', 'remember_token'];
 
+    public function posts(){
+      return $this->hasMany('App\Models\Post');
+    }
+
 }
