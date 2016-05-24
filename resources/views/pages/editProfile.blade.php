@@ -36,29 +36,14 @@
 			  <div class="row-aside">
 				<li>
 				  <div class="profile-a">
-					<img src="http://arainfo.org/wordpress/wp-content/uploads/2013/12/heisenberg-breaking-bad.jpg" class="img-circle">
+					<img src="{{$user_image_uri}}" class="img-circle">
 					<label for="user">Tu nombre</label>
-					<input type="text" class="user" id="user" placeholder="Current name...">
-					<label for="user">Tu apellido</label>
-					<input type="text" class="user" id="user" placeholder="Current lastname...">
+
+					<input type="text" class="user" id="user" placeholder="Escribe aquí tu nombre" required="required" value="{{$name}}">
 				  </div></li>
 				<li>
 				  <label for="ema">Correo electronico</label>
-				  <input type="email" placeholder="Current email" id="ema">
-				</li>
-				<li>
-				  <label for="select">Idiomas</label>
-				  <select>
-					<option>Español</option>
-					<option>Ingles</option>
-				  </select>
-				</li>
-				<li>
-				  <label for="select">Pais</label>
-				  <select>
-					<option>España</option>
-					<option>Francia</option>
-				  </select>
+				  <input type="email" placeholder="Escribe aquí tu email" id="ema" value="{{$email}}">
 				</li>
 				<div class="contenido">
 				  <h4>Contenido</h4>

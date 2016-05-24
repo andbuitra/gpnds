@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->string('user_image_uri')->default('/images/users/default.jpg');
+            $table->string('user_image_uri')->default('/assets/img/default_profile_picture.jpg');
             $table->string('about');
             $table->string('role')->default('basic');
             $table->boolean('confirmed')->default('0');

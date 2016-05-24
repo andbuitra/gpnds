@@ -61,11 +61,13 @@
 		            </div>
 	            </div>
 	            <div class="row">
+
+								@foreach($recentPosts as $recentPost)
 	            	<div class="col-sm-3 posts-1-box wow fadeInUp">
                     	<div class="posts-1-box-inner">
 
-		                    <h3>Consejos sobre la eduacion y aprendizaje sano de cuidado personal</h3>
-		                    <h4><i class="glyphicon glyphicon-time"></i>05 ABR, 2016 <a href="#" title="Show Comments"><i class="glyphicon glyphicon-comment"></i>15</a></h4>
+		                    <h3>{{$recentPost['title']}}</h3>
+		                    <h4><i class="glyphicon glyphicon-time"></i>{{$recentPost['created_at']}}</h4>
 		                    <div class="posts-1-box-features">
 								<ul>
 		                    	<img src="assets/img/articulos/3.jpg">
@@ -77,6 +79,7 @@
 		                    </div>
 		                </div>
                     </div>
+										@endforeach
 
 	            </div>
 	        </div>

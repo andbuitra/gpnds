@@ -14,6 +14,12 @@ use DB;
 class UserProfileController extends Controller
 {
 
+  public function show($id)
+  {
+    $user = User::findOrFail($id);
+    return $user;
+  }
+
   public function me(){
     if(Auth::check()){
       $user = User::find(Auth::user()->user_id);
@@ -24,12 +30,14 @@ class UserProfileController extends Controller
 
   }
 
-    public function showEditForm($profileID){
-      $user = User::where('profileID', $profileID)->firstOrFail();
-      if(Auth::user()->profileID === $user->profileID){
-        return view('pages.editProfile', compact($user));
+    public function showEditForm(){
+      if(Auth::check()){
+        $user = User::find(Auth::user()->user_id);
+        return view('pages.editProfile', $user);
       }else{
-        abort(404);
+        return redirect()->to('/');
       }
+
+
     }
 }

@@ -36,11 +36,7 @@ Route::group(['middleware' => ['web']], function () {
 
   Route::get('contacto', 'PagesController@contacto');
 
-  Route::get('blog', 'PagesController@blog');
-
   Route::get('iniciar-sesion', 'PagesController@login');
-
-  Route::get('blog/post', 'PagesController@blogPost');
 
   Route::get('galeria', 'PagesController@galeria');
 
@@ -53,6 +49,15 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('chatp', 'PagesController@chatp');
 
   Route::get('tpost', 'PagesController@tpost');
+
+  #
+  # Blog related routes
+  #
+  
+  Route::get('blog', 'BlogController@mainBlogList');
+  Route::get('blog/{id}', 'BlogController@blogPost');
+  # Only for testing
+  Route::get('blog/post/{id}', 'BlogController@test');
 
   //Login Routes
   Route::get('iniciar-sesion', 'AuthenticationController@showLoginForm');
@@ -75,6 +80,8 @@ Route::group(['middleware' => ['web']], function () {
 
   Route::group(['middleware' => ['web', 'auth']], function(){
     Route::get('profile', 'UserProfileController@me');
+    Route::get('profile/edit', 'UserProfileController@showEditForm');
+    Route::get('profile/{id}', 'UserProfileController@show')->where('id', '[0-9]+');
   });
 
   Route::group(['middleware' => ['web', 'auth', 'AdminAccess']], function(){
