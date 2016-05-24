@@ -25,20 +25,24 @@
                         		<div class="form-top-right">
                         			<i class="fa fa-lock"></i>
                         		</div>
-                            </div>
-                            <div class="form-bottom">
-			                    <form role="form" method="post" class="login-form">
-			                    	{!! csrf_field() !!}
-			                    	<div class="form-group">
-			                    		<label class="sr-only" for="form-username">Email</label>
-			                        	<input type="text" name="email" placeholder="Email" class="form-username form-control" id="form-username">
-			                        </div>
-			                        <div class="form-group">
-			                        	<label class="sr-only" for="form-password">Contraseña</label>
-			                        	<input type="password" name="password" placeholder="Contraseña" class="form-password form-control" id="form-password">
-			                        </div>
-			                        <button type="submit" class="btn">Entrar</button>
-			                    </form>
+                          </div>
+                        <div class="form-bottom">
+													<div class="form-top">
+														<div class="form-top-left">
+															<form role="form" method="post" class="login-form">
+					                    	{!! csrf_field() !!}
+					                    	<div class="form-group">
+					                    		<label class="sr-only" for="form-username">Email</label>
+					                        	<input type="text" name="email" placeholder="Email" class="form-username form-control" id="form-username">
+					                        </div>
+					                        <div class="form-group">
+					                        	<label class="sr-only" for="form-password">Contraseña</label>
+					                        	<input type="password" name="password" placeholder="Contraseña" class="form-password form-control" id="form-password">
+					                        </div>
+					                        <button type="submit" class="btn">Entrar</button>
+					                    </form>
+														</div>
+													</div>
 		                    </div>
                         </div>
                     </div>
@@ -70,7 +74,7 @@
         <script src="assets/js/jquery-1.11.1.min.js"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="assets/js/jquery.backstretch.min.js"></script>
-        
+
 
 	<footer>
 		@include('includes.footer')

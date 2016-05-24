@@ -25,9 +25,11 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
+
   Route::get('/', 'PagesController@inicio');
 
   Route::get('sobre-nosotros', 'PagesController@sobreNosotros');
+
   Route::get('puericultura', 'PagesController@puericultura');
 
   Route::get('eventos', 'PagesController@eventos');
@@ -45,31 +47,38 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('profile', 'PagesController@profile');
 
   Route::get('questions', 'PagesController@questions');
+
   Route::get('library', 'PagesController@library');
 
   Route::get('chatp', 'PagesController@chatp');
+
   Route::get('tpost', 'PagesController@tpost');
 
   //Login Routes
   Route::get('iniciar-sesion', 'AuthenticationController@showLoginForm');
+
   Route::post('iniciar-sesion', 'AuthenticationController@login');
+
   Route::get('logout', 'AuthenticationController@logout');
 
   //Register Routes
   Route::get('registro', 'AuthenticationController@showRegistrationForm');
+
   Route::post('registro', 'AuthenticationController@register');
-  
+
   //Verification by email routes
   Route::get('registro/verify/{confirmationCode}', [
-    'as' => 'confirmation_path',
-    'uses' => 'AuthenticationController@confirm'
-  ]);
-});
+      'as' => 'confirmation_path',
+      'uses' => 'AuthenticationController@confirm'
+    ]);
+  });
 
-Route::group(['middleware' => ['web', 'auth']], function(){
-  Route::get('me', 'PagesController@me');
-});
+  Route::group(['middleware' => ['web', 'auth']], function(){
+    Route::get('me', 'PagesController@me');
+  });
 
-Route::group(['middleware' => ['web', 'auth', 'AdminAccess']], function(){
-  Route::get('/new/post', 'PostsController@showNewPostForm');
-});
+  Route::group(['middleware' => ['web', 'auth', 'AdminAccess']], function(){
+    Route::get('/new/post', 'PostsController@showNewPostForm');
+
+    Route::post('/new/post', 'PostsController@registrarEntrada');
+  });

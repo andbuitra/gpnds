@@ -45,13 +45,13 @@ class PagesController extends Controller
 
     }
 
-	public function profile(){
+	   public function profile(){
     	return view('pages.profile');
 
     }
 
 
-	public function questions(){
+	   public function questions(){
     	return view('pages.questions');
 
     }

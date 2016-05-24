@@ -8,13 +8,12 @@
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
-        
-        <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">        
+
+        <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/font-awesome.min.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
-		<link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">        
-		<link rel="stylesheet" href="{{ asset('assets/flexslider/flexslider.css') }}">        
-		<link rel="stylesheet" href="{{ asset('assets/css/form-elements.css') }}">        
+		<link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/flexslider/flexslider.css') }}">      
 		<link rel="stylesheet" href="{{ asset('assets/css/form-Login.css') }}">
 		<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/media-queries.css') }}">
