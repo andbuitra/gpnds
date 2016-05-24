@@ -31,7 +31,7 @@ class AuthenticationController extends Controller
       return redirect()->intended('/');
     }else{
       return redirect()->back()->withInput()->withErrors([
-        'credentials' => 'Error al logear'
+        'credentials' => 'Error al intentar iniciar sesión'
       ]);
     }
   }
@@ -57,26 +57,24 @@ class AuthenticationController extends Controller
     $this->validate(request(), [
       'name' => 'required',
       'email' => 'required|email|unique:users,email',
-      'password' => 'required',
+      'password' => 'required|min:8|max:32',
       'repassword' => 'required|same:password'
     ],[
       'email.unique' => 'Este email ya está en uso',
-      'repassword.same' => 'Las contraseñas deben coincidir'
+      'repassword.same' => 'Las contraseñas deben coincidir',
+      'password.min' => 'La contraseña debe tener por lo menos ocho caracteres',
+      'password.max' => 'La contraseña no puede tener más de 32 caracteres'
     ]);
     $name = request()->input('name');
     $email = request()->input('email');
     $pwd = bcrypt(request()->input('password'));
-    $role = 'regularuser';
     $confirmation_code = str_random(55);
-    $profileID = rand(1000000, 9999999);
 
     User::create(array(
       'name' => $name,
       'email' => $email,
       'password' => $pwd,
-      'role' => $role,
-      'confirmation_code' => $confirmation_code,
-      'profileID' => $profileID
+      'confirmation_code' => $confirmation_code
     ));
 
 
