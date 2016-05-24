@@ -74,7 +74,7 @@ Route::group(['middleware' => ['web']], function () {
   });
 
   Route::group(['middleware' => ['web', 'auth']], function(){
-    Route::get('me', 'PagesController@me');
+    Route::get('profile', 'UserProfileController@me');
   });
 
   Route::group(['middleware' => ['web', 'auth', 'AdminAccess']], function(){

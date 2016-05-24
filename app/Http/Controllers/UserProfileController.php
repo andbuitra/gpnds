@@ -9,14 +9,20 @@ use App\Http\Requests;
 use App\Models\User;
 
 use Auth;
+use DB;
 
 class UserProfileController extends Controller
 {
-    public function show($profileID){
-      $user = User::where('profileID', $profileID)->firstOrFail();
-      // return view('pages.profile', compact($user));
-      return ('Aquí va el perfil')
+
+  public function me(){
+    if(Auth::check()){
+      $user = User::find(Auth::user()->user_id);
+      return ($user);
+    }else{
+      return redirect()->to('/');
     }
+
+  }
 
     public function showEditForm($profileID){
       $user = User::where('profileID', $profileID)->firstOrFail();
@@ -24,13 +30,6 @@ class UserProfileController extends Controller
         return view('pages.editProfile', compact($user));
       }else{
         abort(404);
-      }
-    }
-
-    public function me(){
-      if(Auth::check()){
-        $user = User::where('profileID', Auth::user()->profileID)->firstOrFail();
-        return redirect('profile/'.$user->profileID);
       }
     }
 }

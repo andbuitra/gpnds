@@ -8,7 +8,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.html">Grupo de Puericultura - Norte de Santander</a>
+					<a class="navbar-brand" href="/">Grupo de Puericultura - Norte de Santander</a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="top-navbar-1">
@@ -45,7 +45,7 @@
 								<li><a href="#">Foro publico</a></li>
 									<li class="dropdown-submenu">
 	                					<a tabindex="-1" href="#">Links de interes</a>
-			                				<ul class="dropdown-menu">                  				
+			                				<ul class="dropdown-menu">
 			                 					<li><a href="#">Sociedad de pediatria de Colombia</a></li>
 												<li><a href="#">Pediatria y puericultua en Colombia</a></li>
 			                				</ul>
