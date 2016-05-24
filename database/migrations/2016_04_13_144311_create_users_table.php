@@ -19,10 +19,9 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('user_image_uri');
             $table->string('about');
-            $table->string('role')->default('regular');
+            $table->string('role')->default('basic');
             $table->boolean('confirmed')->default('0');
             $table->string('confirmation_code')->nullable();
-            $table->string('profileID')->unique();
             $table->rememberToken();
             $table->timestamps();
         });
