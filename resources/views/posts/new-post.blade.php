@@ -37,12 +37,12 @@
 										<label class="sr-only" for="form-title">Titulo</label>
 										<input type="text" name="title" placeholder="Titulo" class="form-username form-control" id="form-title">
 									</div>
-									<textarea name="body" id="summernote" ></textarea>
+									<textarea name="body" id="summernote"></textarea>
 									<div class="form-group">
 										<label class="sr-only" for="form-tags">Titulo</label>
 										<input type="text" name="tags" placeholder="Tags" class="form-username form-control" id="form-tags">
 									</div>
-									<input type="hidden" name="profileID" value="{{Auth::user()->profileID}}">
+									<input type="hidden" name="profileID" value="{{Auth::user()->user_id}}">
 									<button type="submit" class="btn btn-submit">Guardar</button>
 								</form>
 						</div>

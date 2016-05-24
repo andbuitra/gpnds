@@ -9,6 +9,8 @@ class Post extends Model
     //
     protected $fillable = ['title','body','tags'];
 
+    protected $primaryKey = 'post_id';
+
     public function user(){
       return $this->belongsTo('App\Models\User');
     }
