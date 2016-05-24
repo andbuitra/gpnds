@@ -12,17 +12,16 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-      Schema::create('posts', function (Blueprint $table) {
-          $table->increments('post_id')->unsigned();
+        Schema::create('posts', function(Blueprint $table){
+          $table->increments('post_id');
           $table->string('title');
           $table->string('body');
           $table->string('tags');
-          $table->string('user_id');
           $table->timestamps();
+          $table->integer('user_id')->unsigned();
 
           $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
-
-      });
+        });
     }
 
     /**
@@ -32,6 +31,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('posts');
+        //
     }
 }
