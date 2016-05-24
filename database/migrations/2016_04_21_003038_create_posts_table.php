@@ -17,7 +17,13 @@ class CreatePostsTable extends Migration
           $table->string('title');
           $table->string('body');
           $table->string('tags');
+          $table->string('user_id');
           $table->timestamps();
+
+          $table->foreign('user_id')
+                ->references('user_id')
+                ->on('users')
+                ->onDelete('cascade');
       });
     }
 
