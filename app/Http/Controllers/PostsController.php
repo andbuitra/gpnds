@@ -18,16 +18,12 @@ class PostsController extends Controller
       $title = request()->input('title');
       $body = request()->input('body');
       $tags = request()->input('tags');
-      $profileID = request()->input('profileID');
+      $user_id = request()->input('user_id');
       Post::create([
         'title' => $title,
         'body' => $body,
-        'tags' => $tags
-      ]);
-      $last_post = Post::all()->last()->id;
-      Post_User::create([
-        'id_post' => $last_post,
-        'profileID' => $profileID
+        'tags' => $tags,
+        'user_id' => $user_id
       ]);
       return view('posts.new-post');
     }

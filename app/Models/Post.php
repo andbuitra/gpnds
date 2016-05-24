@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     //
-    protected $fillable = ['title','body','tags'];
+    protected $fillable = ['title','body','tags', 'user_id'];
 
     protected $primaryKey = 'post_id';
 

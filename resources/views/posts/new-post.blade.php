@@ -27,7 +27,8 @@
             </div>
         </div>
 		<!-- Posts populares -->
-				<div class="container">
+
+			<div class="container">
 					<div class="row">
 						<div class="col-sm-10 col-sm-offset-1 form-box">
 								<br>
@@ -42,7 +43,7 @@
 										<label class="sr-only" for="form-tags">Titulo</label>
 										<input type="text" name="tags" placeholder="Tags" class="form-username form-control" id="form-tags">
 									</div>
-									<input type="hidden" name="profileID" value="{{Auth::user()->user_id}}">
+									<input type="hidden" name="user_id" value="{{Auth::user()->user_id}}">
 									<button type="submit" class="btn btn-submit">Guardar</button>
 								</form>
 						</div>
