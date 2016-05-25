@@ -31,7 +31,7 @@ class AuthenticationController extends Controller
       return redirect()->intended('/');
     }else{
       return redirect()->back()->withInput()->withErrors([
-        'credentials' => 'Error al intentar iniciar sesión'
+        'credentials' => 'Email o contraseña incorrectos'
       ]);
     }
   }
