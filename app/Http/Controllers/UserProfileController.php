@@ -30,14 +30,14 @@ class UserProfileController extends Controller
 
   }
 
-    public function showEditForm(){
-      if(Auth::check()){
-        $user = User::find(Auth::user()->user_id);
-        return view('pages.editProfile', $user);
-      }else{
-        return redirect()->to('/');
-      }
-
-
+  public function showEditForm(){
+    if(Auth::check()){
+      $user = User::find(Auth::user()->user_id);
+      return view('pages.editProfile', compact('user'));
+    }else{
+      return redirect()->to('/');
     }
+
+
+  }
 }
