@@ -70,12 +70,12 @@
 									<h4><i class="glyphicon glyphicon-time"></i>{{$recentPost['created_at']}}</h4>
 									<div class="posts-1-box-features">
 										<ul>
-											<img src="assets/img/articulos/3.jpg">
-											<li>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis, nulla id pretium malesuada, dui est laoreet risus, ac rhoncus eros diam id odio....</li>
+											<img src="{{$recentPost['cover_image']}}">
+											<li>{{$recentPost['description']}}</li>
 										</ul>
 									</div>
 									<div class="posts-1-box-sign-up">
-										<a class="big-link-3" href="#">Leer mas</a>
+										<a class="big-link-3" href="/blog/{{$recentPost['slug']}}">Leer mas</a>
 									</div>
 								</div>
 							</div>

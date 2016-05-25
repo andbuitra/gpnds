@@ -43,7 +43,7 @@ Route::group(['middleware' => ['web']], function () {
   #
 
   Route::get('blog', 'BlogController@mainBlogList');
-  Route::get('blog/{id}', 'BlogController@blogPost');
+  Route::get('blog/{slug}', 'BlogController@blogPost');
   # Only for testing
   Route::get('blog/post/{id}', 'BlogController@test');
 
@@ -71,9 +71,9 @@ Route::group(['middleware' => ['web']], function () {
 #
 
 Route::group(['middleware' => ['web', 'auth']], function(){
-  Route::get('profile', 'UserProfileController@me');
-  Route::get('profile/edit', 'UserProfileController@showEditForm');
-  Route::get('profile/{id}', 'UserProfileController@show')->where('id', '[0-9]+');
+  Route::get('perfil', 'UserProfileController@me');
+  Route::get('perfil/editar', 'UserProfileController@showEditForm');
+  Route::get('perfil/{id}', 'UserProfileController@show')->where('id', '[0-9]+');
 });
 
 #

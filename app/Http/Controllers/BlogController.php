@@ -18,8 +18,8 @@ class BlogController extends Controller
       return view('pages.blog', compact('recentPosts', 'bestPosts'));
     }
 
-    public function blogPost($id){
-      $post = Post::findOrFail($id);
+    public function blogPost($slug){
+      $post = Post::where('slug', '=', $slug)->firstOrFail();
 
       return view('pages.single-post', compact('post'));
     }

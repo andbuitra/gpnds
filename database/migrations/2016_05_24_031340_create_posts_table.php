@@ -18,7 +18,8 @@ class CreatePostsTable extends Migration
           $table->longText('body');
           $table->string('tags');
           $table->string('description');
-          $table->tinytext('cover_image');
+          $table->text('cover_image');
+          $table->string('slug')->unique();
           $table->timestamps();
           $table->integer('user_id')->unsigned();
 
