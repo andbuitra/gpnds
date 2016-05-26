@@ -16,7 +16,7 @@ class AdminAccess
      */
     public function handle($request, Closure $next)
     {
-      if ($request->user()->role != 'mod')
+      if ($request->user()->role != 'admin')
       {
           return redirect('/');
       }

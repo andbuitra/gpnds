@@ -27,16 +27,20 @@
 Route::group(['middleware' => ['web']], function () {
 
   Route::get('/', 'PagesController@inicio');
-  Route::get('sobre-nosotros', 'PagesController@sobreNosotros');
-  Route::get('puericultura', 'PagesController@puericultura');
   Route::get('eventos', 'PagesController@eventos');
   Route::get('contacto', 'PagesController@contacto');
-  Route::get('iniciar-sesion', 'PagesController@login');
   Route::get('galeria', 'PagesController@galeria');
   Route::get('questions', 'PagesController@questions');
   Route::get('library', 'PagesController@library');
   Route::get('chatp', 'PagesController@chatp');
   Route::get('tpost', 'PagesController@tpost');
+
+  #
+  # Info related routes
+  #
+
+  Route::get('info/sobre-nosotros', 'InfoPageController@sobreNosotros');
+  Route::get('info/puericultura', 'InfoPageController@puericultura');
 
   #
   # Blog related routes
@@ -80,15 +84,19 @@ Route::group(['middleware' => ['web', 'auth']], function(){
 # Post related routes
 #
 
-Route::group(['middleware' => ['web', 'auth', 'AdminAccess']], function(){
+Route::group(['middleware' => ['web', 'auth', 'ModAccess']], function(){
   Route::get('nuevo/post', 'PostsController@showNewPostForm');
   Route::post('nuevo/post', 'PostsController@registrarEntrada');
+});
+
+Route::group(['middleware' => ['web', 'auth', 'AdminAccess']], function(){
+  Route::get('administrar', 'AdminController@showAdminPanel');
 });
 
 #
 # TESTING ROUTES (DELETE WHEN FINISHED)
 #
 
-Route::get('profileTest', function(){
-  return view('pages.profile');
+Route::get('admin', function(){
+  return view('pages.admin');
 });
