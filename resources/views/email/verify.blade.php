@@ -8,8 +8,7 @@
 
         <div>
             Thanks for creating an account with the verification demo app.
-            Please follow the link below to verify your email address
-            {{ URL::to('registro/verify/' . $confirmation_code) }}.<br/>
+            Please follow <a href="{{ URL::to('registro/verify/' . $confirmation_code) }}">this link</a> to verify your email address.<br/>
 
         </div>
 

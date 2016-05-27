@@ -21,9 +21,9 @@
 									{!! csrf_field() !!}
 									<div class="form-group">
 										@if ($errors->has('credentials'))
-										<span class="help-block" style="color:red">
-											<strong>{{ $errors->first('credentials') }}</strong>
-										</span>
+											<span class="help-block" style="color:red">
+												<strong>{{ $errors->first('credentials') }}</strong>
+											</span>
 										@endif
 										<label class="sr-only" for="form-username">Email</label>
 										<input type="text" name="email" placeholder="Email" class="form-username form-control" id="form-username">

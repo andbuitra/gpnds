@@ -27,7 +27,6 @@ class UserProfileController extends Controller
     }else{
       return redirect()->to('/');
     }
-
   }
 
   public function showEditForm(){
@@ -37,7 +36,5 @@ class UserProfileController extends Controller
     }else{
       return redirect()->to('/');
     }
-
-
   }
 }

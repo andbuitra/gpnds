@@ -20,8 +20,8 @@ class User extends Authenticatable
       return $this->hasMany('App\Models\Like');
     }
 
-    public function AdditionalInfo(){
-      return $this->hasMany('App\Models\AdditionalInfo');
+    public function specialist(){
+      return $this->hasMany('App\Models\Specialist');
     }
 
 }

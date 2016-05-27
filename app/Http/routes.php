@@ -68,6 +68,8 @@ Route::group(['middleware' => ['web']], function () {
     'as' => 'confirmation_path',
     'uses' => 'AuthenticationController@confirm'
   ]);
+  Route::get('assign-username', 'AuthenticationController@showAssignUsernameForm');
+  Route::post('assign-username', 'AuthenticationController@assignUsername');
 });
 
 #
@@ -77,7 +79,7 @@ Route::group(['middleware' => ['web']], function () {
 Route::group(['middleware' => ['web', 'auth']], function(){
   Route::get('perfil', 'UserProfileController@me');
   Route::get('perfil/editar', 'UserProfileController@showEditForm');
-  Route::get('perfil/{id}', 'UserProfileController@show')->where('id', '[0-9]+');
+  Route::get('perfil/{username}', 'UserProfileController@show')->where('username', '[0-9]+');
 });
 
 #
@@ -97,6 +99,6 @@ Route::group(['middleware' => ['web', 'auth', 'AdminAccess']], function(){
 # TESTING ROUTES (DELETE WHEN FINISHED)
 #
 
-Route::get('admin', function(){
-  return view('pages.admin');
+Route::get('createusername', function(){
+  return view('pages.createusername');
 });

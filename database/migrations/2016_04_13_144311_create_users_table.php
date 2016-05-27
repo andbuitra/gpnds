@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('role')->default('basic');
             $table->boolean('confirmed')->default('0');
             $table->string('confirmation_code')->nullable();
+            $table->string('username');
             $table->rememberToken();
             $table->timestamps();
         });

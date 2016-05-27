@@ -7,7 +7,6 @@ use App\Http\Requests;
 use App\Models\User;
 use Auth;
 use Mail;
-use Laracasts\Flash;
 
 class AuthenticationController extends Controller
 {
@@ -103,10 +102,29 @@ class AuthenticationController extends Controller
     }
     $user->confirmed = 1;
     $user->confirmation_code = null;
+    $user_id = $user->user_id;
     $user->save();
 
-    return redirect('iniciar-sesion');
+    return redirect('assign-username')->with(compact('user_id'));
 
+  }
+
+  public function showAssignUsernameForm()
+  {
+    return view('pages.createusername');
+  }
+
+  public function assignUsername()
+  {
+    $user_id = request()->input('user_id');
+    $username = request()->input('username');
+    if(User::where('username', '=', $username)->exists()){
+      return redirect()->back()->withInput()->withErrors([
+        'username' => 'Este usuario ya se encuentra registrado. Intenta nuevamente'
+      ]);
+    }else{
+      DB::table('user')->where('user_id', $user_id)->update(['username' => $username]);
+    }
   }
 
 }
