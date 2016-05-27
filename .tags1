@@ -1,0 +1,13 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+User	/home/andres/Documentos/Universidad/ProgWeb/proy_puericultura/app/Models/User.php	/^class User extends Authenticatable$/;"	class	line:7
+fillable	/home/andres/Documentos/Universidad/ProgWeb/proy_puericultura/app/Models/User.php	/^    protected $fillable = ['name', 'email', 'password', 'confirmation_code'];$/;"	variable	line:9
+hidden	/home/andres/Documentos/Universidad/ProgWeb/proy_puericultura/app/Models/User.php	/^    protected $hidden = ['password', 'remember_token'];$/;"	variable	line:10
+primaryKey	/home/andres/Documentos/Universidad/ProgWeb/proy_puericultura/app/Models/User.php	/^    protected $primaryKey = 'user_id';$/;"	variable	line:12
+posts	/home/andres/Documentos/Universidad/ProgWeb/proy_puericultura/app/Models/User.php	/^    public function posts(){$/;"	function	line:14
+likes	/home/andres/Documentos/Universidad/ProgWeb/proy_puericultura/app/Models/User.php	/^    public function likes()$/;"	function	line:18
+AdditionalInfo	/home/andres/Documentos/Universidad/ProgWeb/proy_puericultura/app/Models/User.php	/^    public function AdditionalInfo(){$/;"	function	line:23
