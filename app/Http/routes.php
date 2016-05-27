@@ -80,7 +80,7 @@ Route::group(['middleware' => ['web']], function () {
 Route::group(['middleware' => ['web', 'auth']], function(){
   Route::get('perfil', 'UserProfileController@me');
   Route::get('perfil/editar', 'UserProfileController@showEditForm');
-  Route::get('perfil/{username}', 'UserProfileController@show')->where('username', '[0-9]+');
+  Route::get('perfil/{username}', 'UserProfileController@show')->where('username', '^[a-z0-9_]{3,15}$');
 });
 
 #

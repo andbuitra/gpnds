@@ -14,10 +14,10 @@ use DB;
 class UserProfileController extends Controller
 {
 
-  public function show($id)
+  public function show($username)
   {
-    $user = User::findOrFail($id);
-    return $user;
+    $user = DB::table('users')->where('username', '=', $username)->first();
+    return compact('user');
   }
 
   public function me(){
