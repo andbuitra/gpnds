@@ -1862,7 +1862,7 @@ box-shadow:         2px 2px 7px 0px #efefef;
   margin:  auto;
   display:  block;
   width:  700px;
-  height: 900px;
+  height: 600px;
   top:  -440px;
   left: 100px;
   border-radius: 7px;
@@ -2582,8 +2582,7 @@ figure.thumb {
 }
 
 #myImg:hover {opacity: 0.7;
-	width: 150px;
-	height: 150px;
+	
 }
 
 /* The Modal (background) */
@@ -2591,52 +2590,44 @@ figure.thumb {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: 200px; /* Location of the box */
+    padding-left: 570px;
     left: 0;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    background-color: #c0cffb ;
+    opacity: 0.9;
+
 }
 
 /* Modal Content (image) */
 .modal-content {
-    width: 500px;
-    
+    width: 200px;
+    height: 70px;
+    background: transparent;
+    border: 0;
+
 }
 
 
 /* Caption of Modal Image */
 #caption {
-    margin: auto;
+    margin-top: 100px;
+    padding-top: 500px;	
     display: block;
     width: 80%;
     max-width: 700px;
     text-align: center;
     color: #ccc;
-    padding: 10px 0;
+    
     height: 150px;
 }
 
 /* Add Animation */
-.modal-content, #caption {    
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
 
-@-webkit-keyframes zoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-}
-
-@keyframes zoom {
-    from {transform: scale(0.1)} 
-    to {transform: scale(1)}
-}
 
 /* The Close Button */
 .close {
@@ -2666,8 +2657,8 @@ figure.thumb {
 /*Dont fuck my other code*/
 #containerpop {
   position: absolute;
-  width: 180px;
-  height: 180px;
+  width: 380px;
+  height: 380px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -2723,9 +2714,10 @@ figure.thumb {
 }
 .stupid-btn{
 	text-align: center;
-	margin-top: 150px;
-	margin-right: 100px;
-	margin-left: 340px;
+	margin-top: 200px;
+	margin-left: -200px;
+	
+	
 }
 
 .box {
@@ -2863,12 +2855,19 @@ figure.thumb {
   -o-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  width: 300px;
+  width: 500px;
   height: auto;
   padding: 20px 15px;
   box-shadow: 0 3px 20px 2px rgba(0, 0, 0, .1);
   border-radius: 5px;
   z-index: 10;
+}
+#popup img{
+	border-radius: 50%;
+}
+#popup img:hover{
+	opacity: 0.4;
+	cursor: pointer;
 }
 
 .profile-avatar {
@@ -2886,10 +2885,33 @@ figure.thumb {
 
 .message {
   position: relative;
+  font-family: 'Lobster', cursive;
   display: block;
   width: 80%;
   padding: 10px 10px;
+  padding-bottom: 25px;
   margin: 0 auto;
-  font-size: 14px;
+  font-size: 20px;
   text-align: center;
+}
+
+.stupid-btn input[type="file"] {
+    display: none;
+}
+
+
+.custom-file-upload {
+    color: #ccc;
+    display: inline-block;
+    font-family: 'Lobster', cursive;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-size: 19px;
+    cursor: pointer;
+    background: #f7819f;
+    opacity: 0.7;
+    width: 200px;
+    border-radius: 10px;
 }
