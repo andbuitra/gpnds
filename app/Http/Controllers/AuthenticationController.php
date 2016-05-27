@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Models\User;
 use Auth;
 use Mail;
+use DB;
 
 class AuthenticationController extends Controller
 {
@@ -105,25 +106,42 @@ class AuthenticationController extends Controller
     $user_id = $user->user_id;
     $user->save();
 
-    return redirect('assign-username')->with(compact('user_id'));
+    session()->flash('user_id', $user_id);
+    return redirect('assign-username');
 
   }
 
   public function showAssignUsernameForm()
   {
+    session()->keep(['user_id']);
     return view('pages.createusername');
   }
 
   public function assignUsername()
   {
-    $user_id = request()->input('user_id');
+    $user_id = session()->get('user_id');
     $username = request()->input('username');
     if(User::where('username', '=', $username)->exists()){
+      session()->flash('user_id', $user_id);
       return redirect()->back()->withInput()->withErrors([
         'username' => 'Este usuario ya se encuentra registrado. Intenta nuevamente'
       ]);
     }else{
-      DB::table('user')->where('user_id', $user_id)->update(['username' => $username]);
+      session()->flash('user_id', $user_id);
+      DB::table('users')->where('user_id', $user_id)->update(['username' => $username]);
+      $user = DB::table('users')->where('user_id', $user_id)->get();
+      return redirect('/succesfully-registered');
+    }
+  }
+
+  public function succesfullyRegistered()
+  {
+    $user_id = session()->get('user_id');
+    if($user_id != null){
+      session()->forget('user_id');
+      return view('pages.succesfully-registered');
+    }else{
+      return redirect('/');
     }
   }
 

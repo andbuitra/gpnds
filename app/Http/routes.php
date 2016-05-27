@@ -70,6 +70,7 @@ Route::group(['middleware' => ['web']], function () {
   ]);
   Route::get('assign-username', 'AuthenticationController@showAssignUsernameForm');
   Route::post('assign-username', 'AuthenticationController@assignUsername');
+  Route::get('succesfully-registered', 'AuthenticationController@succesfullyRegistered');
 });
 
 #
