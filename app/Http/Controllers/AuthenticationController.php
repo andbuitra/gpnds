@@ -120,10 +120,10 @@ class AuthenticationController extends Controller
   public function assignUsername()
   {
     $this->validate(request(), [
-      'username' => 'required|^[a-z0-9_]{3,15}$'
+      'username' => 'required|alpha_dash'
     ], [
       'username.required' => 'Debes llenar este campo',
-      
+      'username.alpha_dash' => 'Aceptamos unicamente a-Z - y _'
     ]);
     $user_id = session()->get('user_id');
     $username = request()->input('username');
