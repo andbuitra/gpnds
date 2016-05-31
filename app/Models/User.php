@@ -11,17 +11,13 @@ class User extends Authenticatable
 
     protected $primaryKey = 'user_id';
 
-    public function posts(){
-      return $this->hasMany('App\Models\Post');
-    }
-
     public function likes()
     {
       return $this->hasMany('App\Models\Like');
     }
 
     public function specialist(){
-      return $this->hasMany('App\Models\Specialist');
+      return $this->belongsTo('App\Models\Specialist');
     }
 
 }

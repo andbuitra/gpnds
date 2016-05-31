@@ -120,24 +120,18 @@ class AuthenticationController extends Controller
   public function assignUsername()
   {
     $this->validate(request(), [
-      'username' => 'required|alpha_dash'
+      'username' => 'required|alpha_dash|unique:users,username'
     ], [
       'username.required' => 'Debes llenar este campo',
-      'username.alpha_dash' => 'Aceptamos unicamente a-Z - y _'
+      'username.alpha_dash' => 'Aceptamos unicamente a-Z - y _',
+      'username.unique' => 'Ya está en uso, digite otro'
     ]);
     $user_id = session()->get('user_id');
     $username = request()->input('username');
-    if(User::where('username', '=', $username)->exists()){
-      session()->flash('user_id', $user_id);
-      return redirect()->back()->withInput()->withErrors([
-        'username' => 'Este usuario ya se encuentra registrado. Intenta nuevamente'
-      ]);
-    }else{
-      session()->flash('user_id', $user_id);
-      DB::table('users')->where('user_id', $user_id)->update(['username' => $username]);
-      $user = DB::table('users')->where('user_id', $user_id)->get();
-      return redirect('/succesfully-registered');
-    }
+    session()->flash('user_id', $user_id);
+    DB::table('users')->where('user_id', $user_id)->update(['username' => $username]);
+    $user = DB::table('users')->where('user_id', $user_id)->get();
+    return redirect('/succesfully-registered');
   }
 
   public function succesfullyRegistered()

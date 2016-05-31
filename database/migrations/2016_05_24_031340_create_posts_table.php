@@ -21,9 +21,9 @@ class CreatePostsTable extends Migration
           $table->text('cover_image');
           $table->string('slug')->unique();
           $table->timestamps();
-          $table->integer('user_id')->unsigned();
+          $table->integer('specialist_id')->unsigned();
 
-          $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
+          $table->foreign('specialist_id')->references('specialist_id')->on('specialists')->onDelete('cascade');
         });
     }
 
