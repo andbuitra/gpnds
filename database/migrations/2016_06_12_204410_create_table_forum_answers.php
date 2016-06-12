@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLikesTable extends Migration
+class CreateTableForumAnswers extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,14 @@ class CreateLikesTable extends Migration
      */
     public function up()
     {
-        Schema::create('likes', function(Blueprint $table){
-          $table->increments('like_id');
-          $table->integer('post_id')->unsigned();
+        Schema::create('forum_answers', function(Blueprint $table){
+          $table->increments('forum_answers_id')->unsigned();
+          $table->string('answer');
+          $table->integer('forum_question_id')->unsigned();
           $table->integer('user_id')->unsigned();
-          $table->foreign('post_id')->references('post_id')->on('posts')->onDelete('cascade');
+          $table->timestamps();
+
+          $table->foreign('forum_question_id')->references('forum_question_id')->on('forum_questions')->onDelete('cascade');
           $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
         });
     }
@@ -28,6 +31,6 @@ class CreateLikesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('likes');
+        //
     }
 }

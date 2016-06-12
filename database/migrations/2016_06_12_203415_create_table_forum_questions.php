@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostsTable extends Migration
+class CreateTableForumQuestions extends Migration
 {
     /**
      * Run the migrations.
@@ -12,18 +12,16 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function(Blueprint $table){
-          $table->increments('post_id');
+        Schema::create('forum_questions', function(Blueprint $table){
+          $table->increments('forum_question_id')->unsigned();
           $table->string('title');
           $table->longText('body');
           $table->string('tags');
-          $table->string('description');
-          $table->text('cover_image');
           $table->string('slug')->unique();
           $table->timestamps();
-          $table->integer('specialist_id')->unsigned();
+          $table->integer('user_id')->unsigned();
 
-          $table->foreign('specialist_id')->references('specialist_id')->on('specialists')->onDelete('cascade');
+          $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -34,6 +32,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('posts');
+        //
     }
 }
