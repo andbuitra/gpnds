@@ -23,4 +23,8 @@ class BlogController extends Controller
 
       return view('pages.single-post', compact('post'));
     }
+
+    public function test(){
+      return view('pages.single-post');
+    }
 }
