@@ -54,28 +54,31 @@
 								</p>
 
 							</div>
-							<div id="disqus_thread"></div>
-		<script>
-			/**
-			* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-			* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-			*/
-			/*
-			var disqus_config = function () {
-			this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
-			this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-			};
-			*/
-			(function() { // DON'T EDIT BELOW THIS LINE
-			var d = document, s = d.createElement('script');
-
-			s.src = '//gpndschat.disqus.com/embed.js';
-
-			s.setAttribute('data-timestamp', +new Date());
-			(d.head || d.body).appendChild(s);
-			})();
-		</script>
-		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+							<div class= "bod">
+							<div class="containerc">
+							    <div class="comment-box">
+							      <div class="comment-form">
+							      
+							      
+							        <div class="headerb">Agrega tu comentario</div>
+							        <form action="#" onsubmit="event.preventDefault(); postComment()">
+							          <div class="commentWork"> 
+							            <input type="text" id="name" placeholder="Usuario"/>
+							          </div>
+							          <div class="commentWork">
+							            <textarea id="comment" rows="3" cols="30" placeholder="Comentario"></textarea>
+							          </div>
+							          <button type="submit">COMENTAR</button>
+							        </form>  
+							      </div>
+							      <div>
+							        <h4 class="header">Comentarios</h4>
+							        <div id="comments"></div>
+							      </div>
+							      
+							    </div>
+							  </div>
+							  </div>
 		
 						</div>
 
