@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\Models\Post;
+use DB;
 
 class BlogController extends Controller
 {
@@ -21,7 +22,11 @@ class BlogController extends Controller
     public function blogPost($slug){
       $post = Post::where('slug', '=', $slug)->firstOrFail();
 
-      return view('pages.single-post', compact('post'));
+      $post_id = $post->post_id;
+
+      $comments = DB::table('comments')->select('body', 'user_id', 'created_at')->where('post_id', '=', $post_id)->get();
+      
+      return view('pages.single-post', compact('post', 'comments'));
     }
 
     public function test(){

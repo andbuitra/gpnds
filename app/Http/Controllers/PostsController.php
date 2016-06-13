@@ -9,11 +9,10 @@ use App\Http\Requests;
 use App\Models\Post as Post;
 use App\Models\User as User;
 
-use App\Models\Post_Usuario as Post_User;
-
 class PostsController extends Controller
 {
 
+    # TODO agregar la función del slug
     public function registrarEntrada(){
       $title = request()->input('title');
       $body = request()->input('body');

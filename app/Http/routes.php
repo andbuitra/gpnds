@@ -87,7 +87,7 @@ Route::group(['middleware' => ['web', 'auth']], function(){
 # Post related routes
 #
 
-Route::group(['middleware' => ['web', 'auth', 'ModAccess']], function(){
+Route::group(['middleware' => ['web', 'auth', 'AdminAccess']], function(){
   Route::get('nuevo/post', 'PostsController@showNewPostForm');
   Route::post('nuevo/post', 'PostsController@registrarEntrada');
 });
