@@ -10,19 +10,19 @@
     <title>GPNS Admin</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/BS/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/BS/bootstrap.css" rel="stylesheet">
     <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="assets/css/BS/zabuto_calendar.css">
-    <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
-    <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">
+    <link href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/BS/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="/assets/js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/lineicons/style.css">
 
     <!-- Custom styles for this template -->
-    <link href="assets/css/BS/style.css" rel="stylesheet">
-    <link href="assets/css/BS/style-responsive.css" rel="stylesheet">
+    <link href="/assets/css/BS/style.css" rel="stylesheet">
+    <link href="/assets/css/BS/style-responsive.css" rel="stylesheet">
 
-    <script src="assets/js/chart-master/Chart.js"></script>
-    <link rel="shortcut icon" href="assets/ico/icono.jpg">
+    <script src="/assets/js/chart-master/Chart.js"></script>
+    <link rel="shortcut icon" href="/assets/ico/icono.jpg">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -154,10 +154,10 @@
               <ul class="sidebar-menu" id="nav-accordion">
 
                   <p class="centered"><a href="profile.html"><img src="assets/img/friends/fr-05.jpg" class="img-circle" width="60"></a></p>
-                  <h5 class="centered">Marcel Newman</h5>
+                  <h5 class="centered">{{Auth::user()->name}}</h5>
 
                   <li class="mt">
-                      <a class="active" href="index.html">
+                      <a href="index.html">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
@@ -166,7 +166,7 @@
 
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a class="active" href="javascript:;" >
                           <i class=" fa fa-user"></i>
                           <span>Usuarios</span>
                       </a>
@@ -193,35 +193,28 @@
                         <h1>Lista de usuarios</h1>
                           <table class="rwd-table">
                             <tr>
-                              <th>Movie Title</th>
-                              <th>Genre</th>
-                              <th>Year</th>
-                              <th>Gross</th>
+                              <th>Id</th>
+                              <th>Nombre</th>
+                              <th>Username</th>
+                              <th>Email</th>
+                              <th>Fecha de registro</th>
                             </tr>
-                            <tr>
-                              <td data-th="Movie Title">Star Wars</td>
-                              <td data-th="Genre">Adventure, Sci-fi</td>
-                              <td data-th="Year">1977</td>
-                              <td data-th="Gross">$460,935,665</td>
-                            </tr>
-                            <tr>
-                              <td data-th="Movie Title">Howard The Duck</td>
-                              <td data-th="Genre">"Comedy"</td>
-                              <td data-th="Year">1986</td>
-                              <td data-th="Gross">$16,295,774</td>
-                            </tr>
-                            <tr>
-                              <td data-th="Movie Title">American Graffiti</td>
-                              <td data-th="Genre">Comedy, Drama</td>
-                              <td data-th="Year">1973</td>
-                              <td data-th="Gross">$115,000,000</td>
-                            </tr>
+                            @foreach($users as $user)
+                              <tr>
+                                <td data-th="Id">{{$user->user_id}}</td>
+                                <td data-th="Nombre">{{$user->name}}</td>
+                                <td data-th="Username">{{$user->username}}</td>
+                                <td data-th="Email">{{$user->email}}</td>
+                                <td data-th="Fecha de Registro">{{$user->created_at}}</td>
+                              </tr>
+                            @endforeach
+
                           </table>
                           </div>
 
 
 
-                    
+
                         </div><!-- /row -->
                         <div class="row">
             <!-- TWITTER PANEL -->
@@ -229,7 +222,7 @@
           </div><!-- /row -->
           <div class="row mt">
                       <!--CUSTOM CHART START -->
-                      
+
                       <!--custom chart end-->
           </div><!-- /row -->
 

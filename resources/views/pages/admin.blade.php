@@ -10,18 +10,18 @@
     <title>GPNS Admin</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/BS/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/BS/bootstrap.css" rel="stylesheet">
     <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="assets/css/BS/zabuto_calendar.css">
-    <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
-    <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">    
+    <link href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/BS/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="/assets/js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/lineicons/style.css">
 
     <!-- Custom styles for this template -->
-    <link href="assets/css/BS/style.css" rel="stylesheet">
-    <link href="assets/css/BS/style-responsive.css" rel="stylesheet">
+    <link href="/assets/css/BS/style.css" rel="stylesheet">
+    <link href="/assets/css/BS/style-responsive.css" rel="stylesheet">
 
-    <script src="assets/js/chart-master/Chart.js"></script>
+    <script src="/assets/js/chart-master/Chart.js"></script>
     <link rel="shortcut icon" href="assets/ico/icono.jpg">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -154,7 +154,7 @@
               <ul class="sidebar-menu" id="nav-accordion">
 
                   <p class="centered"><a href="profile.html"><img src="assets/img/friends/fr-05.jpg" class="img-circle" width="60"></a></p>
-                  <h5 class="centered">Marcel Newman</h5>
+                  <h5 class="centered">{{Auth::user()->name}}</h5>
 
                   <li class="mt">
                       <a class="active" href="index.html">
@@ -166,7 +166,7 @@
 
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="/administrar/usuarios" >
                           <i class=" fa fa-user"></i>
                           <span>Usuarios</span>
                       </a>
