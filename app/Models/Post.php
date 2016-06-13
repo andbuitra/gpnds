@@ -12,7 +12,7 @@ class Post extends Model
 
     protected $primaryKey = 'post_id';
 
-    public function specialist(){
+    public function user(){
       return $this->belongsTo('App\Models\User');
     }
 
