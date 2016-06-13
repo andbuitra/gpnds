@@ -54,32 +54,54 @@
 								</p>
 
 							</div>
-							<div class= "bod">
-							<div class="containerc">
-							    <div class="comment-box">
-							      <div class="comment-form">
-							      
-							      
-							        <div class="headerb">Agrega tu comentario</div>
-							        <form action="#" onsubmit="event.preventDefault(); postComment()">
-							          <div class="commentWork"> 
-							            <input type="text" id="name" placeholder="Usuario"/>
-							          </div>
-							          <div class="commentWork">
-							            <textarea id="comment" rows="3" cols="30" placeholder="Comentario"></textarea>
-							          </div>
-							          <button type="submit">COMENTAR</button>
-							        </form>  
-							      </div>
-							      <div>
-							        <h4 class="header">Comentarios</h4>
-							        <div id="comments"></div>
-							      </div>
-							      
-							    </div>
-							  </div>
-							  </div>
-		
+							<div class="bcomment">
+							<div class="comments">
+								<div class="comment-wrap">
+										<div class="photo">
+												<div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg')"></div>
+										</div>
+										<div class="comment-block">
+												<form action="">
+														<textarea name="" id="" cols="30" rows="3" placeholder="Add comment..."></textarea>
+														<button type="submit">COMMENT</button>
+														
+												</form>
+										</div>
+								</div>
+
+								<div class="comment-wrap">
+										<div class="photo">
+												<div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg')"></div>
+										</div>
+										<div class="comment-block">
+												<p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus iste nostrum dolorem natus recusandae incidunt voluptatum. Eligendi voluptatum ducimus architecto tempore, quaerat explicabo veniam fuga corporis totam reprehenderit quasi
+														sapiente modi tempora at perspiciatis mollitia, dolores voluptate. Cumque, corrupti?</p>
+												<div class="bottom-comment">
+														<div class="comment-date">Aug 24, 2014 @ 2:35 PM</div>
+														<ul class="comment-actions">
+																<li class="complain">Complain</li>
+																<li class="reply">Reply</li>
+														</ul>
+												</div>
+										</div>
+								</div>
+
+								<div class="comment-wrap">
+										<div class="photo">
+												<div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/felipenogs/128.jpg')"></div>
+										</div>
+										<div class="comment-block">
+												<p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus iste nostrum dolorem natus recusandae incidunt voluptatum. Eligendi voluptatum ducimus architecto tempore, quaerat explicabo veniam fuga corporis totam.</p>
+												<div class="bottom-comment">
+														<div class="comment-date">Aug 23, 2014 @ 10:32 AM</div>
+														<ul class="comment-actions">
+																<li class="complain">Complain</li>
+																<li class="reply">Reply</li>
+														</ul>
+												</div>
+										</div>
+								</div>
+						</div>
 						</div>
 
 
