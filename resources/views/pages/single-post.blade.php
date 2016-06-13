@@ -58,28 +58,28 @@
 							<div class="containerc">
 							    <div class="comment-box">
 							      <div class="comment-form">
-							      
-							      
+
+
 							        <div class="headerb">Agrega tu comentario</div>
 							        <form action="#" onsubmit="event.preventDefault(); postComment()">
-							          <div class="commentWork"> 
+							          <div class="commentWork">
 							            <input type="text" id="name" placeholder="Usuario"/>
 							          </div>
 							          <div class="commentWork">
 							            <textarea id="comment" rows="3" cols="30" placeholder="Comentario"></textarea>
 							          </div>
 							          <button type="submit">COMENTAR</button>
-							        </form>  
+							        </form>
 							      </div>
 							      <div>
 							        <h4 class="header">Comentarios</h4>
 							        <div id="comments"></div>
 							      </div>
-							      
+
 							    </div>
 							  </div>
 							  </div>
-		
+
 						</div>
 
 
@@ -137,26 +137,7 @@
 					<!-- End Sidebar -->
 				</div>
 			</div>
-
-
-	    </div>
-	    
-
-
-        <!-- Javascript -->
-        <script src="assets/js/jquery-1.11.1.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
-        <script src="assets/js/jquery.backstretch.min.js"></script>
-        <script src="assets/js/wow.min.js"></script>
-        <script src="assets/js/retina-1.1.0.min.js"></script>
-        <script src="assets/js/jquery.magnific-popup.min.js"></script>
-        <script src="assets/flexslider/jquery.flexslider-min.js"></script>
-        <script src="assets/js/jflickrfeed.min.js"></script>
-        <script src="assets/js/masonry.pkgd.min.js"></script>
-        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-        <script src="assets/js/jquery.ui.map.min.js"></script>
-        <script src="assets/js/scripts.js"></script>
+		</div>
 		<footer>
 		@include('includes.footer')
 		</footer>
