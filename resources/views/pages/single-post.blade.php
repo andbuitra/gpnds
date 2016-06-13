@@ -40,7 +40,7 @@
 							<div class="comments">
 								<div class="comment-wrap">
 										<div class="photo">
-												<div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg')"></div>
+												<div class="avatar" style="background-image: url('{{Auth::user()->user_image_uri}}')"></div>
 										</div>
 										<div class="comment-block">
 												<form action="">
@@ -50,39 +50,19 @@
 												</form>
 										</div>
 								</div>
-
+								@foreach($comments as $comment)
 								<div class="comment-wrap">
 										<div class="photo">
-												<div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg')"></div>
+												<div class="avatar" style="background-image: url('$comment->user->user_image_uri')"></div>
 										</div>
 										<div class="comment-block">
-												<p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus iste nostrum dolorem natus recusandae incidunt voluptatum. Eligendi voluptatum ducimus architecto tempore, quaerat explicabo veniam fuga corporis totam reprehenderit quasi
-														sapiente modi tempora at perspiciatis mollitia, dolores voluptate. Cumque, corrupti?</p>
+												<p class="comment-text">{{$comment->body}}</p>
 												<div class="bottom-comment">
-														<div class="comment-date">Aug 24, 2014 @ 2:35 PM</div>
-														<ul class="comment-actions">
-																<li class="complain">Complain</li>
-																<li class="reply">Reply</li>
-														</ul>
+														<div class="comment-date">{{$comment->created_at}}</div>
 												</div>
 										</div>
 								</div>
-
-								<div class="comment-wrap">
-										<div class="photo">
-												<div class="avatar" style="background-image: url('https://s3.amazonaws.com/uifaces/faces/twitter/felipenogs/128.jpg')"></div>
-										</div>
-										<div class="comment-block">
-												<p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus iste nostrum dolorem natus recusandae incidunt voluptatum. Eligendi voluptatum ducimus architecto tempore, quaerat explicabo veniam fuga corporis totam.</p>
-												<div class="bottom-comment">
-														<div class="comment-date">Aug 23, 2014 @ 10:32 AM</div>
-														<ul class="comment-actions">
-																<li class="complain">Complain</li>
-																<li class="reply">Reply</li>
-														</ul>
-												</div>
-										</div>
-								</div>
+								@endforeach
 						</div>
 						</div>
 

@@ -22,6 +22,7 @@ class PostsController extends Controller
         'title' => $title,
         'body' => $body,
         'tags' => $tags,
+        'slug' => str_slug($title),
         'user_id' => $user_id
       ]);
       return view('posts.new-post');

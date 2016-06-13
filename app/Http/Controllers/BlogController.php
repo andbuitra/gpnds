@@ -25,7 +25,7 @@ class BlogController extends Controller
       $post_id = $post->post_id;
 
       $comments = DB::table('comments')->select('body', 'user_id', 'created_at')->where('post_id', '=', $post_id)->get();
-      
+
       return view('pages.single-post', compact('post', 'comments'));
     }
 

@@ -10,15 +10,15 @@ class Comments extends Model
     protected $fillable = ['body','post_id','user_id'];
     protected $primaryKey = 'comment_id';
 
-    public function users(){
+    public function user(){
       return $this->belongsTo('App\Models\User');
     }
 
-    public function posts(){
+    public function post(){
       return $this->belongsTo('App\Models\Post');
     }
 
     public function likes_comments(){
-      return $this->hasMany('App\Models\Lokes_Comments');
+      return $this->hasMany('App\Models\Likes_Comments');
     }
 }
