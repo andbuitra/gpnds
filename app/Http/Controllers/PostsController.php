@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Auth;
 
 use App\Models\Post as Post;
 use App\Models\User as User;
@@ -33,7 +34,7 @@ class PostsController extends Controller
       $body = request()->input('body');
       $user_id = Auth::user()->user_id;
       $post_id = request()->input('post_id');
-      Comment::create([
+      $variable = Comment::create([
         'body' => $body,
         'user_id' => $user_id,
         'post_id' => $post_id

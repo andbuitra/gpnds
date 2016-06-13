@@ -43,10 +43,11 @@
 												<div class="avatar" style="background-image: url('{{Auth::user()->user_image_uri}}')"></div>
 										</div>
 										<div class="comment-block">
-												<form action="">
-														<textarea name="" id="" cols="30" rows="3" placeholder="Add comment..."></textarea>
+												<form action="/nuevo/comentario" method="post">
+													{!! csrf_field() !!}
+														<textarea name="body" id="" cols="30" rows="3" placeholder="Add comment..."></textarea>
+														<input type="hidden" name="post_id" value="{{$post->post_id}}">
 														<button type="submit">COMMENT</button>
-
 												</form>
 										</div>
 								</div>
