@@ -4,7 +4,6 @@
 	@include('includes.head')
 	<script src="{{asset('assets/js/jquery.js')}}"></script>
 	<script src="{{asset('assets/bootstrap/js/bootstrap.js')}}"></script>
-	<script src="{{asset('assets/summernote/summernote.js')}}"></script>
 	<link href="{{asset('assets/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
 	<link href="{{asset('assets/summernote/summernote.css')}}" rel="stylesheet">
 	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
@@ -67,6 +66,6 @@
 		<footer>
 		@include('includes.footer')
 	</footer>
-
+	<script src="{{asset('assets/summernote/summernote.js')}}"></script>
 </body>
 </html>
