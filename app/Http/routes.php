@@ -90,6 +90,7 @@ Route::group(['middleware' => ['web', 'auth']], function(){
 Route::group(['middleware' => ['web', 'auth', 'AdminAccess']], function(){
   Route::get('nuevo/post', 'PostsController@showNewPostForm');
   Route::post('nuevo/post', 'PostsController@registrarEntrada');
+  Route::post('nuevo/comentario', 'PostsController@registrarComentario');
 });
 
 Route::group(['middleware' => ['web', 'auth', 'AdminAccess']], function(){

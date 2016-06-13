@@ -8,6 +8,7 @@ use App\Http\Requests;
 
 use App\Models\Post as Post;
 use App\Models\User as User;
+use App\Models\Comments as Comment;
 
 class PostsController extends Controller
 {
@@ -26,6 +27,18 @@ class PostsController extends Controller
         'user_id' => $user_id
       ]);
       return view('posts.new-post');
+    }
+
+    public function registrarComentario(){
+      $body = request()->input('body');
+      $user_id = Auth::user()->user_id;
+      $post_id = request()->input('post_id');
+      Comment::create([
+        'body' => $body,
+        'user_id' => $user_id,
+        'post_id' => $post_id
+      ]);
+      return redirect()->back();
     }
 
     public function showNewPostForm()
