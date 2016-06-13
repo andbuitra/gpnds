@@ -6,7 +6,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    protected $talbe = 'users';
+    protected $table = 'users';
 
     protected $fillable = ['name', 'email', 'password', 'confirmation_code'];
 
@@ -40,6 +40,6 @@ class User extends Authenticatable
     }
 
     public function bans(){
-      return $this->hasMany('App\Models\Bans'):
+      return $this->hasMany('App\Models\Bans');
     }
 }

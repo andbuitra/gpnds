@@ -15,6 +15,6 @@ class Forum_Answers extends Model
     }
 
     public function users(){
-      retunt $this->belongsTo('App\Models\User');
+      return $this->belongsTo('App\Models\User');
     }
 }
