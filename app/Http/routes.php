@@ -94,6 +94,7 @@ Route::group(['middleware' => ['web', 'auth', 'ModAccess']], function(){
 
 Route::group(['middleware' => ['web', 'auth', 'AdminAccess']], function(){
   Route::get('administrar', 'AdminController@showAdminPanel');
+  Route::get('administrar/usuarios', 'AdminController@showUsersPanel');
 });
 
 #
