@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    //
+    protected $table = 'posts'
+
     protected $fillable = ['title','body','tags', 'user_id', 'slug', 'description', 'cover_image'];
 
     protected $primaryKey = 'post_id';
@@ -20,4 +21,7 @@ class Post extends Model
       return $this->hasMany('App\Models\Like');
     }
 
+    public function comments(){
+      return $this->hasMany('App\Models\Comments');
+    }
 }
