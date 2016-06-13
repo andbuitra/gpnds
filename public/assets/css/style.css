@@ -2922,7 +2922,8 @@ figure.thumb {
   font-family: "PT Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   color: #555f77;
   -webkit-font-smoothing: antialiased;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
 }
 .bcomment input, textarea {
   outline: none;

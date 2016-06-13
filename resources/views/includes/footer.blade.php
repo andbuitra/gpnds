@@ -5,8 +5,7 @@
       <h4>Sobre nosotros</h4>
       <div class="footer-box-text">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+         Somos un espacio de reflexión creado por un grupo interdisciplinario de profesionales, para el estudio, intercambio de saberes y generación de acuerdos sobre prácticas de crianza que propendan por el desarrollo adecuado, 
         </p>
         <p><a href="about.html">Leer mas...</a></p>
       </div>
@@ -26,10 +25,7 @@
         <p class="error-message"></p>
       </div>
     </div>
-    <div class="col-sm-3 footer-box wow fadeInUp">
-      <h4>Flickr Photos</h4>
-      <div class="footer-box-text flickr-feed"></div>
-    </div>
+    
     <div class="col-sm-3 footer-box wow fadeInDown">
       <h4>Contact Us</h4>
       <div class="footer-box-text footer-box-text-contact">
