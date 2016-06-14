@@ -6,6 +6,7 @@ use Auth;
 use App\Models\Files as Files;
 use File;
 use Storage;
+use DB;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 
@@ -72,7 +73,7 @@ class StorageController extends Controller
 
     public function listDocsInLibrary()
     {
-      $filenames = Storage::disk('documentos')->allFiles();
+      /*$filenames = Storage::disk('documentos')->allFiles();
       $files = array();
       foreach ($filenames as $filename) {
         $explode = explode('.', $filename);
@@ -82,10 +83,16 @@ class StorageController extends Controller
                       'image_uri' => '/assets/img/'.$explode[1].'.png'
                     ];
         array_push($files, $fileInfo);
-      }
+      }*/
 
-      dd($files);
-      return view('pages.library')->with(compact('files'));
+      $filenames = DB::select('
+        SELECT f.name as fileName, u.name as userName, f.image_uri as image_uri
+        FROM files f
+        INNER JOIN users u
+        ON u.user_id = f.user_id
+      ');
+
+      return view('pages.library')->with(compact('filenames'));
     }
 
     public function inicioDescarga(){
