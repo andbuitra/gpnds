@@ -34,6 +34,10 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('library', 'PagesController@library');
   Route::get('chatp', 'PagesController@chatp');
   Route::get('tpost', 'PagesController@tpost');
+  Route::get('upload', 'StorageController@inicio');
+  Route::post('upload', 'StorageController@upload');
+  Route::get('download', 'StorageController@inicioDescarga');
+  Route::post('download', 'StorageController@download');
 
   #
   # Info related routes
