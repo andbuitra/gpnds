@@ -11,7 +11,6 @@
 
     <footer>
       @include('includes.footer')
-    </footer>
-    @include('includes.javascript')
+    </footer>    
   </body>
 </html>

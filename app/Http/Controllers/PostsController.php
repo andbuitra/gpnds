@@ -6,13 +6,13 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Auth;
+use App\Http\Response;
 
 use App\Models\Post as Post;
 use App\Models\User as User;
 
 class PostsController extends Controller
 {
-
     # TODO agregar la función del slug
     public function registrarEntrada(){
       $title = request()->input('title');
@@ -44,5 +44,60 @@ class PostsController extends Controller
     public function showNewPostForm()
     {
       return view('posts.new-post');
+    }
+
+    public function hasHeAlreadyLikedThisPost()
+    {
+      $slug = request()->input('slug');
+      $user_id = request()->input('user_id');
+
+      $post = Post::where('slug', '=', $slug)->first();
+      $post_id = $post->post_id;
+      $like = Like::where(['user_id' => $user_id, 'post_id' => $post_id]);
+      if($like == null){
+        return response()->json(['success' => false, 'data' => false]);
+      }
+        return response()->json(['success' => true, 'data' => false]);
+    }
+
+    public function addLike()
+    {
+      $slug = request()->input('slug');
+      $user_id = request()->input('user_id');
+
+      $post = Post::where('slug', '=', $slug)->first();
+
+      $like = Like::create(array(
+        'user_id' => $user_id,
+        'post_id' => $post->post_id
+      ));
+
+      if($like){
+        return Response::json(array(
+          'success' => true,
+          'data'   => true
+        ));
+      }else{
+        return Response::json(array(
+          'success' => true,
+          'data'   => false
+        ));
+      }
+    }
+
+    public function dislike()
+    {
+      $slug = request()->input('slug');
+      $user_id = request()->input('user_id');
+
+      $post = Post::where('slug', '=', $slug)->first();
+
+      $like = Like::find([$user_id, $post_id]);
+      $like->destroy;
+
+      return Response::json(array(
+        'success' => true,
+        'data'   => true
+      ));
     }
 }

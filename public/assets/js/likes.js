@@ -2,10 +2,10 @@
 var anchors = document.querySelectorAll('a.like')
 
 Array.prototype.forEach.call(anchors, function(anchor) {
-	anchor.addEventListener('click', explode)
+	anchor.addEventListener('click', executeAnimation)
 })
 
-function explode(e) {
+function executeAnimation(e) {
     [].map.call(anchors, function(el) {
            el.classList.toggle('active');
      });
@@ -15,9 +15,9 @@ function explode(e) {
 	var ctx = c.getContext('2d')
 	var ratio = window.devicePixelRatio
 	var particles = []
-	
+
 	document.body.appendChild(c)
-	
+
 	c.style.position = 'absolute'
 	c.style.left = (x - 50) + 'px'
 	c.style.top = (y - 50) + 'px'
@@ -26,7 +26,7 @@ function explode(e) {
 	c.style.height = 100 + 'px'
 	c.width = 100 * ratio
 	c.height = 100 * ratio
-	
+
 	function Particle() {
 
 		return {
@@ -42,30 +42,30 @@ function explode(e) {
 			gravity: 0
 		}
 	}
-	
+
 	for(var i=0; ++i<15;) {
 		particles.push(Particle())
 	}
-	
-	
-	
+
+
+
 	function render() {
 		ctx.clearRect(0, 0, c.width, c.height)
-		
+
 		particles.forEach(function(p, i) {
-			
+
 			angleTools.moveOnAngle(p, p.speed)
-			
+
 			p.opacity -= 0.01
 			p.speed *= p.friction
 			p.radius *= p.friction
-			
+
 			p.yVel += p.gravity
 			p.y += p.yVel
-			
+
 			if(p.opacity < 0) return
 			if(p.radius < 0) return
-			
+
 			ctx.beginPath()
 			ctx.globalAlpha = p.opacity
 			ctx.fillStyle = p.color
@@ -73,12 +73,12 @@ function explode(e) {
 			ctx.fill()
 		})
 	}
-	
+
 	;(function renderLoop(){
 		requestAnimationFrame(renderLoop)
 		render()
 	})()
-	
+
 	setTimeout(function() {
 		document.body.removeChild(c)
 	}, 3000)

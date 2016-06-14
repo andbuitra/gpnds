@@ -95,6 +95,9 @@ Route::group(['middleware' => ['web', 'auth', 'AdminAccess']], function(){
   Route::get('nuevo/post', 'PostsController@showNewPostForm');
   Route::post('nuevo/post', 'PostsController@registrarEntrada');
   Route::post('nuevo/comentario', 'PostsController@registrarComentario');
+  Route::post('like', 'PostsController@addLike');
+  Route::post('like/alreadyLiked', 'PostsController@hasHeAlreadyLikedThisPost');
+  Route::post('dislike', 'PostsController@dislike');
 });
 
 Route::group(['middleware' => ['web', 'auth', 'AdminAccess']], function(){

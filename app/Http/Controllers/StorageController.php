@@ -38,7 +38,7 @@ class StorageController extends Controller
       if(Storage::disk('documentos')->exists($name)){
         # TODO cambiar por vista
         File::create(array(
-          
+
         ));
         return "Subida exitosa";
       }
@@ -60,7 +60,7 @@ class StorageController extends Controller
         array_push($files, $fileInfo);
       }
 
-      dd($files);
+      
       return view('pages.library')->with(compact('files'));
     }
 

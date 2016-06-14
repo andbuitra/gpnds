@@ -1,6 +1,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <title>Grupo de Puericultura de Norte de Santander</title>
 
 <!-- CSS -->
@@ -13,10 +14,12 @@
 <link rel="stylesheet" href="{{ asset('assets/font-awesome/css/font-awesome.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/flexslider/flexslider.css') }}">      
+<link rel="stylesheet" href="{{ asset('assets/flexslider/flexslider.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/form-Login.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/media-queries.css') }}">
+
+<script src="{{asset('assets/js/jquery-1.11.1.min.js')}}"></script>
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
