@@ -23,14 +23,6 @@ class User extends Authenticatable
       return $this->belongsTo('App\Models\Specialist');
     }
 
-    public function comment(){
-      return $this->hasMany('App\Models\Comments');
-    }
-
-    public function likes_comments(){
-      return $this->hasMany('App\Models\Likes_Comments');
-    }
-
     public function forum_answers(){
       return $this->hasMany('App\Models\Forum_Answers');
     }
