@@ -47,7 +47,7 @@ class StorageController extends Controller
     public function listDocsInLibrary()
     {
       $filenames = DB::select('
-        SELECT f.name as fileName, u.name as userName, f.image_uri as image_uri
+        SELECT f.name as fileName, u.name as userName, f.image_uri as image_uri, f.url
         FROM files f
         INNER JOIN users u
         ON u.user_id = f.user_id
