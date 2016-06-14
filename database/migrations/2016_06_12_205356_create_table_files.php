@@ -14,11 +14,12 @@ class CreateTableFiles extends Migration
     {
         Schema::create('files', function(Blueprint $table){
           $table->increments('file_id')->unsigned();
+          $table->string('url');
+          $table->string('name');
+          $table->string('ext');
+          $table->string('image_uri');
           $table->integer('user_id')->unsigned();
-          $table->string('filename');
-          $table->text('route');
           $table->timestamps();
-
           $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
         });
     }

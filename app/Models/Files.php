@@ -1,13 +1,13 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class File extends Model
+class Files extends Model
 {
     protected $table = 'files';
-    protected $fillable = ['file_name','route','user_id'];
+    protected $fillable = ['url','name','ext','image_uri','user_id'];
     protected $primaryKey = 'file_id';
 
     public function users(){

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
+use App\Models\Files as Files;
 use File;
 use Storage;
 use Illuminate\Http\Request;
@@ -15,18 +17,28 @@ class StorageController extends Controller
 
     # FOR TESTING ONLY - DELETE WHEN ON PRODUCTION
     public function upload(){
-      // Obtenemos el campo file definido en el formulario
       $file = request()->file('file');
-
-      // Ahora obtenemos el nombre correspondiente
-      $nombre = $file->getClientOriginalName();
-      $fixedName = str_replace(':', "-", $nombre);
-
-      // Indicamos si queremos guardar el nuevo archivo en el disco local
+      $name = $file->getClientOriginalName();
+      $fixedName = str_replace(':', "-", $name);
       Storage::disk('documentos')->put($fixedName, File::get($file));
-
-      return "subió";
-
+      if(Storage::disk('documentos')->exists($name)){
+        # TODO cambiar por vista
+        $explode = explode('.',$name);
+        $cantidad = count($explode);
+        $arrayNombre = array_slice($explode,0,$cantidad-2);
+        $ext = $explode[$cantidad-1];
+        $nombre = str_replace('.'.$ext,'',$name);
+        Files::create([
+          'url' => storage_path('documentos/'.$name),
+          'name' => $nombre,
+          'ext' => $ext,
+          'image_uri' => '/assets/img/'.$ext.'.png',
+          'user_id' => Auth::user()->user_id
+        ]);
+        return "Subida exitosa";
+      }
+      # TODO cambiar por vista
+      return "Paila";
     }
 
     public function uploadDoc()
@@ -37,9 +49,21 @@ class StorageController extends Controller
       Storage::disk('documentos')->put($fixedName, File::get($file));
       if(Storage::disk('documentos')->exists($name)){
         # TODO cambiar por vista
-        File::create(array(
-          
-        ));
+        $explode = explode('.',$name);
+        $cantidad = count($explode);
+        $arrayNombre = array_slice($explode,0,$cantidad-2);
+        $nombre;
+        foreach ($arrayNombre as $parteNombre) {
+          $nombre += $parteNombre;
+        }
+        $ext = $explode[$cantidad-1];
+        File::create([
+          'url' => storage_path('documentos/'.$name),
+          'name' => $name,
+          'ext' => $ext,
+          'image_uri' => '/assets/img/'.$ext.'.png',
+          'user_id' => Auth::user()->user_id
+        ]);
         return "Subida exitosa";
       }
       # TODO cambiar por vista
