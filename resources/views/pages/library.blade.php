@@ -19,103 +19,15 @@
 		<div class="col-sm-12 wow fadeIn">
 
 			<div class="content">
+				@foreach($files as $file)
 				<figure class="thumb">
 					<div class="cover">
-						<img src="assets/img/jpg.png"/>
+						<img src="{{$file['image_uri']}}"/>
 					</div>
-					<h2>Logo puericultura</h2>
+					<h2>{{$file['name']}}</h2>
 					<a class="btn btn-default" href="assets/img/logo.png" download="logo.png">Descargar</a>
 				</figure>
-
-				<figure class="thumb">
-					<div class="cover">
-						<img src="assets/img/jpg.png" />
-					</div>
-					<h2>Fondo 1</h2>
-					<a class="btn btn-default" href="assets/img/slider/1.jpg" download="1.jpg">Descargar</a>
-				</figure>
-
-				<figure class="thumb">
-					<div class="cover">
-						<img src="assets/img/jpg.png" />
-					</div>
-					<h2>Fondo 2</h2>
-					<a class="btn btn-default" href="assets/img/slider/2.jpg" download="2.jpg">Descargar</a>
-				</figure>
-
-				<figure class="thumb">
-					<div class="cover">
-						<img src="assets/img/pdf.png"/>
-					</div>
-					<h2>Manual de puericultura</h2>
-					<a class="btn btn-default" href="assets/archivos/Manual_de_Puericultura.pdf" download="manual.pdf">Descargar</a>
-				</figure>
-
-				<figure class="thumb">
-					<div class="cover">
-						<img src="assets/img/word.png" />
-					</div>
-					<h2>Cuidados prematuros</h2>
-					<a class="btn btn-default" href="assets/archivos/CUIDADOSPREMATUROS.docx" download="cuidados.docx">Descargar</a>
-				</figure>
-
-				<figure class="thumb">
-					<div class="cover">
-						<img src="assets/img/jpg.png" />
-					</div>
-					<h2>SCP Folleto</h2>
-					<a class="btn btn-default" href="assets/archivos/scp.png" download="scp.png">Descargar</a>
-				</figure>
-			</div>
-			<div class="content">
-				<figure class="thumb">
-					<div class="cover">
-						<img src="assets/img/jpg.png"/>
-					</div>
-					<h2>Logo puericultura</h2>
-					<a class="btn btn-default" href="assets/img/logo.png" download="logo.png">Descargar</a>
-				</figure>
-
-				<figure class="thumb">
-					<div class="cover">
-						<img src="assets/img/jpg.png" />
-					</div>
-					<h2>Fondo 1</h2>
-					<a class="btn btn-default" href="assets/img/slider/1.jpg" download="1.jpg">Descargar</a>
-				</figure>
-
-				<figure class="thumb">
-					<div class="cover">
-						<img src="assets/img/jpg.png" />
-					</div>
-					<h2>Fondo 2</h2>
-					<a class="btn btn-default" href="assets/img/slider/2.jpg" download="2.jpg">Descargar</a>
-				</figure>
-
-				<figure class="thumb">
-					<div class="cover">
-						<img src="assets/img/pdf.png"/>
-					</div>
-					<h2>Manual de puericultura</h2>
-					<a class="btn btn-default" href="assets/archivos/Manual_de_Puericultura.pdf" download="manual.pdf">Descargar</a>
-				</figure>
-
-				<figure class="thumb">
-					<div class="cover">
-						<img src="assets/img/word.png" />
-					</div>
-					<h2>Cuidados prematuros</h2>
-					<a class="btn btn-default" href="assets/archivos/CUIDADOSPREMATUROS.docx" download="cuidados.docx">Descargar</a>
-				</figure>
-
-				<figure class="thumb">
-					<div class="cover">
-						<img src="assets/img/jpg.png" />
-					</div>
-					<h2>SCP Folleto</h2>
-					<a class="btn btn-default" href="assets/archivos/scp.png" download="scp.png">Descargar</a>
-				</figure>
-
+				@endforeach
 			</div>
 			<div class="content"></div>
 

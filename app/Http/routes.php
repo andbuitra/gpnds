@@ -31,7 +31,7 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('contacto', 'PagesController@contacto');
   Route::get('galeria', 'PagesController@galeria');
   Route::get('questions', 'PagesController@questions');
-  Route::get('library', 'PagesController@library');
+  Route::get('library', 'StorageController@listDocsInLibrary');
   Route::get('chatp', 'PagesController@chatp');
   Route::get('tpost', 'PagesController@tpost');
   Route::get('upload', 'StorageController@inicio');

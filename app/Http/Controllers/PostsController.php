@@ -9,7 +9,6 @@ use Auth;
 
 use App\Models\Post as Post;
 use App\Models\User as User;
-use App\Models\Comments as Comment;
 
 class PostsController extends Controller
 {
