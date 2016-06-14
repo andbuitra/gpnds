@@ -51,25 +51,10 @@
 												</form>
 										</div>
 								</div>
-								@foreach($comments as $comment)
-								<div class="comment-wrap">
-										<div class="photo">
-												<div class="avatar" style="background-image: url('$comment->user->user_image_uri')"></div>
-										</div>
-										<div class="comment-block">
-												<p class="comment-text">{{$comment->body}}</p>
-												<div class="bottom-comment">
-														<div class="comment-date">{{$comment->created_at}}</div>
-												</div>
-										</div>
-								</div>
-								@endforeach
 						</div>
 						</div>
 
 						</div>
-
-
 
 
 					</div>

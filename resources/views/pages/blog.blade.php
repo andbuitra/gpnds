@@ -22,23 +22,26 @@
 		<div class="row">
 
 			<!-- POST -->
-			<div class="col-sm-4 posts-1-box posts-1-box-best wow fadeInDown">
-				<div class="posts-1-box-inner">
+			@foreach($mostLikedPosts as $post)
 
-					<h3>Ultimos cuidados con la alimentacion de ni&ntilde;os</h3>
-					<h4><i class="glyphicon glyphicon-time"></i>15 OCT, 2014 <a href="#" title="Show Comments"><i class="glyphicon glyphicon-comment"></i>11</a></h4>
-					<div class="posts-1-box-features">
-						<ul>
-							<img src="assets/img/articulos/1.jpg">
-							<li>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis, nulla id pretium malesuada, dui est laoreet risus, ac rhoncus eros diam id odio....</li>
+				<div class="col-sm-4 posts-1-box posts-1-box-best wow fadeInDown">
+					<div class="posts-1-box-inner">
 
-						</ul>
-					</div>
-					<div class="posts-1-box-sign-up">
-						<a class="big-link-3" href="/blog/post">Leer mas</a>
+						<h3>{{$post->title}}</h3>
+						<h4><i class="glyphicon glyphicon-time"></i>{{$post->created_at}} <a href="#" title="Show Comments"><i class="glyphicon glyphicon-comment"></i>11</a></h4>
+						<div class="posts-1-box-features">
+							<ul>
+								<img src="{{$post->cover_image}}">
+								<li>{{$post->description}}</li>
+							</ul>
+						</div>
+						<div class="posts-1-box-sign-up">
+							<a class="big-link-3" href="/blog/{{$post->slug}}">Leer más</a>
+						</div>
 					</div>
 				</div>
-			</div>
+
+			@endforeach
 
 			<!-- FINAL DEL POST -->
 

@@ -14,9 +14,23 @@ class BlogController extends Controller
     public function mainBlogList()
     {
       $recentPosts = Post::orderBy('created_at', 'desc')->get()->take(4)->toArray();
-      #Pending
-      $bestPosts = [];
-      return view('pages.blog', compact('recentPosts', 'bestPosts'));
+      $mostLikedPostsQuery = DB::select('
+        SELECT posts.post_id, COUNT( posts.post_id ) AS PostIdCounter2
+        FROM posts
+        JOIN likes ON posts.post_id = likes.post_id
+        GROUP BY posts.post_id
+        ORDER BY PostIdCounter2 DESC
+        LIMIT 0 , 3
+      ');
+      $currentPost;
+      $mostLikedPosts = array();
+      foreach($mostLikedPostsQuery As $post){
+        $currentPost = DB::table('posts')->where('post_id', $post->post_id)->get();
+        $post2 = $currentPost[0];
+        array_push($mostLikedPosts, $post2);
+      }
+
+      return view('pages.blog', compact('recentPosts', 'mostLikedPosts'));
     }
 
     public function blogPost($slug){
@@ -24,12 +38,27 @@ class BlogController extends Controller
 
       $post_id = $post->post_id;
 
-      $comments = DB::table('comments')->select('body', 'user_id', 'created_at')->where('post_id', '=', $post_id)->get();
-
-      return view('pages.single-post', compact('post', 'comments'));
+      return view('pages.single-post', compact('post'));
     }
 
     public function test(){
-      return view('pages.single-post');
+
+      $mostLikedPostsQuery = DB::select('
+        SELECT posts.post_id, COUNT( posts.post_id ) AS PostIdCounter2
+        FROM posts
+        JOIN likes ON posts.post_id = likes.post_id
+        GROUP BY posts.post_id
+        ORDER BY PostIdCounter2 DESC
+        LIMIT 0 , 4
+      ');
+      $currentPost;
+      $mostLikedPosts = array();
+      foreach($mostLikedPostsQuery As $post){
+        $currentPost = DB::table('posts')->where('post_id', $post->post_id)->get();
+        $post2 = $currentPost[0];
+        array_push($mostLikedPosts, $post2);
+      }
+
+      dd($mostLikedPosts);
     }
 }

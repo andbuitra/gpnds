@@ -49,7 +49,7 @@ Route::group(['middleware' => ['web']], function () {
   Route::get('blog', 'BlogController@mainBlogList');
   Route::get('blog/{slug}', 'BlogController@blogPost');
   # Only for testing
-  Route::get('blog/post/{id}', 'BlogController@test');
+  Route::get('pruebablog/testing', 'BlogController@test');
 
   #
   # Authentication related routes
