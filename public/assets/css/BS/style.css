@@ -221,6 +221,12 @@ ul.top-menu > li > .logout {
 
 
 /*sidebar navigation*/
+.alineacionPosts{
+    margin-left: 300px;
+    padding-left: 300px;
+    text-align: center;
+    align-content: center;
+}
 
 #sidebar {
     width: 210px;
@@ -2305,11 +2311,12 @@ label {
 
 
 .tableA h1 {
-  font-weight: normal;
+  
   letter-spacing: -1px;
   color: #34495E;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Lobster', cursive;
   padding-left: 120px;
+  font-size: 50px;
 }
 
 .rwd-table {
@@ -2317,7 +2324,7 @@ label {
   color: #fff;
   border-radius: 1px;
   overflow: hidden;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', cursive;
   
 }
 .rwd-table tr {
@@ -2335,4 +2342,41 @@ label {
 }
 .rwd-table th, .rwd-table td:before {
   color: #de748f;
+}
+/*Estilo formulario preguntas*/
+
+.preguntas input, textarea, select {
+  float: left;
+  width: 60%;
+  max-width: 100%;
+  border: none;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background: white;
+  color: #7a7a7a;
+  
+}
+.preguntas input[type=submit], textarea[type=submit] {
+  background: #f7819f;
+  color: #fff;
+  width: 100px;
+  height: 50px;
+  font-size: 15px;
+  
+  float: center;
+}
+.preguntas input::placeholder, textarea::placeholder {
+  color: #7a7a7a;
+}
+.preguntas input.error, textarea.error {
+  background: #AD4747;
+  color: #fff;
+}
+.preguntas input.error::placeholder, textarea.error::placeholder {
+  color: black;
+}
+
+.preguntas textarea {
+  height: 10rem;
 }
