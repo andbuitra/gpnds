@@ -202,7 +202,7 @@
 
                             <tr>
                               <td >Usuario</td>
-                              <td > <input type="text" value="{{$user->name}}" name="user" required></td>
+                              <td > <input type="text" value="{{$usuario->name}}" name="user" required></td>
 
                             </tr>
 
