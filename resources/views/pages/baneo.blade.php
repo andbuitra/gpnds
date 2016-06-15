@@ -10,23 +10,20 @@
     <title>GPNS Admin</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/BS/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/BS/bootstrap.css" rel="stylesheet">
     <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="assets/css/BS/zabuto_calendar.css">
-    <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
-    <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans">
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
+    <link href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/BS/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="/assets/js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/lineicons/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
 
     <!-- Custom styles for this template -->
-    <link href="assets/css/BS/style.css" rel="stylesheet">
-    <link href="assets/css/BS/style-responsive.css" rel="stylesheet">
+    <link href="/assets/css/BS/style.css" rel="stylesheet">
+    <link href="/assets/css/BS/style-responsive.css" rel="stylesheet">
 
-    <script src="assets/js/chart-master/Chart.js"></script>
-    <link rel="shortcut icon" href="assets/ico/icono.jpg">
+    <script src="/assets/js/chart-master/Chart.js"></script>
+    <link rel="shortcut icon" href="/assets/ico/icono.jpg">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
