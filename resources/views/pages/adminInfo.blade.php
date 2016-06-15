@@ -157,7 +157,7 @@
                   <h5 class="centered">Marcel Newman</h5>
 
                   <li class="mt">
-                      <a class="active" href="index.html">
+                      <a  href="index.html">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
@@ -173,11 +173,18 @@
 
                   </li>
                    <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a class="active" href="javascript:;" >
                           <i class=" fa fa-user"></i>
                           <span>Informacion</span>
                       </a>
 
+                  </li>
+                  <li class="sub-menu">
+                      <a  href="javascript:;" >
+                          <i class=" fa fa-user"></i>
+                          <span>Crear un post</span>
+                      </a>
+                      
                   </li>
 
               </ul>

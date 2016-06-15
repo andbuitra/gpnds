@@ -172,6 +172,20 @@
                       </a>
 
                   </li>
+                  <li class="sub-menu">
+                      <a  href="javascript:;" >
+                          <i class=" fa fa-user"></i>
+                          <span>Informacion</span>
+                      </a>
+                      
+                  </li>
+                  <li class="sub-menu">
+                      <a  href="javascript:;" >
+                          <i class=" fa fa-user"></i>
+                          <span>Crear un post</span>
+                      </a>
+                      
+                  </li>
 
               </ul>
               <!-- sidebar menu end-->

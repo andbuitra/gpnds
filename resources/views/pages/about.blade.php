@@ -1,5 +1,19 @@
 @extends('layouts.master')
 @section('content')
+
+<div class="page-title-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 wow fadeIn">
+                        <i class="fa fa-pencil"></i>
+                        <h1>Sobre nosotros /</h1>
+                        <p>Nuestra Mision y vision.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 <div class="about-us-container">
 	<div class="container">
 		<div class="row">

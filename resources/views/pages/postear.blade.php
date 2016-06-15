@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+ <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/BS/zabuto_calendar.css">
     <link rel="stylesheet" type="text/css" href="/assets/js/gritter/css/jquery.gritter.css" />
     <link rel="stylesheet" type="text/css" href="/assets/lineicons/style.css">
-
+          <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
     <!-- Custom styles for this template -->
     <link href="/assets/css/BS/style.css" rel="stylesheet">
     <link href="/assets/css/BS/style-responsive.css" rel="stylesheet">
@@ -58,7 +58,7 @@
                             <li>
                                 <p class="green">Tiene 1 tarea pendientes</p>
                             </li>
-
+                            
                             <li>
                                 <a href="#">
                                     <div class="task-info">
@@ -72,7 +72,7 @@
                                     </div>
                                 </a>
                             </li>
-
+                            
                             <li class="external">
                                 <a href="#">Ver todas las tareas</a>
                             </li>
@@ -126,7 +126,7 @@
                                     </span>
                                 </a>
                             </li>
-
+                            
                             <li>
                                 <a href="#">Ver todos los mensajes</a>
                             </li>
@@ -143,7 +143,7 @@
             </div>
         </header>
       <!--header end-->
-
+      
       <!-- **********************************************************************************************************************************************************
       MAIN SIDEBAR MENU
       *********************************************************************************************************************************************************** -->
@@ -152,36 +152,35 @@
           <div id="sidebar"  class="nav-collapse ">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
-
+              
                   <p class="centered"><a href="profile.html"><img src="assets/img/friends/fr-05.jpg" class="img-circle" width="60"></a></p>
-                  <h5 class="centered">{{Auth::user()->name}}</h5>
-
+                  <h5 class="centered">Marcel Newman</h5>
+                    
                   <li class="mt">
-                      <a href="/administrar">
+                      <a  href="index.html">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
                   </li>
 
-
-
+                  
+                  
                   <li class="sub-menu">
-                      <a class="active" href="javascript:;" >
+                      <a href="javascript:;" >
                           <i class=" fa fa-user"></i>
                           <span>Usuarios</span>
                       </a>
-
+                      
                   </li>
                    <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class=" fa fa-user"></i>
                           <span>Informacion</span>
                       </a>
-
+                      
                   </li>
-
-                  <li class="sub-menu">
-                      <a  href="javascript:;" >
+                   <li class="sub-menu">
+                      <a class="active" href="javascript:;" >
                           <i class=" fa fa-user"></i>
                           <span>Crear un post</span>
                       </a>
@@ -193,7 +192,7 @@
           </div>
       </aside>
       <!--sidebar end-->
-
+      
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
@@ -203,56 +202,20 @@
 
               <div class="row">
                   <div class="col-lg-9 main-chart">
-                      <div class="row mtbox">
-                      <div class="tableA">
-                        <h1>Lista de usuarios</h1>
-                          <table class="rwd-table">
-                            <tr>
-                              <th>Id</th>
-                              <th>Nombre</th>
-                              <th>Username</th>
-                              <th>Email</th>
-                              <th>Fecha de registro</th>
-                            </tr>
-                            @foreach($users as $user)
-                              <tr>
-                                <td data-th="Id">{{$user->user_id}}</td>
-                                <td data-th="Nombre">{{$user->name}}</td>
-                                <td data-th="Username">{{$user->username}}</td>
-                                <td data-th="Email">{{$user->email}}</td>
-                                <td data-th="Fecha de Registro">{{$user->created_at}}</td>
-                                <td><a href="/administrar/usuarios/{{$user->user_id}}">Castigar</a></td>
-                              </tr>
-                            @endforeach
-
-                          </table>
-                          </div>
-
-
-
-
-                        </div><!-- /row -->
-                        <div class="row">
-            <!-- TWITTER PANEL -->
-      <!-- /col-md-4 -->
-          </div><!-- /row -->
-          <div class="row mt">
-                      <!--CUSTOM CHART START -->
-
-                      <!--custom chart end-->
-          </div><!-- /row -->
-
-          </div><!-- /col-lg-9 END SECTION MIDDLE -->
-
-
+                  <!-- Aqui lo que quieran incluir -->
+                    
+          
+                  </div>
+                  
+                  
       <!-- **********************************************************************************************************************************************************
       RIGHT SIDEBAR CONTENT
-      *********************************************************************************************************************************************************** -->
-
+      *********************************************************************************************************************************************************** -->                  
+                  
                   <div class="col-lg-3 ds">
                     <!--COMPLETED ACTIONS DONUTS CHART-->
             <h3>NOTIFICACIONES</h3>
-
+                                        
                       <!-- First Action -->
                       <div class="desc">
                         <div class="thumb">
@@ -380,7 +343,7 @@
                                 </div>
                             </div>
                         </div><!-- / calendar -->
-
+                      
                   </div><!-- /col-lg-3 -->
               </div><! --/row -->
           </section>
@@ -411,14 +374,14 @@
 
     <!--common script for all pages-->
     <script src="assets/js/common-scripts.js"></script>
-
+    
     <script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
     <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
 
     <!--script for this page-->
-    <script src="assets/js/sparkline-chart.js"></script>
-  <script src="assets/js/zabuto_calendar.js"></script>
-
+    <script src="assets/js/sparkline-chart.js"></script>    
+  <script src="assets/js/zabuto_calendar.js"></script>  
+  
   <script type="text/javascript">
         $(document).ready(function () {
         var unique_id = $.gritter.add({
@@ -439,7 +402,7 @@
         return false;
         });
   </script>
-
+  
   <script type="application/javascript">
         $(document).ready(function () {
             $("#date-popover").popover({html: true, trigger: "manual"});
@@ -447,7 +410,7 @@
             $("#date-popover").click(function (e) {
                 $(this).hide();
             });
-
+        
             $("#my-calendar").zabuto_calendar({
                 action: function () {
                     return myDateFunction(this.id, false);
@@ -465,8 +428,8 @@
                 ]
             });
         });
-
-
+        
+        
         function myNavFunction(id) {
             $("#date-popover").hide();
             var nav = $("#" + id).data("navigation");
@@ -474,7 +437,7 @@
             console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
         }
     </script>
-
+  
 
   </body>
 </html>
