@@ -22,7 +22,7 @@
     <link href="/assets/css/BS/style-responsive.css" rel="stylesheet">
 
     <script src="/assets/js/chart-master/Chart.js"></script>
-    <link rel="shortcut icon" href="assets/ico/icono.jpg">
+    <link rel="shortcut icon" href="/assets/ico/icono.jpg">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -157,7 +157,7 @@
                   <h5 class="centered">{{Auth::user()->name}}</h5>
 
                   <li class="mt">
-                      <a class="active" href="index.html">
+                      <a class="active" href="/administrar">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>

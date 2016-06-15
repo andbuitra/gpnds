@@ -157,7 +157,7 @@
                   <h5 class="centered">{{Auth::user()->name}}</h5>
 
                   <li class="mt">
-                      <a href="index.html">
+                      <a href="/administrar">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
@@ -206,6 +206,7 @@
                                 <td data-th="Username">{{$user->username}}</td>
                                 <td data-th="Email">{{$user->email}}</td>
                                 <td data-th="Fecha de Registro">{{$user->created_at}}</td>
+                                <td><a href="/administrar/usuarios/{{$user->user_id}}">Castigar</a></td>
                               </tr>
                             @endforeach
 
