@@ -106,6 +106,7 @@ Route::group(['middleware' => ['web', 'auth']], function(){
 
 Route::group(['middleware' => ['web', 'auth']], function(){
   Route::get('preguntas', 'ForumController@listQuestions');
+  Route::get('pregunta/{slug}', 'ForumController@getQuestion');
   Route::get('nuevo/pregunta', 'ForumController@newQuestion');
   Route::post('nuevo/pregunta', 'ForumController@askQuestion');
   Route::post('nuevo/respuesta', 'ForumController@reply');

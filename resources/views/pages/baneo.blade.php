@@ -16,10 +16,6 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/BS/zabuto_calendar.css">
     <link rel="stylesheet" type="text/css" href="/assets/js/gritter/css/jquery.gritter.css" />
     <link rel="stylesheet" type="text/css" href="/assets/lineicons/style.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans">
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
 
     <!-- Custom styles for this template -->
     <link href="/assets/css/BS/style.css" rel="stylesheet">

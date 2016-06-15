@@ -32,13 +32,15 @@
 			<div class="col-sm-12 posts-1-box posts-1-box-best wow fadeInDown">
 				<div class="posts-1-box-inner">
 					<div class="preguntas">
-					<form action="">
+					<form action="/nuevo/pregunta" method="post">
 
+						{{ csrf_field() }}
 					  <input type="text" placeholder="Titulo de la pregunta..." name="title" required>
 
-					  <textarea placeholder="Explica tu pregunta..." name="pregunta" required></textarea>		  
+					  <textarea placeholder="Explica tu pregunta..." name="body" required></textarea>
 
-					  
+						<input type="text" placeholder="Tags" name="tags" required>
+
 
 					  <input type="submit" value="Preguntar">
 
@@ -49,7 +51,7 @@
 			<!-- FINAL -->
 
 
-					
+
 		</div>
 	</div>
 </div>
