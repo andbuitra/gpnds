@@ -14,8 +14,8 @@ class BansController extends Controller
     public function banearPersona(){
       $user_id = request()->input('user_id');
       $description = request()->input('description');
-      $typeBan = TB::where('description', $description);
-      $meses = request()->inputs('meses');
+      $typeBan = TB::where('description', $description)->first();
+      $meses = request()->input('meses');
       $fecha = C::now()->addMonths($meses);
       B::create([
         'user_id' => $user_id,

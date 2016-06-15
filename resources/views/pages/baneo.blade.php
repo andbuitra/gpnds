@@ -10,23 +10,23 @@
     <title>GPNS Admin</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/BS/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/BS/bootstrap.css" rel="stylesheet">
     <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="assets/css/BS/zabuto_calendar.css">
-    <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
-    <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">
+    <link href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/BS/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="/assets/js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/lineicons/style.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans">
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
 
     <!-- Custom styles for this template -->
-    <link href="assets/css/BS/style.css" rel="stylesheet">
-    <link href="assets/css/BS/style-responsive.css" rel="stylesheet">
+    <link href="/assets/css/BS/style.css" rel="stylesheet">
+    <link href="/assets/css/BS/style-responsive.css" rel="stylesheet">
 
-    <script src="assets/js/chart-master/Chart.js"></script>
-    <link rel="shortcut icon" href="assets/ico/icono.jpg">
+    <script src="/assets/js/chart-master/Chart.js"></script>
+    <link rel="shortcut icon" href="/assets/ico/icono.jpg">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -198,21 +198,21 @@
                         <div class="preguntas">
                         <table class="rwd-table">
 
-                            <form action="">
-
+                            <form action="/administrar/banear" method="post">
+                                {!! csrf_field() !!}
                             <tr>
                               <td >Usuario</td>
                               <td > <input type="text" value="{{$usuario->name}}" name="user" required></td>
-
+                              <input type="hidden" name="user_id" value="{{$usuario->user_id}}">
                             </tr>
 
 
                             <tr>
                               <td >Descripcion</td>
                               <td > <select>
-                                    <optgroup label="optgroup">
+                                    <optgroup label="description">
                                       @foreach ($tiposBans as $tipoBaneo)
-                                        <option name="description" value="{{$tipoBaneo->description}}"></option>
+                                        <option name="description" value="{{$tipoBaneo->description}}">{{$tipoBaneo->description}}</option>
                                       @endforeach
                                     </optgroup>
                                   </select></td>
@@ -224,7 +224,7 @@
                             </tr>
                             <tr>
                             <td>
-                             <input type="submit" value="Preguntar">
+                             <button type="submit" > Enviar</button>
                              </td>
                              </tr>
                             </form>
@@ -415,24 +415,24 @@
   </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/jquery-1.8.3.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="assets/js/jquery.scrollTo.min.js"></script>
-    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-    <script src="assets/js/jquery.sparkline.js"></script>
+    <script src="/assets/js/jquery.js"></script>
+    <script src="/assets/js/jquery-1.8.3.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="/assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="/assets/js/jquery.scrollTo.min.js"></script>
+    <script src="/assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+    <script src="/assets/js/jquery.sparkline.js"></script>
 
 
     <!--common script for all pages-->
-    <script src="assets/js/common-scripts.js"></script>
+    <script src="/assets/js/common-scripts.js"></script>
 
-    <script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
-    <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
+    <script type="text/javascript" src="/assets/js/gritter/js/jquery.gritter.js"></script>
+    <script type="text/javascript" src="/assets/js/gritter-conf.js"></script>
 
     <!--script for this page-->
-    <script src="assets/js/sparkline-chart.js"></script>
-  <script src="assets/js/zabuto_calendar.js"></script>
+    <script src="/assets/js/sparkline-chart.js"></script>
+  <script src="/assets/js/zabuto_calendar.js"></script>
 
   <script type="text/javascript">
         $(document).ready(function () {

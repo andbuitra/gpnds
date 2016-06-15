@@ -131,6 +131,7 @@ Route::group(['middleware' => ['web', 'auth', 'AdminAccess']], function(){
   Route::get('administrar', 'AdminController@showAdminPanel');
   Route::get('administrar/usuarios', 'AdminController@showUsersPanel');
   Route::get('administrar/usuarios/{user_id}','BansController@panelBaneo');
+  Route::post('administrar/banear','BansController@banearPersona');
 });
 
 #
