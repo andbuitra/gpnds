@@ -30,38 +30,29 @@
 
 			<!-- POST -->
 			<div class="alineacionPosts">
+				@foreach($posts as $post)
+
+
 			<div class="col-sm-8 posts-1-box posts-1-box-best wow fadeInDown">
 				<div class="posts-1-box-inner">
 
-					<a href="/blog/post"><h3>Ultimos cuidados con la alimentacion de ni&ntilde;os</h3></a>
-					<h4><i class="glyphicon glyphicon-time"></i>15 OCT, 2014 <a href="#" title="Show Comments"><i class="glyphicon glyphicon-comment"></i>11</a></h4>
+					<a href="/blog/{{$post->slug}}"><h3>{{$post->title}}</h3></a>
+					<h4><i class="glyphicon glyphicon-time"></i>{{$post->created_at}} <a href="#" title="Show Comments"><i class="glyphicon glyphicon-comment"></i>11</a></h4>
 					<div class="posts-1-box-features">
 						<ul>
-							<img src="assets/img/articulos/1.jpg">
-							<li>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis, nulla id pretium malesuada, dui est laoreet risus, ac rhoncus eros diam id odio....</li>
+							<img src="{{$post->cover_image}}">
+							<li>{{$post->description}}</li>
 
 						</ul>
 					</div>
-					
+
 				</div>
 			</div>
-			
-			<div class="col-sm-8 posts-1-box posts-1-box-best wow fadeInDown">
-				<div class="posts-1-box-inner">
+			@endforeach
 
-					<h3>Ultimos cuidados con la alimentacion de ni&ntilde;os</h3>
-					<h4><i class="glyphicon glyphicon-time"></i>15 OCT, 2014 <a href="#" title="Show Comments"><i class="glyphicon glyphicon-comment"></i>11</a></h4>
-					<div class="posts-1-box-features">
-						<ul>
-							<img src="assets/img/articulos/3.jpg">
-							<li>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis, nulla id pretium malesuada, dui est laoreet risus, ac rhoncus eros diam id odio....</li>
+			{!! $posts->render() !!}
 
-						</ul>
-					</div>
-					
-				</div>
-			</div>
-
+				<!--
 				<ul class="paginationB modal-1">
 			  <li><a href="#" class="prev">&laquo</a></li>
 			  <li><a href="#" class="active">1</a></li>
@@ -69,15 +60,17 @@
 			  <li> <a href="#">3</a></li>
 			  <li> <a href="#">4</a></li>
 			  <li> <a href="#">5</a></li>
-			  <li> <a href="#">6</a></li>			 			  
+			  <li> <a href="#">6</a></li>
 			  <li><a href="#" class="next">&raquo;</a></li>
 			</ul><br>
 			</div>
 
+		-->
+
 			<!-- FINAL DEL POST -->
 
-		
-			
+
+
 
 		</div>
 	</div>

@@ -13,18 +13,8 @@ class ForumController extends Controller
 {
     public function listQuestions()
     {
-      $questions = DB::select('
-        SELECT q.title as title, q.body as body, u.name as name, q.created_at as creation, q.forum_question_id as id
-        FROM forum_questions q
-        INNER JOIN users u
-        ON q.user_id = u.user_id
-      ');
-      $answers = DB::select('
-        SELECT a.answer as answer, a.created_at as creation, u.name as name, a.forum_question_id as idQ
-        FROM forum_answers a
-        INNER JOIN users u
-        ON u.user_id = a.user_id
-      ');
+      $questions = ForumQuestion::all();
+      $answers = ForumAnswers::all();
       return view('pages.forum')->with(compact('questions', 'answers'));
     }
 }

@@ -1,4 +1,3 @@
-
 jQuery(document).ready(function($) {
 
 	var cols = {},
@@ -95,10 +94,8 @@ jQuery(document).ready(function($) {
 
 	// Enable sexy scrollbars
 	$('.nano').nanoScroller();
-
 	
 	// Search box responsive stuff
-
 	$('.search-box input').on('focus', function() {
 		if($(window).width() <= 1360) {
 			cols.hideMessage();

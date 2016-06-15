@@ -53,7 +53,9 @@ class StorageController extends Controller
         ON u.user_id = f.user_id
       ');
 
-      return view('pages.library')->with(compact('filenames'));
+      $files = Files::paginate(5);
+
+      return view('pages.library')->with(compact('filenames', 'files'));
     }
 
     public function inicioDescarga(){
@@ -64,7 +66,7 @@ class StorageController extends Controller
 
       //Obtenemos la url de nuestra carpeta de descargas
       $url = storage_path('documentos').'/'.$filename;
-      
+
       //Verificamos si existe tal archivo
       if(Storage::disk('documentos')->exists($filename)){
         return response()->download($url);

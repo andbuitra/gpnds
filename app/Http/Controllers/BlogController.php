@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\Models\Post;
+use App\Models\User;
 use DB;
 
 class BlogController extends Controller
@@ -60,5 +61,11 @@ class BlogController extends Controller
       }
 
       dd($mostLikedPosts);
+    }
+
+    public function listAllPosts()
+    {
+      $posts = Post::paginate(4);
+      return view('pages.blogList', compact('posts'));
     }
 }

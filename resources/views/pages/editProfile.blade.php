@@ -18,6 +18,10 @@
 			</div>
 		</div>
 	</div>
+	<form class="" action="/perfil/editar" method="post">
+
+		{!! csrf_field() !!}
+
 	<div class="wrapper">
 		<div class="row-aside">
 			<li>
@@ -59,15 +63,8 @@
 		</li>
 		<li>
 			<label for="ema">Correo electronico</label>
-			<input type="email" placeholder="Tu email" id="ema" required="required" value="{{$user['email']}}">
+			<input type="email" placeholder="Tu email" name="email" id="ema" required="required" value="{{$user['email']}}">
 		</li>
-		<div class="contenido">
-			<h4>Contraseña</h4>
-			<li>
-				<label for="ema">Contraseña</label>
-				<input type="password" placeholder="Contraseña actual" id="ema">
-			</li>
-		</div>
 		<div class="contenido">
 			<h4>Información General</h4>
 			<li>
@@ -75,10 +72,10 @@
 				<textarea name="about" rows="8" cols="40">{{$user['about']}}</textarea>
 			</li>
 		</div>
-		<button class="btn btn-info">Salvar cambios</button>
+		<button type="submit" class="btn btn-info">Salvar cambios</button>
 	</div>
 </div>
-
+</form>
 <script src="/assets/js/jquery-1.11.1.min.js"></script>
 <script src="/assets/js/profileimage.js"></script>
 <script src="/assets/js/work.js"></script>

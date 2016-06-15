@@ -16,14 +16,14 @@ class UserProfileController extends Controller
 
   public function show($username)
   {
-    $user = DB::table('users')->where('username', '=', $username)->first();
-    return compact('user');
+    $user = User::where('username', $username)->first();
+    return view('pages.profile', compact('user'));
   }
 
   public function me(){
     if(Auth::check()){
       $user = User::find(Auth::user()->user_id);
-      return ($user);
+      return view('pages.profile', compact('user'));
     }else{
       return redirect()->to('/');
     }
@@ -36,5 +36,16 @@ class UserProfileController extends Controller
     }else{
       return redirect()->to('/');
     }
+  }
+
+  public function saveEdit()
+  {
+    $user = User::find(Auth::user()->user_id);
+    $user->name = request()->input('name');
+    $user->email = request()->input('email');
+    $user->about = request()->input('about');
+
+    $user->save();
+    return redirect()->back();
   }
 }
