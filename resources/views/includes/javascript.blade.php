@@ -13,3 +13,5 @@
 <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <script src="{{asset('assets/js/jquery.ui.map.min.js')}}"></script>
 <script src="{{asset('assets/js/scripts.js')}}"></script>
+<script src="{{asset('assets/js/likes.js')}}"></script>
+<script src="{{asset('assets/js/forum.js')}}"></script>
