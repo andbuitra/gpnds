@@ -14,12 +14,12 @@ class BansController extends Controller
     public function banearPersona(){
       $user_id = request()->input('user_id');
       $description = request()->input('description');
-      $typeBan = TB::where('description', $description)->first();
+      $typeBan = TB::where('description',"=", $description)->first();
       $meses = request()->input('meses');
       $fecha = C::now()->addMonths($meses);
       B::create([
         'user_id' => $user_id,
-        'typeBan_id' => $typeBan->typeBan_id,
+        'typeBan_id' => $typeBan,
         'ban_date_end' => $fecha
       ]);
       return redirect()->to('administrar/usuarios');

@@ -205,12 +205,10 @@
 
                             <tr>
                               <td >Descripcion</td>
-                              <td > <select>
-                                    <optgroup label="description">
+                              <td > <select name = "description">
                                       @foreach ($tiposBans as $tipoBaneo)
-                                        <option name="description" value="{{$tipoBaneo->description}}">{{$tipoBaneo->description}}</option>
+                                        <option value="{{$tipoBaneo->description}}">{{$tipoBaneo->description}}</option>
                                       @endforeach
-                                    </optgroup>
                                   </select></td>
 
                             </tr>
