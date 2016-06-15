@@ -155,11 +155,11 @@ ul.navbar-nav li a:hover i, ul.navbar-nav li a:focus i { color: #fff; }
 
 ul.navbar-nav li .dropdown-menu a { padding-top: 15px; padding-bottom: 15px; }
 ul.navbar-nav li.active .dropdown-menu a { background: #fff; color: #5d5d5d; border: 0; }
-ul.navbar-nav li.active .dropdown-menu a:hover,
+ul.navbar-nav li.active .dropdown-menu a:hover, 
 ul.navbar-nav li.active .dropdown-menu a:focus { background: #9d426b; color: #fff; border: 0; }
 
 ul.navbar-nav li.active .dropdown-menu > .active > a { background: #f8f8f8; color: #9d426b; border: 0; }
-ul.navbar-nav li.active .dropdown-menu > .active > a:hover,
+ul.navbar-nav li.active .dropdown-menu > .active > a:hover, 
 ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #9d426b; color: #fff; border: 0; }
 
 .navbar>.container .navbar-brand { margin-left: 0; }
@@ -169,7 +169,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #9d426b
 	height: 85px;
 	background: url(../img/logo.png) left center no-repeat;
 	text-indent: -99999px;
-
+    
     margin-top: 20px;
 }
 
@@ -367,7 +367,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #9d426b
     border-bottom: 2px solid #9d426b;
 	width:80%;
 	height:20%;
-
+	
 }
 
 .profile h3{
@@ -427,7 +427,7 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #9d426b
 .work:hover img {
     opacity: 0.7;
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
-
+    
 }
 
 .work:hover {
@@ -827,7 +827,7 @@ footer {
     color: #fff;
     -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
 }
-.btn-link-2:hover, .btn-link-2:focus,
+.btn-link-2:hover, .btn-link-2:focus, 
 .btn-link-2:active, .btn-link-2:active:focus { outline: 0; opacity: 0.6; background: rgba(0, 0, 0, 0.3); color: #fff; }
 
 
@@ -853,7 +853,7 @@ footer {
 .top-content .description a {
 	color: #fff;
 }
-.top-content .description a:hover,
+.top-content .description a:hover, 
 .top-content .description a:focus { border-bottom: 1px dotted #fff; }
 
 .form-box {
@@ -862,13 +862,13 @@ footer {
     padding-left: 0px;
 	margin-top: 5px;
     background: #efb6c4;
-
+	
 }
 
 .form-top {
 	overflow: hidden;
 	padding: 0 25px 15px 25px;
-
+	
 	background: rgba(0, 0, 0, 0.35);
 	-moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
 	text-align: left;
@@ -876,11 +876,11 @@ footer {
 }
 
 .form-top-left {
-
+    
 	float: left;
 	width: 75%;
 	padding-top: 25px;
-
+	
 }
 
 .form-top-left h3 { margin-top: 0; color: #fff; }
@@ -895,7 +895,7 @@ footer {
 	line-height: 100px;
 	text-align: right;
 	opacity: 0.3;
-
+    
 }
 
 .form-bottom {
@@ -910,7 +910,7 @@ footer {
 	height: 800px;
     width: 100%
     margin-top: 100px;
-
+    
 
 }
 .alinee{
@@ -946,13 +946,13 @@ footer {
 @media (min-width: 768px) and (max-width: 991px) {}
 
 @media (max-width: 767px) {
-
+	
 	.inner-bg { padding: 60px 0 110px 0; }
 
 }
 
 @media (max-width: 415px) {
-
+	
 	h1, h2 { font-size: 32px; }
 
 }
@@ -1155,9 +1155,9 @@ footer {
 }
 
 .alinear2{
-
+	
 	margin-top: 165px;
-
+	
 }
 
 .posts-1-title {
@@ -1177,17 +1177,17 @@ footer {
 .posts-1-box {
 	padding-top: 40px;
 	padding-bottom: 20px;
-
+	
 }
 
 .posts-1-box-inner {
 	background: #fdf3f3;
-
+	
 }
 
 .posts-1-box-inner p{
 	text-align: justify;
-
+	
 }
 
 .posts-1-box-inner:hover {
@@ -1279,7 +1279,7 @@ footer {
 	width: 180px;
     border-color: #c0c6e1;
     border:3px;
-
+	
 }
 
 .posts-1-box-sign-up {
@@ -1317,12 +1317,12 @@ footer {
 .profile-1-box {
 	padding-top: 40px;
 	padding-bottom: 20px;
-
+	
 }
 
 .profile-1-box-inner {
 	background: #f8f8f8;
-
+	
 }
 
 .profile-1-box-inner:hover {
@@ -1420,7 +1420,7 @@ background: url(URL) no-repeat;
 box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-
+	
 }
 
 .profile-1-box-sign-up {
@@ -1900,15 +1900,15 @@ box-shadow:         2px 2px 7px 0px #efefef;
 .row-aside .profile-a .user {
   width: 200px;
   position: relative;
-  margin-top: 30px;
+  margin-top: 30px; 
   margin-left: 20px;
-
+  
   color: rgba(44,44,44,0.854);
   border: 1px solid #ececec;
   border-radius: 2px;
   transition: all .3s linear;
   -webkit-transition: all .3s linear;
-  -moz-transition: all .3s
+  -moz-transition: all .3s 
 }
 
 
@@ -1916,14 +1916,14 @@ box-shadow:         2px 2px 7px 0px #efefef;
 .row-aside .profile-a .user:focus {
   box-shadow: 0 0 5px rgba(81, 203, 238, 1);
    border: 2px solid rgba(81, 203, 238, 1);
-
+  
 }
 .row-aside .profile-a label {
   position: absolute;
   color: rgba(44,44,44,0.776);
   font-weight: 100;
   top: 2px;
-  margin-right: 20px;
+  margin-right: 20px;	
 
 }
 
@@ -2004,9 +2004,9 @@ select {
 }
 
 .alinear2{
-
+    
     margin-top: 165px;
-
+    
 }
 
 .card-1-title {
@@ -2026,17 +2026,17 @@ select {
 .card-1-box {
     padding-top: 40px;
     padding-bottom: 20px;
-
+    
 }
 
 .card-1-box-inner {
     background: #f8f8f8;
-
+    
 }
 
 .card-1-box-inner p{
     text-align: justify;
-
+    
 }
 
 .card-1-box-inner:hover {
@@ -2126,7 +2126,7 @@ select {
 .card-1-box-features img {
     height: 120px;
     width: 180px;
-
+    
 }
 
 .card-1-box-sign-up {
@@ -2218,7 +2218,7 @@ select {
 /** clearfix **/
 .clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
 .clearfix { display: inline-block; }
-
+ 
 html[xmlns] .clearfix { display: block; }
 * html .clearfix { height: 1%; }
 
@@ -2433,7 +2433,7 @@ figure.thumb {
   padding-top: 10px;
 }
 
-.thumb h2,
+.thumb h2, 
 .thumb p {
   margin: 0;
 }
@@ -2467,8 +2467,8 @@ figure.thumb {
   height: 100%;
   position: absolute;
   top: 0;
-
-
+  
+  
 }
 
 
@@ -2476,7 +2476,7 @@ figure.thumb {
   height: 150px;
   width: 90px;
   border-radius: 50%;
-
+  
   margin-left: 20px;
   margin-right: 20px;
 
@@ -2541,7 +2541,7 @@ figure.thumb {
   display: inline-block;
   background: #ddd;
   cursor: pointer;
-
+  
   &.navActive {
     background: #bbb;
     color: white;
@@ -2589,7 +2589,7 @@ figure.thumb {
 }
 
 #myImg:hover {opacity: 0.7;
-
+	
 }
 
 /* The Modal (background) */
@@ -2623,13 +2623,13 @@ figure.thumb {
 /* Caption of Modal Image */
 #caption {
     margin-top: 100px;
-    padding-top: 500px;
+    padding-top: 500px;	
     display: block;
     width: 80%;
     max-width: 700px;
     text-align: center;
     color: #ccc;
-
+    
     height: 150px;
 }
 
@@ -2723,8 +2723,8 @@ figure.thumb {
 	text-align: center;
 	margin-top: 200px;
 	margin-left: -200px;
-
-
+	
+	
 }
 
 .box {
@@ -2936,14 +2936,14 @@ figure.thumb {
   text-align:center;
   color:#666;
   font-size:22px;
-  position: center;
+  position: center;  
   margin-top: 50px;
   margin-left: 150px;
   margin-bottom: 30px;
   box-shadow:0 3px 9px rgba(0,0,0,0.3);
   border-radius:10px;
   overflow:hidden;
-
+ 
 }
 .post header{
   background: #f8f8f8 url(../img/pattern.jpg) left top repeat;
@@ -2989,7 +2989,7 @@ figure.thumb {
 
 
 .comments-section {
-
+  
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   top: 5%;
@@ -3093,7 +3093,7 @@ figure.thumb {
 }
 
 .question-section {
-
+  
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   top: 5%;
@@ -3216,7 +3216,7 @@ figure.thumb {
   text-decoration: none;
   padding: 5px 12px;
   color: #fff;
-
+  
   border: 1px solid transparent;
   line-height: 1.5;
 }
@@ -3279,10 +3279,10 @@ figure.thumb {
     font-family: 'Lobster', cursive;
     font-size: 25px;
     color: #FFF;
-    text-decoration: none;
+    text-decoration: none;  
 }
 .alinearBoton a{
-
+    
     color: white;
 }
 .blue
@@ -3372,10 +3372,10 @@ figure.thumb {
 }
 #main {
   left: 300px;
-
+  
   z-index: 4;
   transition-duration: .3s;
-
+  
 
   height: 100%;
   width: 100%;
@@ -3407,7 +3407,7 @@ figure.thumb {
 }
 .header h1{
       font-family: 'Lobster', cursive;
-
+  
       margin-bottom: 30px;
 }
 #main .header .page-title {
@@ -3430,7 +3430,7 @@ figure.thumb {
 }
 #main .header .search-box {
   margin-left: 750px;
-
+  
   width: 150px;
   height: 40px;
   position: relative;
@@ -3439,10 +3439,10 @@ figure.thumb {
 #main .header .search-box .icon {
   transition-duration: .3s;
 }
-#main .header .search-box input {
-
+#main .header .search-box input {  
+  
   width: 100%;
-
+  
 
   text-indent: 15px;
   height: 40px;
@@ -3495,7 +3495,7 @@ figure.thumb {
   line-height: 50px;
   cursor: default;
   transition-duration: .3s;
-
+  
 }
 #main .message-list li:hover,
 #main .message-list li.active,
@@ -3588,7 +3588,7 @@ figure.thumb {
   margin: 30px 0 100px 0;
 }
 #message {
-
+  
   top: 0;
   left: 60%;
   bottom: 0;
@@ -3888,7 +3888,7 @@ figure.thumb {
                 padding-top: 15px;
                 margin-left: -120px;
 
-
+               
             }
             .col-1 p{
                 font-size: 14px;
@@ -3967,7 +3967,7 @@ figure.thumb {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
 }
 .comment-block textarea {
-  width: 500px;
+  width: 490px;
   height: 80px;
   margin-left: -10px;
   margin-top: -10px;
@@ -4013,7 +4013,7 @@ figure.thumb {
 /*more aline*/
 .alineRepositorio{
     margin-top: 50px;
-    margin-left: 220px;
+    margin-left: 220px; 
     margin-right: -500px;
 }
 
@@ -4034,7 +4034,7 @@ figure.thumb {
 .preguntas input[type=submit], textarea[type=submit] {
   background: #f7819f;
   color: #fff;
-  width: 100px;
+  width: 120px;
   height: 50px;
   font-size: 15px;
   margin-left: 500px;
@@ -4056,6 +4056,191 @@ figure.thumb {
 }
 
 .thisAline{
-  margin-top: 20px;
-  margin-left: -350px;
+    margin-top: 20px;
+    margin-left: -350px;
+}
+
+/*Preguntas frecuentes FAQ*/
+
+.wrapF {
+  display: block;
+  max-width: 1024px;
+  margin: 0 auto 2em;
+  padding: 0 1em;
+  width: 100%;
+}
+@media (min-width: 43.75em) {
+  .wrapF {
+    padding: 3em;
+  }
+}
+.wrapF p {
+  color: #555;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.wrapF a, a:visited {
+  color: #4bc5b7;
+  text-decoration: none;
+}
+
+.question-section {
+  background: #fbccd8;
+  box-shadow: 0 2px 5px rgba(68, 68, 68, 0.4);
+  display: inline-block;
+  font-size: 1rem;
+  margin-bottom: 1em;
+  padding: 1em;
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+}
+@media (min-width: 50em) {
+  .question-section {
+    font-size: .75rem;
+    padding: 1em 1.5em;
+  }
+}
+@media (min-width: 62.5em) {
+  .question-section {
+    font-size: 1rem;
+  }
+}
+.question-section h1 {
+  font-family: 'Lobster', cursive;
+  color: #7f7f7f;
+  font-size: 1.25em;
+  font-size: 5.5vw;
+  font-weight: 700;
+  margin-bottom: .25em;
+}
+@media (min-width: 32.25em) {
+  .question-section h1 {
+    font-size: 2.25em;
+    font-size: 4.9vw;
+  }
+}
+@media (min-width: 67.5em) {
+  .question-section h1 {
+    font-size: 3.25em;
+  }
+}
+.question-section > p, .question-section > h1 {
+  text-align: center;
+}
+.question-section > p {
+  font-size: 0.667em;
+  font-size: 2.8vw;
+  margin-bottom: 1em;
+}
+@media (min-width: 22.1875em) {
+  .question-section > p {
+    font-size: 0.667em;
+  }
+}
+@media (min-width: 31.25em) {
+  .question-section > p {
+    font-size: 1em;
+  }
+}
+@media (min-width: 81.25em) {
+  .question-section > p {
+    font-size: 1.15em;
+  }
+}
+
+div[class^="cat"] {
+  width: 100%;
+}
+div[class^="cat"] > label {
+  background: #72d2c6;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 0.5em;
+  padding: 0.75em 0.5em;
+  -webkit-transition: all 0.55s;
+  transition: all 0.55s;
+}
+div[class^="cat"] > label:hover {
+  background: #85D8CE;
+}
+@media (min-width: 50em) {
+  div[class^="cat"] > label {
+    font-size: 1.25em;
+  }
+}
+div[class^="cat"] > input {
+  position: absolute;
+  z-index: -999;
+}
+div[class^="cat"] > input:focus + label {
+  background: #4bc5b7;
+  letter-spacing: 1px;
+}
+div[class^="cat"] .question-wrap {
+  height: 100%;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  width: 100%;
+}
+div[class^="cat"] > input:checked ~ .question-wrap {
+  max-height: 1000px;
+  opacity: 1;
+  -webkit-transition: all 1.95s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1.95s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.question-wrap .question {
+  margin: 1em 0;
+}
+.question-wrap label {
+  color: #f4517a;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+@media (min-width: 50em) {
+  .question-wrap label {
+    font-size: 1.25em;
+  }
+}
+.question-wrap input {
+  position: absolute;
+  z-index: -999;
+  top: -10000px;
+}
+.question-wrap input:focus + label {
+  color: #f4517a;
+}
+.question-wrap input:not(:checked) ~ p {
+  height: 100%;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.question-wrap input:checked ~ p {
+  max-height: 500px;
+  opacity: 1;
+  -webkit-transition: all 1.95s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1.95s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.wrapF input:focus {
+  border: 3px solid red;
+  outline: 3px solid red;
+  background: red;
+}
+
+.wrapF a:focus {
+  color: #085078;
+  font-weight: bold;
+  outline: none;
 }

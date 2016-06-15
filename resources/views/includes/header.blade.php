@@ -27,8 +27,8 @@
 						<li class="{{ Request::is('/info/puericultura') ? 'active' : ''}}">
 							<a href="/info/puericultura">¿Que es puericultura?</a>
 						</li>
-						<li class="{{ Request::is('/info/faq') ? 'active' : ''}}">
-							<a href="/info/faq">Preguntas frecuentes</a>
+						<li class="{{ Request::is('/info/preguntasFrecuentes') ? 'active' : ''}}">
+							<a href="/info/preguntasFrecuentes">Preguntas frecuentes</a>
 						</li>
 					</ul>
 				</li>

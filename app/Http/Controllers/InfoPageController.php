@@ -14,4 +14,7 @@ class InfoPageController extends Controller
   public function puericultura(){
     return view('pages.puericultura');
   }
+  public function preguntasFrecuentes(){
+    return view('pages.preguntasFrecuentes');
+  }
 }

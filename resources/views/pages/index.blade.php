@@ -58,7 +58,7 @@
 					<img src="assets/img/info/1.jpg"></img>
 					<h3>¿Que es puericultura?</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...</p>
-					<a class="big-link-1" href="puericultura.html">Leer mas</a>
+					<a class="big-link-1" href="/puericultura">Leer mas</a>
 				</div>
 			</div>
 			<div class="col-sm-3">
@@ -66,7 +66,7 @@
 					<img src="assets/img/info/2.jpg"></img>
 					<h3>Preguntas frecuentes</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...</p>
-					<a class="big-link-1" href="services.html">Read more</a>
+					<a class="big-link-1" href="/preguntasFrecuentes">Read more</a>
 				</div>
 			</div>
 			<div class="col-sm-3">

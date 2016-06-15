@@ -45,6 +45,7 @@ Route::group(['middleware' => ['web']], function () {
 
   Route::get('info/sobre-nosotros', 'InfoPageController@sobreNosotros');
   Route::get('info/puericultura', 'InfoPageController@puericultura');
+  Route::get('info/preguntasFrecuentes', 'InfoPageController@preguntasFrecuentes');
 
   #
   # Blog related routes
