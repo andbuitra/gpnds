@@ -95,12 +95,7 @@ jQuery(document).ready(function($) {
 
 	// Enable sexy scrollbars
 	$('.nano').nanoScroller();
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 789ae96fde71a82c7675581defeb62c766117875
+89ae96fde71a82c7675581defeb62c766117875
 	// Search box responsive stuff
 
 	$('.search-box input').on('focus', function() {
