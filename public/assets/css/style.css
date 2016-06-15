@@ -266,6 +266,26 @@ ul.navbar-nav li.active .dropdown-menu > .active > a:focus { background: #9d426b
 
 
 /***** Presentation *****/
+.presentation-container h1{
+    display: inline;
+    margin-left: 10px;
+    font-family: 'Lobster', cursive;
+    margin-top: 40px;
+    font-size: 40px;
+    color: #5d5d5d;
+    font-weight: bold;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .7);
+    vertical-align: middle;
+
+}
+.presentation-container p{
+    display: inline;
+    margin-top: 30px;
+    margin-left: 105px;
+    font-size: 24px;
+    font-style: italic;
+    vertical-align: middle;
+}
 
 .Cool-container {
     margin-top: 30px;

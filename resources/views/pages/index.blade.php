@@ -57,7 +57,7 @@
 				<div class="service wow fadeInUp">
 					<img src="assets/img/info/1.jpg"></img>
 					<h3>¿Que es puericultura?</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...</p>
+					<p>Tambien se la puede definir como la ciencia o disciplina, que aplicando cuidados, conocimientos medicos...</p>
 					<a class="big-link-1" href="/puericultura">Leer mas</a>
 				</div>
 			</div>
@@ -65,24 +65,24 @@
 				<div class="service wow fadeInDown">
 					<img src="assets/img/info/2.jpg"></img>
 					<h3>Preguntas frecuentes</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...</p>
-					<a class="big-link-1" href="/preguntasFrecuentes">Read more</a>
+					<p>Que preguntas mas frecuentes tienen nuestros usuarios sobre puericultura...</p>
+					<a class="big-link-1" href="/preguntasFrecuentes">Leer mas</a>
 				</div>
 			</div>
 			<div class="col-sm-3">
 				<div class="service wow fadeInUp">
 					<img src="assets/img/info/3.jpg"></img>
 					<h3>Consejos</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...</p>
-					<a class="big-link-1" href="services.html">Read more</a>
+					<p>Consigue consejos sobre puericultura, como llevarla a tu hogar...</p>
+					<a class="big-link-1" href="#">Leer mas</a>
 				</div>
 			</div>
 			<div class="col-sm-3">
 				<div class="service wow fadeInDown">
 					<img src="assets/img/info/4.jpg"></img>
 					<h3>Notas destacadas</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...</p>
-					<a class="big-link-1" href="services.html">Read more</a>
+					<p>Notas a destacar sobre el tema de puericultura, y nuestro grupo.</p>
+					<a class="big-link-1" href="#">Leer mas</a>
 				</div>
 			</div>
 		</div>
@@ -101,8 +101,8 @@
 			<div class="col-sm-3">
 				<div class="work wow fadeInUp">
 					<img src="assets/img/Info_sliders/1.jpg" alt="Lorem Website" data-at2x="assets/img/Info_sliders/1.jpg">
-					<h3>Lorem Website</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
+					<h3>Dia 1</h3>
+					
 					<div class="work-bottom">
 						<a class="big-link-2 view-work" href="assets/img/Info_sliders/1.jpg"><i class="fa fa-search"></i></a>
 						<a class="big-link-2" href="#"><i class="fa fa-link"></i></a>
@@ -112,8 +112,8 @@
 			<div class="col-sm-3">
 				<div class="work wow fadeInDown">
 					<img src="assets/img/Info_sliders/2.jpg" alt="Ipsum Logo" data-at2x="assets/img/Info_sliders/2.jpg">
-					<h3>Ipsum Logo</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
+					<h3>Dia 2</h3>
+					
 					<div class="work-bottom">
 						<a class="big-link-2 view-work" href="assets/img/Info_sliders/2.jpg"><i class="fa fa-search"></i></a>
 						<a class="big-link-2" href="#"><i class="fa fa-link"></i></a>
@@ -123,8 +123,8 @@
 			<div class="col-sm-3">
 				<div class="work wow fadeInUp">
 					<img src="assets/img/Info_sliders/3.jpg" alt="Dolor Prints" data-at2x="assets/img/Info_sliders/3.jpg">
-					<h3>Dolor Prints</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
+					<h3>Dia 3</h3>
+					
 					<div class="work-bottom">
 						<a class="big-link-2 view-work" href="assets/img/Info_sliders/3.jpg"><i class="fa fa-search"></i></a>
 						<a class="big-link-2" href="#"><i class="fa fa-link"></i></a>
@@ -134,8 +134,8 @@
 			<div class="col-sm-3">
 				<div class="work wow fadeInDown">
 					<img src="assets/img/Info_sliders/4.jpg" alt="Sit Amet Website" data-at2x="assets/img/Info_sliders/4.jpg">
-					<h3>Sit Amet Website</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor...</p>
+					<h3>Dia 4</h3>
+					
 					<div class="work-bottom">
 						<a class="big-link-2 view-work" href="assets/img/Info_sliders/4.jpg"><i class="fa fa-search"></i></a>
 						<a class="big-link-2" href="#"><i class="fa fa-link"></i></a>
@@ -164,10 +164,10 @@
 								<img src="assets/img/testimonials/1.jpg" alt="" data-at2x="assets/img/testimonials/1.jpg">
 							</div>
 							<div class="testimonial-text">
-								<p>
-									"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-									Lorem ipsum dolor sit amet, consectetur..."<br>
+								<p>	
+									Ultimos cuidados con la alimentacion de ni&ntilde;os
+									Como se sabe la primera etapa de edad de los niños es la mas dificil
+									y puede conllevar a dificultades a la hora de alimentar..."<br>
 									<a class="big-link-1" href="services.html">Leer mas</a>
 								</p>
 							</div>
