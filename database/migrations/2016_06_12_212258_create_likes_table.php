@@ -18,6 +18,7 @@ class CreateLikesTable extends Migration
         $table->integer('user_id')->unsigned();
         $table->foreign('post_id')->references('post_id')->on('posts')->onDelete('cascade');
         $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
+        $table->timestamps();
       });
     }
 

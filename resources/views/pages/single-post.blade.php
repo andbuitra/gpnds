@@ -150,5 +150,72 @@
 
 </script>
 
-<script src="/assets/js/likes-ajax-request.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+	$.ajaxSetup({
+		headers: {
+			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		}
+	});
+
+	$.ajax({
+		url : "/like/alreadyLiked",
+		method : "POST",
+		dataType : 'json',
+		data : {
+			slug : '{{Request::segment(2)}}',
+			user_id : '{{Auth::user()->user_id}}'
+		},
+		success : function(data){
+			if(data.display){
+				$('#likelink').attr('class', 'like active');
+			}else{
+				$('#likelink').attr('class', 'like');
+			}
+		}
+	});
+
+	if($('#likelink').attr('class') == 'like'){
+
+		$('#likelink').on('click', function(e) {
+			e.preventDefault();
+			$.ajax({
+				url : "/like",
+				method : "POST",
+				dataType : 'json',
+				data : {
+					slug : '{{Request::segment(2)}}',
+					user_id : '{{Auth::user()->user_id}}'
+				},
+				success : function(data){
+					if(data.display){
+						$('#likelink').attr('class', 'like active');
+					}
+				}
+			});
+		});
+
+
+	}else{
+		$('#likelink').on('click', function(e) {
+			e.preventDefault();
+			$.ajax({
+				url : "/dislike",
+				method : "POST",
+				dataType : 'json',
+				data : {
+					slug : '{{Request::segment(2)}}',
+					user_id : '{{Auth::user()->user_id}}'
+				},
+				success : function(data) {
+					if(!data.display){
+						$('#likelink').attr('class', 'like');
+					}
+				}
+			});
+		});
+	}
+});
+</script>
 @endsection

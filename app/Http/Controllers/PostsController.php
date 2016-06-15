@@ -10,6 +10,7 @@ use App\Http\Response;
 
 use App\Models\Post as Post;
 use App\Models\User as User;
+use App\Models\Like as Like;
 
 class PostsController extends Controller
 {
@@ -48,41 +49,38 @@ class PostsController extends Controller
 
     public function hasHeAlreadyLikedThisPost()
     {
-      $slug = request()->input('slug');
-      $user_id = request()->input('user_id');
-
-      $post = Post::where('slug', '=', $slug)->first();
-      $post_id = $post->post_id;
-      $like = Like::where(['user_id' => $user_id, 'post_id' => $post_id]);
-      if($like == null){
-        return response()->json(['success' => false, 'data' => false]);
+      if(request()->ajax()){
+          $post = Post::where('slug', '=', request()->input('slug'))->first();
+          $post_id = $post->post_id;
+          $like = Like::where(['user_id' => request()->input('user_id'), 'post_id' => $post_id]);
+          if($like != null){
+            return response()->json(['display' => true, 'user_id' => request()->input('user_id'), 'post_id' => $post_id]);
+          }else{
+            return response()->json(['display' => false]);
+          }
       }
-        return response()->json(['success' => true, 'data' => false]);
     }
 
     public function addLike()
     {
-      $slug = request()->input('slug');
-      $user_id = request()->input('user_id');
+      if(request()->ajax()){
+        $slug = request()->input('slug');
+        $user_id = request()->input('user_id');
 
-      $post = Post::where('slug', '=', $slug)->first();
+        $post = Post::where('slug', '=', $slug)->first();
 
-      $like = Like::create(array(
-        'user_id' => $user_id,
-        'post_id' => $post->post_id
-      ));
-
-      if($like){
-        return Response::json(array(
-          'success' => true,
-          'data'   => true
+        $like = Like::create(array(
+          'user_id' => $user_id,
+          'post_id' => $post->post_id
         ));
-      }else{
-        return Response::json(array(
-          'success' => true,
-          'data'   => false
-        ));
+
+        if($like){
+          return response()->json(['display' => true]);
+        }else{
+          return response()->json(['display' => false]);
+        }
       }
+
     }
 
     public function dislike()
@@ -93,11 +91,8 @@ class PostsController extends Controller
       $post = Post::where('slug', '=', $slug)->first();
 
       $like = Like::find([$user_id, $post_id]);
-      $like->destroy;
+      $like->delete;
 
-      return Response::json(array(
-        'success' => true,
-        'data'   => true
-      ));
+      return response()->json(['display' => false]);
     }
 }

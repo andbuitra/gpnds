@@ -8,11 +8,13 @@ $(document).ready(function() {
 	$.ajax({
 		url : "/like/alreadyLiked",
 		method : "POST",
+		dataType : 'json',
 		data : {
 			slug : '{{Request::segment(2)}}',
 			user_id : '{{Auth::user()->user_id}}'
 		},
 		success : function(data){
+			console.log("Lo que hay en la variable data es: "+data);
 			if(data){
 				$('#likelink').addClass('active');
 			}
@@ -24,12 +26,14 @@ $(document).ready(function() {
 		if($('#likelink').attr('class') == 'like'){
 			$.ajax({
 				url: "/like",
-				method: "POST",//type of posting the data
+				method: "POST",
+				dataType : 'json',
 				data: {
 					slug : '{{Request::segment(2)}}',
 					user_id : '{{Auth::user()->user_id}}'
 				},
 				success: function (data) {
+					console.log("Lo que hay en la variable data 2 es: "+data);
 					if(data){
 						executeAnimation(e);
 					}
@@ -39,11 +43,13 @@ $(document).ready(function() {
 			$.ajax({
 				url: "/dislike",
 				method: "POST",
+				dataType : 'json',
 				data: {
 					slug : '{{Request::segment(2)}}',
 					user_id : '{{Auth::user()->user_id}}'
 				},
 				success: function (data) {
+					console.log("Lo que hay en la variable data 3 es: "+data);
 					if(data){
 						executeAnimation(e);
 					}
