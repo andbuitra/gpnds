@@ -12,25 +12,25 @@ use App\Http\Requests;
 
 class StorageController extends Controller
 {
-    public function inicio(){
+    public function showUploadForm(){
       return view('pages.uploads');
     }
 
-    # FOR TESTING ONLY - DELETE WHEN ON PRODUCTION
     public function upload(){
       $file = request()->file('file');
       $name = $file->getClientOriginalName();
       $fixedName = str_replace(':', "-", $name);
       Storage::disk('documentos')->put($fixedName, File::get($file));
-      if(Storage::disk('documentos')->exists($name)){
+
+      if(Storage::disk('documentos')->exists($fixedName)){
         # TODO cambiar por vista
         $explode = explode('.',$name);
         $cantidad = count($explode);
         $arrayNombre = array_slice($explode,0,$cantidad-2);
         $ext = $explode[$cantidad-1];
-        $nombre = str_replace('.'.$ext,'',$name);
+        $nombre = str_replace('.'.$ext,'',$fixedName);
         Files::create([
-          'url' => storage_path('documentos/'.$name),
+          'url' => 'storage/documentos/'.$fixedName,
           'name' => $nombre,
           'ext' => $ext,
           'image_uri' => '/assets/img/'.$ext.'.png',
@@ -47,7 +47,7 @@ class StorageController extends Controller
     public function listDocsInLibrary()
     {
       $filenames = DB::select('
-        SELECT f.name as fileName, u.name as userName, f.image_uri as image_uri, f.url
+        SELECT f.name as fileName, u.name as userName, f.image_uri as image_uri, f.url, f.ext as ext
         FROM files f
         INNER JOIN users u
         ON u.user_id = f.user_id
@@ -60,18 +60,15 @@ class StorageController extends Controller
       return view('pages.downloads');
     }
 
-    public function download(){
-
-      //Obtenemos el nombre del archivo que el user quiere descargar
-      $nombre = request()->input('nombre');
+    public function downloadThis($filename){
 
       //Obtenemos la url de nuestra carpeta de descargas
-      $url = storage_path('app').'/'.$nombre;
-
+      $url = storage_path('documentos').'/'.$filename;
+      
       //Verificamos si existe tal archivo
-      if(Storage::exists($nombre)){
+      if(Storage::disk('documentos')->exists($filename)){
         return response()->download($url);
       }
-      return "no se encontro archivo con el nombre ".$nombre;
+      return "no se encontro archivo con el nombre ".$filename;
     }
 }

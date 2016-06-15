@@ -87,11 +87,18 @@ Route::group(['middleware' => ['web', 'auth']], function(){
   Route::get('perfil/{username}', 'UserProfileController@show')->where('username', '^[a-z0-9_]{3,15}$');
 });
 
+Route::group(['middleware' => ['web', 'auth']], function(){
+  Route::get('repositorio', 'StorageController@listDocsInLibrary');
+  Route::get('descargar/{filename}', 'StorageController@downloadThis');
+  Route::get('subir', 'StorageController@showUploadForm');
+  Route::post('subir', 'StorageController@upload');
+});
+
 #
 # Post related routes
 #
 
-Route::group(['middleware' => 'web', 'auth'], function(){  
+Route::group(['middleware' => 'web', 'auth'], function(){
   Route::post('like', 'PostsController@addLike');
   Route::post('like/alreadyLiked', 'PostsController@hasHeAlreadyLikedThisPost');
   Route::post('dislike', 'PostsController@dislike');

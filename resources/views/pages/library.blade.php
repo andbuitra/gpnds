@@ -25,7 +25,7 @@
 						<img src="{{$file->image_uri}}"/>
 					</div>
 					<h2>{{$file->fileName}}</h2>
-					<a class="btn btn-default" href="{{$file->url}}" download>Descargar</a>
+					<a class="btn btn-default" href="descargar/{{$file->fileName.'.'.$file->ext}}" download>Descargar</a>
 				</figure>
 				@endforeach
 			</div>
