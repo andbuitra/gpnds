@@ -14,7 +14,7 @@ class BansController extends Controller
     public function banearPersona(){
       $user_id = request()->input('user_id');
       $description = request()->input('description');
-      $typeBan = TB::->where('description', $description);
+      $typeBan = TB::where('description', $description);
       $meses = request()->inputs('meses');
       $fecha = C::now()->addMonths($meses);
       B::create([
@@ -28,6 +28,6 @@ class BansController extends Controller
     public function panelBaneo($user_id){
       $tiposBans = TB::all();
       $usuario = U::find($user_id);
-      return view('pages.ASDQWEASD', compact('tiposBans','usuario'));
+      return view('pages.baneo', compact('tiposBans','usuario'));
     }
 }

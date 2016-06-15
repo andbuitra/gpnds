@@ -197,13 +197,13 @@
                         <h1>Titulo</h1>
                         <div class="preguntas">
                         <table class="rwd-table">
-                            
+
                             <form action="">
 
                             <tr>
                               <td >Usuario</td>
-                              <td > <input type="text" placeholder="Usuario..." name="user" required></td>
-                                
+                              <td > <input type="text" value="{{$user->name}}" name="user" required></td>
+
                             </tr>
 
 
@@ -211,16 +211,16 @@
                               <td >Descripcion</td>
                               <td > <select>
                                     <optgroup label="optgroup">
-                                      <option>option 1</option>
-                                      <option>option 2</option>
-                                      <option>option 3</option>
+                                      @foreach ($tiposBans as $tipoBaneo)
+                                        <option name="description" value="{{$tipoBaneo->description}}"></option>
+                                      @endforeach
                                     </optgroup>
                                   </select></td>
-                                
+
                             </tr>
                             <tr>
                             <td>Tiempo</td>
-                            <td > <input type="text" placeholder="Tiempo..." name="time" required></td>
+                            <td > <input type="text" placeholder="Tiempo en meses" name="meses" required></td>
                             </tr>
                             <tr>
                             <td>
@@ -228,24 +228,24 @@
                              </td>
                              </tr>
                             </form>
-                         
-                            
+
+
                           </table>
                          </div>
-                           
 
-                               
 
-                            
 
-                           
-                          
-                        
+
+
+
+
+
+
                       </div>
 
 
 
-                    
+
                         </div><!-- /row -->
                         <div class="row">
             <!-- TWITTER PANEL -->
@@ -253,7 +253,7 @@
           </div><!-- /row -->
           <div class="row mt">
                       <!--CUSTOM CHART START -->
-                      
+
                       <!--custom chart end-->
           </div><!-- /row -->
 
