@@ -20,36 +20,16 @@
 				<div class="col-sm-8">
 					<div class="blog-post blog-single-post">
 						<div class="single-post-title">
-							<h2>Ultimos cuidados con la alimentacion de ni&ntilde;os</h2>
+							<h2>{{$post['title']}}</h2>
 						</div>
 						<div class="single-post-info">
-							<i class="glyphicon glyphicon-time"></i>15 OCT, 2014 <a href="#" title="Show Comments"><i class="glyphicon glyphicon-comment"></i>11</a>
+							<i class="glyphicon glyphicon-time"></i>{{$post['created_at']}} <a href="#" title="Show Comments"><i class="glyphicon glyphicon-comment"></i>11</a>
 						</div>
 						<div class="single-post-content" align="justify">
-							<img src="../assets/img/articulos/1.jpg" alt="Post Title">
-							<h3>Lorem ipsum dolor sit amet</h3>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis, nulla id pretium malesuada, dui est laoreet risus, ac rhoncus eros diam id odio. Duis elementum ligula eu ipsum condimentum accumsan.
-							</p>
-							<p>
-								Vivamus euismod elit ac libero facilisis tristique. Duis mollis non ligula vel tincidunt. Nulla consectetur libero id nunc ornare, vel vulputate tellus mollis. Sed quis nulla magna. Integer rhoncus sem quis ultrices lobortis. Maecenas tempus nulla quis dolor vulputate egestas. Phasellus cursus tortor quis massa faucibus fermentum vel sit amet tortor. Phasellus vehicula lorem et tortor luctus, a dignissim lacus tempor. Aliquam volutpat molestie metus sit amet aliquam. Duis vestibulum quam tortor, sed ultrices orci sagittis nec.
-							</p>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis, nulla id pretium malesuada, dui est laoreet risus, ac rhoncus eros diam id odio. Duis elementum ligula eu ipsum condimentum accumsan.
-							</p>
-							<p>
-								Vivamus euismod elit ac libero facilisis tristique. Duis mollis non ligula vel tincidunt. Nulla consectetur libero id nunc ornare, vel vulputate tellus mollis. Sed quis nulla magna. Integer rhoncus sem quis ultrices lobortis. Maecenas tempus nulla quis dolor vulputate egestas. Phasellus cursus tortor quis massa faucibus fermentum vel sit amet tortor. Phasellus vehicula lorem et tortor luctus, a dignissim lacus tempor. Aliquam volutpat molestie metus sit amet aliquam. Duis vestibulum quam tortor, sed ultrices orci sagittis nec.
-							</p>
-							<h3>Sed sit amet metus sit</h3>
-							<p>
-								Proin fermentum, purus id eleifend molestie, nisl arcu rutrum tellus, a luctus erat tortor ut augue. Vivamus feugiat nisi sit amet dignissim fermentum. Duis elementum mattis lacinia. Sed sit amet metus sit amet leo semper feugiat. Nulla vel orci nec neque interdum facilisis egestas vitae lorem. Phasellus elit ante, posuere at augue quis, porta vestibulum magna. Nullam non mattis odio. Donec eget velit leo. Nunc et diam volutpat tellus ultrices fringilla eu a neque. Integer lectus nunc, vestibulum a turpis vitae, malesuada lacinia nibh. In sit amet leo ut turpis convallis bibendum. Nullam nec purus sapien. Quisque sollicitudin cursus felis sit amet aliquam.
-							</p>
-
+							{{$post['body']}}
 						</div>
 
 						<div class="col-sm-12">
-
-
 							<div class="post">
 								<header>
 
@@ -160,61 +140,61 @@ $(document).ready(function() {
 	});
 
 	$.ajax({
-		url : "/like/alreadyLiked",
-		method : "POST",
+		url : '/like/alreadyLiked',
+		method : 'POST',
 		dataType : 'json',
 		data : {
 			slug : '{{Request::segment(2)}}',
 			user_id : '{{Auth::user()->user_id}}'
 		},
-		success : function(data){
-			if(data.display){
-				$('#likelink').attr('class', 'like active');
+		success : function (data) {
+			if(data.display === true){
+				$('#likelink').attr('class', 'like active')
 			}else{
 				$('#likelink').attr('class', 'like');
 			}
 		}
 	});
 
-	if($('#likelink').attr('class') == 'like'){
-
-		$('#likelink').on('click', function(e) {
+	if($('#likelink').hasClass('like') && $('#likelink')[0].classList.length == 1){
+		$('#likelink').on('click', function(e){
 			e.preventDefault();
 			$.ajax({
-				url : "/like",
-				method : "POST",
+				url : '/like',
+				method : 'POST',
 				dataType : 'json',
 				data : {
 					slug : '{{Request::segment(2)}}',
 					user_id : '{{Auth::user()->user_id}}'
 				},
 				success : function(data){
-					if(data.display){
-						$('#likelink').attr('class', 'like active');
+					if(data.display === true){
+						$('#likelink').attr('class', 'like');
 					}
 				}
 			});
+
 		});
-
-
 	}else{
-		$('#likelink').on('click', function(e) {
+		$('#likelink').on('click', function(e){
 			e.preventDefault();
 			$.ajax({
-				url : "/dislike",
-				method : "POST",
+				url : '/dislike',
+				method : 'POST',
 				dataType : 'json',
 				data : {
 					slug : '{{Request::segment(2)}}',
 					user_id : '{{Auth::user()->user_id}}'
 				},
-				success : function(data) {
-					if(!data.display){
+				success : function(data){
+					if(data.display === true){
 						$('#likelink').attr('class', 'like');
 					}
 				}
 			});
+
 		});
+
 	}
 });
 </script>

@@ -51,7 +51,8 @@ Route::group(['middleware' => ['web']], function () {
   #
 
   Route::get('blog', 'BlogController@mainBlogList');
-  Route::get('blog/{slug}', 'BlogController@blogPost');
+  Route::get('blog/all', 'BlogController@listAllPosts');
+  Route::get('blog/{slug}', 'BlogController@blogPost');  
   # Only for testing
   Route::get('pruebablog/testing', 'BlogController@test');
 
@@ -104,7 +105,6 @@ Route::group(['middleware' => ['web', 'auth']], function(){
 
 Route::group(['middleware' => ['web', 'auth']], function(){
   Route::get('preguntas', 'ForumController@listQuestions');
-  Route::get('preguntas/{slug}', 'ForumController@getQuestion');
   Route::get('nuevo/pregunta', 'ForumController@newQuestion');
   Route::post('nuevo/pregunta', 'ForumController@askQuestion');
   Route::post('nuevo/respuesta', 'ForumController@reply');

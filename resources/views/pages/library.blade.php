@@ -36,8 +36,6 @@
 </div>
 </div>
 
-<div class="pagination"></div>
-
-<div class="console"></div>
+{!! $files->render() !!}
 
 @endsection

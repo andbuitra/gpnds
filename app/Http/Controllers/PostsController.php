@@ -52,10 +52,9 @@ class PostsController extends Controller
       if(request()->ajax()){
           $post = Post::where('slug', '=', request()->input('slug'))->first();
           $post_id = $post->post_id;
-          $like = Like::where(['user_id' => request()->input('user_id'), 'post_id' => $post_id]);
-          dd($like);
+          $like = Like::where(['user_id' => request()->input('user_id'), 'post_id' => $post_id])->first();
           if($like != null){
-            return response()->json(['display' => true, 'user_id' => request()->input('user_id'), 'post_id' => $post_id]);
+            return response()->json(['display' => true]);
           }else{
             return response()->json(['display' => false]);
           }
@@ -75,7 +74,7 @@ class PostsController extends Controller
           'post_id' => $post->post_id
         ));
 
-        if($like){
+        if($like->exists){
           return response()->json(['display' => true]);
         }else{
           return response()->json(['display' => false]);
@@ -88,12 +87,8 @@ class PostsController extends Controller
     {
       $slug = request()->input('slug');
       $user_id = request()->input('user_id');
-
       $post = Post::where('slug', '=', $slug)->first();
-
-      $like = Like::find([$user_id, $post_id]);
-      $like->delete;
-
+      $like = Like::where(['post_id' => $post->post_id, 'user_id' => $user_id])->delete();
       return response()->json(['display' => false]);
     }
 }

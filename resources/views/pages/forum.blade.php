@@ -44,8 +44,8 @@
 									<p class="title">{{$question->title}}</p>
 								</div>
 								<div class="col col-2">
-									<div class="subject">{{$question->name}}</div>
-									<div class="date">{{$question->creation}}</div>
+									<div class="subject">{{$question->user->name}}</div>
+									<div class="date">{{$question->created_at}}</div>
 								</div>
 							</li>
 							@endforeach
@@ -63,9 +63,9 @@
 							<li class="sent">
 								<div class="details">
 									<div class="left">Hecha por
-										<div class="arrow"></div>{{$question->name}}
+										<div class="arrow"></div>{{$question->title}}
 									</div>
-									<div class="right">{{$question->creation}}</div>
+									<div class="right">{{$question->created_at}}</div>
 								</div>
 								<div class="message">
 									<p>{{$question->body}}</p>
@@ -76,13 +76,13 @@
 								<h1 class="page-title">Respuestas</h1>
 							</div>
 							@foreach($answers as $answer)
-								@if($answer->idQ == $question->id)
+								@if($answer->answer_id == $question->question_id)
 								<li class="received">
 									<div class="details">
-										<div class="left">{{$answer->name}}
+										<div class="left">{{$answer->user->name}}
 
 										</div>
-										<div class="right">{{$answer->creation}}</div>
+										<div class="right">{{$answer->created_at}}</div>
 									</div>
 									<div class="message">
 										<p>{{$answer->answer}}</p>
