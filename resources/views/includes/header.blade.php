@@ -40,7 +40,7 @@
 						<i class="fa fa-tasks"></i><br>Herramientas</a>
 					</a>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="#">Biblioteca publica</a></li>
+						<li><a href="/repositorio">Biblioteca publica</a></li>
 						<li><a href="/questions">Consulta con especialistas</a></li>
 						<li><a href="#">Foro publico</a></li>
 						<li class="dropdown-submenu">
@@ -83,7 +83,6 @@
 						<li><a href="/iniciar-sesion">Iniciar sesion</a></li>
 						<li><a href="/registro">Registrate</a></li>
 					</ul>
-
 				</li>
 				@endif
 			</ul>

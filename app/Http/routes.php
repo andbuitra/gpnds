@@ -87,11 +87,27 @@ Route::group(['middleware' => ['web', 'auth']], function(){
   Route::get('perfil/{username}', 'UserProfileController@show')->where('username', '^[a-z0-9_]{3,15}$');
 });
 
+#
+# Repository related routes
+#
+
 Route::group(['middleware' => ['web', 'auth']], function(){
   Route::get('repositorio', 'StorageController@listDocsInLibrary');
   Route::get('descargar/{filename}', 'StorageController@downloadThis');
   Route::get('subir', 'StorageController@showUploadForm');
   Route::post('subir', 'StorageController@upload');
+});
+
+#
+# Forum related routes
+#
+
+Route::group(['middleware' => ['web', 'auth']], function(){
+  Route::get('preguntas', 'ForumController@listQuestions');
+  Route::get('preguntas/{slug}', 'ForumController@getQuestion');
+  Route::get('nuevo/pregunta', 'ForumController@newQuestion');
+  Route::post('nuevo/pregunta', 'ForumController@askQuestion');
+  Route::post('nuevo/respuesta', 'ForumController@reply');
 });
 
 #

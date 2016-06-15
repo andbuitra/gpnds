@@ -2457,6 +2457,7 @@ figure.thumb {
   position: relative;
   box-shadow: 0 10px 20px -8px;
   margin-right: 20px;
+  border-radius: 50%;
 }
 
 .cover:after {
@@ -2474,10 +2475,11 @@ figure.thumb {
 .cover img {
   height: 150px;
   width: 90px;
-  display: block;
-  position: relative;
+  border-radius: 50%;
+  
   margin-left: 20px;
   margin-right: 20px;
+
 }
 
 /*Pagination*/
@@ -3299,8 +3301,8 @@ figure.thumb {
 
 /*Pretty forum*/
 .moreAline{
-    margin-left: 500px;
-    margin-top: -85px;
+    margin-left: 700px;
+    margin-top: -88px;
 }
 }
 .circle-icon {
@@ -3405,11 +3407,15 @@ figure.thumb {
 }
 .header h1{
       font-family: 'Lobster', cursive;
-      margin-right: 700px;
+  
       margin-bottom: 30px;
 }
 #main .header .page-title {
   display: block;
+
+}
+#main .header .page-title h1{
+  font-size: 15px;
 
 }
 
@@ -3996,4 +4002,11 @@ figure.thumb {
 }
 .comment-actions li:hover {
   color: #0095ff;
+}
+
+/*more aline*/
+.alineRepositorio{
+    margin-top: 50px;
+    margin-left: 220px; 
+    margin-right: -500px;
 }
