@@ -52,7 +52,7 @@ Route::group(['middleware' => ['web']], function () {
 
   Route::get('blog', 'BlogController@mainBlogList');
   Route::get('blog/all', 'BlogController@listAllPosts');
-  Route::get('blog/{slug}', 'BlogController@blogPost');  
+  Route::get('blog/{slug}', 'BlogController@blogPost');
   # Only for testing
   Route::get('pruebablog/testing', 'BlogController@test');
 
@@ -85,6 +85,7 @@ Route::group(['middleware' => ['web']], function () {
 Route::group(['middleware' => ['web', 'auth']], function(){
   Route::get('perfil', 'UserProfileController@me');
   Route::get('perfil/editar', 'UserProfileController@showEditForm');
+  Route::post('perfil/editar', 'UserProfileController@saveEdit');
   Route::get('perfil/{username}', 'UserProfileController@show')->where('username', '^[a-z0-9_]{3,15}$');
 });
 

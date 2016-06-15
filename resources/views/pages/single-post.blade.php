@@ -169,7 +169,7 @@ $(document).ready(function() {
 				},
 				success : function(data){
 					if(data.display === true){
-						$('#likelink').attr('class', 'like');
+						$('#likelink').attr('class', 'like active');
 					}
 				}
 			});
@@ -187,7 +187,7 @@ $(document).ready(function() {
 					user_id : '{{Auth::user()->user_id}}'
 				},
 				success : function(data){
-					if(data.display === true){
+					if(data.display != true){
 						$('#likelink').attr('class', 'like');
 					}
 				}

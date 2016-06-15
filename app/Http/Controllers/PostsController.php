@@ -88,7 +88,8 @@ class PostsController extends Controller
       $slug = request()->input('slug');
       $user_id = request()->input('user_id');
       $post = Post::where('slug', '=', $slug)->first();
-      $like = Like::where(['post_id' => $post->post_id, 'user_id' => $user_id])->delete();
+      $like = Like::where(['post_id' => $post->post_id, 'user_id' => $user_id])->first();
+      $like->destroy();
       return response()->json(['display' => false]);
     }
 }
