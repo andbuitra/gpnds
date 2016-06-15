@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	@include('includes.head')
+    @include('includes.head')
 </head>
 <body>
-	<header>
-		@include('includes.header')
-	</header>
+    <header>
+        @include('includes.header')
+    </header>
 <div class="page-title-container">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12 wow fadeIn">
-				<i class="fa fa-pencil"></i>
-				<h1>Preguntas frecuentes /</h1>
-				<p>Preguntas frecuentes que puedas tener sobre el tema de puericultura.</p>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 wow fadeIn">
+                <i class="fa fa-pencil"></i>
+                <h1>Preguntas frecuentes /</h1>
+                <p>Preguntas frecuentes que puedas tener sobre el tema de puericultura.</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="about-us-container">
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-12 about-us-text wow fadeInLeft">
-				<div class="wrapF">    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 about-us-text wow fadeInLeft">
+                <div class="wrapF">    
     <section class="question-section"> 
         <h1>¿Tienes alguna duda?</h1>
         
@@ -57,7 +57,7 @@
         
         <div class="cat-2">
             <input id="tab-2" type="radio" name="tabs" tabindex="7">
-            <label for="tab-2" >SassBreak</label>
+            <label for="tab-2" >Lactancia</label>
 
             <div class="question-wrap">
                 <div class="question">
@@ -84,7 +84,7 @@
         </div>
         <div class="cat-3">
             <input id="tab-3" type="radio" name="tabs" tabindex="16">
-            <label for="tab-3" >Other Pens</label>
+            <label for="tab-3" >Primeros años</label>
 
             <div class="question-wrap">
                 <div class="question">
@@ -111,7 +111,7 @@
         </div>
         <div class="cat-4">
             <input id="tab-4" type="radio" name="tabs" tabindex="25">
-            <label for="tab-4" >Lorem Ipsum</label>
+            <label for="tab-4" >Cuidados alimenticios</label>
 
             <div class="question-wrap">
                 <div class="question">
@@ -138,14 +138,14 @@
         </div>
     </section><!-- End of Questions -->
 </div>
-			</div>
-		</div>
-	</div>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- DISQUS ELIMINADO TEMPORALMENTE. AGREGARLO SI EN REALIDAD SE NECESITA -->
 
-	<footer>
-		@include('includes.footer')
-	</footer>
+    <footer>
+        @include('includes.footer')
+    </footer>
 </body>
 </html>
