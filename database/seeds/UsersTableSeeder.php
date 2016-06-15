@@ -3,7 +3,6 @@
 use Illuminate\Database\Seeder;
 use Faker\Factory as Faker;
 use Illuminate\Support\Str as Str;
-
 class UsersTableSeeder extends Seeder
 {
     /**

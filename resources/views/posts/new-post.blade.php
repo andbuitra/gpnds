@@ -42,7 +42,7 @@
 										<label class="sr-only" for="form-tags">Titulo</label>
 										<input type="text" name="tags" placeholder="Tags" class="form-username form-control" id="form-tags">
 									</div>
-									<input type="text" name="user_id" value="{{Auth::user()->user_id}}">
+									<input type="hidden" name="user_id" value="{{Auth::user()->user_id}}">
 									<button type="submit" class="btn btn-submit">Guardar</button>
 								</form>
 						</div>

@@ -98,14 +98,6 @@ jQuery(document).ready(function($) {
 
 
 
-	// Disable links
-
-	$('a').on('click', function(e) {
-		e.preventDefault();
-	});
-
-
-
 	// Search box responsive stuff
 
 	$('.search-box input').on('focus', function() {

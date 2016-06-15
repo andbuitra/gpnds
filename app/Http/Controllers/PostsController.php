@@ -53,6 +53,7 @@ class PostsController extends Controller
           $post = Post::where('slug', '=', request()->input('slug'))->first();
           $post_id = $post->post_id;
           $like = Like::where(['user_id' => request()->input('user_id'), 'post_id' => $post_id]);
+          dd($like);
           if($like != null){
             return response()->json(['display' => true, 'user_id' => request()->input('user_id'), 'post_id' => $post_id]);
           }else{
