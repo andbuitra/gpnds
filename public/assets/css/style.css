@@ -4010,3 +4010,42 @@ figure.thumb {
     margin-left: 220px; 
     margin-right: -500px;
 }
+
+/*Estilo formulario preguntas*/
+
+.preguntas input, textarea {
+  float: left;
+  width: 80%;
+  max-width: 100%;
+  border: none;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background: #fcd9e2;
+  color: #7a7a7a;
+  margin-left: 100px;
+}
+.preguntas input[type=submit], textarea[type=submit] {
+  background: #f7819f;
+  color: #fff;
+  width: 100px;
+  height: 50px;
+  font-size: 15px;
+  margin-left: 500px;
+  float: center;
+}
+.preguntas input::placeholder, textarea::placeholder {
+  color: #7a7a7a;
+}
+.preguntas input.error, textarea.error {
+  background: #AD4747;
+  color: #fff;
+}
+.preguntas input.error::placeholder, textarea.error::placeholder {
+  color: black;
+}
+
+.preguntas textarea {
+  height: 10rem;
+}
+
