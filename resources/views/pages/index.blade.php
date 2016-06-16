@@ -66,7 +66,7 @@
 					<img src="assets/img/info/2.jpg"></img>
 					<h3>Preguntas frecuentes</h3>
 					<p>Que preguntas mas frecuentes tienen nuestros usuarios sobre puericultura...</p>
-					<a class="big-link-1" href="/preguntasFrecuentes">Leer mas</a>
+					<a class="big-link-1" href="/info/preguntasFrecuentes">Leer mas</a>
 				</div>
 			</div>
 			<div class="col-sm-3">
@@ -151,7 +151,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 testimonials-title wow fadeIn">
-				<h2>Posts recientes</h2>
+				<h2>Consejos diarios</h2>
 			</div>
 		</div>
 		<div class="row">
@@ -165,10 +165,10 @@
 							</div>
 							<div class="testimonial-text">
 								<p>	
-									Ultimos cuidados con la alimentacion de ni&ntilde;os
-									Como se sabe la primera etapa de edad de los niños es la mas dificil
-									y puede conllevar a dificultades a la hora de alimentar..."<br>
-									<a class="big-link-1" href="services.html">Leer mas</a>
+									¿Sabes los beneficios de la lactancia materna para el niño?<br>
+									La leche materna contiene todo lo que el niño necesita durante los seis primeros meses de vida, favoreciendo su crecimiento, maduración y salud.
+
+									Muchos de los componentes de la misma se encargan de protegerle mientras su sistema inmunitario completa su desarrollo, protegiéndole de enfermedades como catarros, bronquiolitis, neumonía, diarreas, otitis, infecciones de orina, etcétera; además de enfermedades futuras como asma, alergia, obesidad, o diabetes, y favoreciendo el intelecto.
 								</p>
 							</div>
 						</div>
@@ -178,10 +178,9 @@
 							</div>
 							<div class="testimonial-text">
 								<p>
-									"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-									ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-									lobortis nisl ut aliquip ex ea commodo consequat..."<br>
-									<a class="big-link-1" href="services.html">Leer mas</a>
+									Cómo mejorar la falta de atención en los niños<br>
+									Ayudar a los niños y niñas a dirigir su atención de forma consciente hacía aquello que quieren aprender, evitando otros estímulos distractores es una tarea necesaria para potenciar sus aprendizajes. De esta manera conseguiremos que se concentren en la tarea o contenido concreto que tienen que aprender y, como consecuencia mejoraran su rendimiento. Entrenarles para que sean capaces de dirigir su atención se convierte en una necesidad educativa que no podemos eludir, en una necesidad que supone abrirles las puertas al aprendizaje, a través del control de la focalización de su mente. <br>
+									<a class="big-link-1" href="http://www.webconsultas.com/bebes-y-ninos/educacion-infantil/como-afecta-la-falta-de-atencion-al-aprendizaje">Leer mas</a>
 								</p>
 							</div>
 						</div>
@@ -190,11 +189,9 @@
 								<img src="assets/img/testimonials/3.jpg" alt="" data-at2x="assets/img/testimonials/3.jpg">
 							</div>
 							<div class="testimonial-text">
-								<p>
-									"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-									Lorem ipsum dolor sit amet, consectetur..."<br>
-									<a class="big-link-1" href="services.html">Leer mas</a>
+								<p>	Enseña a tus hijos a usar Internet<br>
+									Muchos padres se sienten frustrados porque no conocen el sistema de las Tecnologías de la Información y la Comunicación (TICs) tan bien como los jóvenes, y se encuentran inmersos en un mundo extraño para ellos. Sin embargo, es necesario que desempeñen un papel importante en la educación digital de sus hijos y les enseñen desde pequeños a hacer un uso responsable de la Red, para evitar situaciones peligrosas, por ejemplo en casos de ciberbullying, grooming o sextorsión.<br>
+									<a class="big-link-1" href="http://www.webconsultas.com/bebes-y-ninos/juegos-y-ocio-infantil/ensena-a-tus-hijos-a-usar-correctamente-internet">Leer mas</a>
 								</p>
 							</div>
 						</div>
@@ -204,10 +201,9 @@
 							</div>
 							<div class="testimonial-text">
 								<p>
-									"Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-									ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-									lobortis nisl ut aliquip ex ea commodo consequat..."<br>
-									<a class="big-link-1" href="services.html">Leer mas</a>
+									Leches de crecimiento<br>
+									La leche es un alimento básico para los bebés a partir del nacimiento, bien a través de la leche materna, que es el sistema recomendado por la OMS y el resto de organizaciones internacionales, bien a través de fórmulas artificiales. Al año de vida, llegamos al dilema sobre qué tipo de leche dar a nuestro hijo, en el caso de que no prosigamos con la lactancia materna. Y nos encontramos con dos opciones: leche de vaca o leche de crecimiento.<br>
+									<a class="big-link-1" href="http://www.webconsultas.com/bebes-y-ninos/nutricion-infantil/leches-de-crecimiento">Leer mas</a>
 								</p>
 							</div>
 						</div>
