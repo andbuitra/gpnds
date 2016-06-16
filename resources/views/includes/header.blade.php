@@ -65,11 +65,11 @@
 
 				@if (Auth::check())
 				<li class="{{ Request::is('profile/'.Auth::user()->profileID.'/edit') || Request::is('profile/'.Auth::user()->profileID)  ? 'active' : ''}} dropdown">
-					<a href="/profile" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
+					<a href="/perfil" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000">
 						<i class="fa fa-user"></i><br>{{explode(' ',trim(Auth::user()->name ))[0]}} <span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="/profile/edit">Configuración</a></li>
+						<li><a href="/perfil/editar">Configuración</a></li>
 						<li><a href="/logout">Cerrar sesión</a></li>
 					</ul>
 				</li>
