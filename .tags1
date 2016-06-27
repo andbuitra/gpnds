@@ -4,10 +4,12 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-User	/home/andres/Documentos/Universidad/ProgWeb/proy_puericultura/app/Models/User.php	/^class User extends Authenticatable$/;"	class	line:7
-fillable	/home/andres/Documentos/Universidad/ProgWeb/proy_puericultura/app/Models/User.php	/^    protected $fillable = ['name', 'email', 'password', 'confirmation_code'];$/;"	variable	line:9
-hidden	/home/andres/Documentos/Universidad/ProgWeb/proy_puericultura/app/Models/User.php	/^    protected $hidden = ['password', 'remember_token'];$/;"	variable	line:10
-primaryKey	/home/andres/Documentos/Universidad/ProgWeb/proy_puericultura/app/Models/User.php	/^    protected $primaryKey = 'user_id';$/;"	variable	line:12
-posts	/home/andres/Documentos/Universidad/ProgWeb/proy_puericultura/app/Models/User.php	/^    public function posts(){$/;"	function	line:14
-likes	/home/andres/Documentos/Universidad/ProgWeb/proy_puericultura/app/Models/User.php	/^    public function likes()$/;"	function	line:18
-AdditionalInfo	/home/andres/Documentos/Universidad/ProgWeb/proy_puericultura/app/Models/User.php	/^    public function AdditionalInfo(){$/;"	function	line:23
+UserProfileController	/home/andres/Documents/Universidad/ProgWeb/proy_puericultura/app/Http/Controllers/UserProfileController.php	/^class UserProfileController extends Controller$/;"	class	line:14
+show	/home/andres/Documents/Universidad/ProgWeb/proy_puericultura/app/Http/Controllers/UserProfileController.php	/^  public function show($username)$/;"	function	line:18
+user	/home/andres/Documents/Universidad/ProgWeb/proy_puericultura/app/Http/Controllers/UserProfileController.php	/^    $user = User::where('username', $username)->first();$/;"	variable	line:20
+me	/home/andres/Documents/Universidad/ProgWeb/proy_puericultura/app/Http/Controllers/UserProfileController.php	/^  public function me(){$/;"	function	line:25
+user	/home/andres/Documents/Universidad/ProgWeb/proy_puericultura/app/Http/Controllers/UserProfileController.php	/^      $user = User::find(Auth::user()->user_id);$/;"	variable	line:27
+showEditForm	/home/andres/Documents/Universidad/ProgWeb/proy_puericultura/app/Http/Controllers/UserProfileController.php	/^  public function showEditForm(){$/;"	function	line:35
+user	/home/andres/Documents/Universidad/ProgWeb/proy_puericultura/app/Http/Controllers/UserProfileController.php	/^      $user = User::find(Auth::user()->user_id);$/;"	variable	line:37
+saveEdit	/home/andres/Documents/Universidad/ProgWeb/proy_puericultura/app/Http/Controllers/UserProfileController.php	/^  public function saveEdit()$/;"	function	line:45
+user	/home/andres/Documents/Universidad/ProgWeb/proy_puericultura/app/Http/Controllers/UserProfileController.php	/^    $user = User::find(Auth::user()->user_id);$/;"	variable	line:47

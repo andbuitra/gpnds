@@ -26,7 +26,7 @@
 							<i class="glyphicon glyphicon-time"></i>{{$post['created_at']}} <a href="#" title="Show Comments"><i class="glyphicon glyphicon-comment"></i>11</a>
 						</div>
 						<div class="single-post-content" align="justify">
-							{{$post['body']}}
+							{!! $post['body'] !!}
 						</div>
 
 						<div class="col-sm-12">
@@ -156,9 +156,9 @@ $(document).ready(function() {
 		}
 	});
 
-	if($('#likelink').hasClass('like') && $('#likelink')[0].classList.length == 1){
-		$('#likelink').on('click', function(e){
-			e.preventDefault();
+	$('#likelink').click(function(e){
+		e.preventDefault();
+		if($('#likelink').hasClass('like') && $('#likelink')[0].classList.length == 1){
 			$.ajax({
 				url : '/like',
 				method : 'POST',
@@ -167,17 +167,15 @@ $(document).ready(function() {
 					slug : '{{Request::segment(2)}}',
 					user_id : '{{Auth::user()->user_id}}'
 				},
-				success : function(data){
+				success : function (data) {
 					if(data.display === true){
 						$('#likelink').attr('class', 'like active');
+					}else{
+						$('#likelink').attr('class', 'like');
 					}
 				}
 			});
-
-		});
-	}else{
-		$('#likelink').on('click', function(e){
-			e.preventDefault();
+		}else{
 			$.ajax({
 				url : '/dislike',
 				method : 'POST',
@@ -186,16 +184,19 @@ $(document).ready(function() {
 					slug : '{{Request::segment(2)}}',
 					user_id : '{{Auth::user()->user_id}}'
 				},
-				success : function(data){
-					if(data.display != true){
+				success : function (data) {
+					if(data.display === true){
+						$('#likelink').attr('class', 'like active');
+					}else{
 						$('#likelink').attr('class', 'like');
 					}
 				}
 			});
+		}
+	})
 
-		});
-
-	}
 });
+
+
 </script>
 @endsection

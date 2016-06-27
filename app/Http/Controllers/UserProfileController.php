@@ -14,12 +14,14 @@ use DB;
 class UserProfileController extends Controller
 {
 
+  # Shows the user profile for the given username
   public function show($username)
   {
     $user = User::where('username', $username)->first();
     return view('pages.profile', compact('user'));
   }
 
+  # Shows the currently authenticated user's profile
   public function me(){
     if(Auth::check()){
       $user = User::find(Auth::user()->user_id);
@@ -29,6 +31,7 @@ class UserProfileController extends Controller
     }
   }
 
+  # Shows the edit form for the profile information ONLY to the authenticated user
   public function showEditForm(){
     if(Auth::check()){
       $user = User::find(Auth::user()->user_id);
@@ -38,6 +41,7 @@ class UserProfileController extends Controller
     }
   }
 
+  # Persists the information given for the user on the edit form
   public function saveEdit()
   {
     $user = User::find(Auth::user()->user_id);

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+# Static info related controller
+
 class InfoPageController extends Controller
 {
   public function sobreNosotros(){

@@ -80,7 +80,7 @@
 			</div>
 			<div class="alinearBoton">
 							<div class="col-sm-3 posts-1-box wow fadeInUp">
-								<a href="#" class="action-button animate blue">Ver todos los posts</a>
+								<a href="blog/all" class="action-button animate blue">Ver todos los posts</a>
 							</div>
 						</div>
 
