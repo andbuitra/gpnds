@@ -66,51 +66,45 @@ class AuthenticationController extends Controller
     }
   }
 
-public function confirm($confirmationCode){
-  if(UserAP::confirm($confirmationCode)){
-    return redirect('assign-username');
-  }
-  return redirect('/');
-}
-
-public function showAssignUsernameForm()
-{
-  # Remember the user_id field
-  session()->keep(['user_id']);
-  return view('pages.createusername');
-}
-
-public function assignUsername()
-{
-  # Validates that the given input fits the requirements
-  # Returns the needed error if not
-  $this->validate(request(), [
-    'username' => 'required|alpha_dash|unique:users,username'
-  ], [
-    'username.required' => 'Debes llenar este campo',
-    'username.alpha_dash' => 'Aceptamos unicamente a-Z - y _',
-    'username.unique' => 'Ya está en uso, digite otro'
-  ]);
-  # Gets the user_id from the session
-  # Requests the username from the input
-  # Updates the user with the given username
-  $user_id = session()->get('user_id');
-  $username = request()->input('username');
-  session()->flash('user_id', $user_id);
-  DB::table('users')->where('user_id', $user_id)->update(['username' => $username]);
-  $user = DB::table('users')->where('user_id', $user_id)->get();
-  return redirect('/succesfully-registered');
-}
-
-public function succesfullyRegistered()
-{
-  $user_id = session()->get('user_id');
-  if($user_id != null){
-    session()->forget('user_id');
-    return view('pages.succesfully-registered');
-  }else{
+  public function confirm($confirmationCode){
+    if(UserAP::confirm($confirmationCode)){
+      return redirect('assign-username');
+    }
     return redirect('/');
   }
-}
+
+  public function showAssignUsernameForm(){
+    # Remember the user_id field
+    session()->keep(['user_id']);
+    return view('pages.createusername');
+  }
+
+  public function assignUsername()
+  {
+    # Validates that the given input fits the requirements
+    # Returns the needed error if not
+    $this->validate(request(), [
+      'username' => 'required|alpha_dash|unique:users,username'
+    ], [
+      'username.required' => 'Debes llenar este campo',
+      'username.alpha_dash' => 'Aceptamos unicamente a-Z - y _',
+      'username.unique' => 'Ya está en uso, digite otro'
+    ]);
+
+    if(UserAP::setUsername()){
+      return redirect('/succesfully-registered');
+    }
+    return redirect('/');
+
+
+  }
+
+  public function succesfullyRegistered(){
+    if(UserAP::wasSuccessfullyRegistered()){
+      return view('pages.successfully-registered');
+    }
+
+    return redirect('/');
+  }
 
 }

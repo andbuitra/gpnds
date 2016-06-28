@@ -71,4 +71,27 @@ class User extends Authenticatable{
     return true;
   }
 
+  public static function setUsername(){
+    # Gets the user_id from the session
+    # Requests the username from the input
+    # Updates the user with the given username
+    $user_id = session()->get('user_id');
+    $username = request()->input('username');
+    session()->flash('user_id', $user_id);
+    DB::table('users')->where('user_id', $user_id)->update(['username' => $username]);
+    $user = DB::table('users')->where('user_id', $user_id)->get();
+    if(!is_null($user)){
+      return true;
+    }
+    return false;
+  }
+
+  public static function wasSuccessfullyRegistered(){
+    $user_id = session()->get('user_id');
+    if($user_id != null){
+      session()->forget('user_id');
+      return true;
+    }
+    return false;
+  }
 }
