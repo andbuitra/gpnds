@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Auth;
 
 class User extends Authenticatable
 {
@@ -38,4 +39,5 @@ class User extends Authenticatable
     public function bans(){
       return $this->hasMany('App\Models\Bans');
     }
+
 }
