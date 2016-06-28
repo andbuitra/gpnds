@@ -5,6 +5,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Models\User as UserM;
 use Auth;
 use Mail;
+use DB;
 
 class User extends Authenticatable{
 
