@@ -81,6 +81,7 @@ Route::group(['middleware' => ['web', 'auth']], function(){
   Route::get('perfil', 'UserProfileController@me');
   Route::get('perfil/editar', 'UserProfileController@showEditForm');
   Route::get('perfil/{username}', 'UserProfileController@show')->where('username', '^[a-z0-9_]{3,15}$');
+  Route::post('nuevo/comentario', 'PostsController@registrarComentario');
 });
 
 #
@@ -90,7 +91,7 @@ Route::group(['middleware' => ['web', 'auth']], function(){
 Route::group(['middleware' => ['web', 'auth', 'AdminAccess']], function(){
   Route::get('nuevo/post', 'PostsController@showNewPostForm');
   Route::post('nuevo/post', 'PostsController@registrarEntrada');
-  Route::post('nuevo/comentario', 'PostsController@registrarComentario');
+
 });
 
 Route::group(['middleware' => ['web', 'auth', 'AdminAccess']], function(){
