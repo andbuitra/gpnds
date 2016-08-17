@@ -34,8 +34,12 @@
 								<header>
 
 								</header>
+								@if (Auth::check())
 								<p>No olvides darle me gusta.</p>
 								<a href="" id="likelink" class="like">&#10084;</a>
+								@else
+								<p>Registrate para poder darle "me gusta" a los posts</p>
+								@endif
 							</div>
 
 						</div>
@@ -132,6 +136,8 @@
 
 <script type="text/javascript">
 
+@if (Auth::check())
+
 $(document).ready(function() {
 	$.ajaxSetup({
 		headers: {
@@ -197,6 +203,6 @@ $(document).ready(function() {
 
 });
 
-
+@endif
 </script>
 @endsection

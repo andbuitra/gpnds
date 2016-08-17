@@ -8,20 +8,12 @@ use App\Http\Requests;
 use App\Models\Bans as B;
 use App\Models\TypeBans as TB;
 use App\Models\User as U;
+use App\AccessPoints\Bans as BansAP
 
 class BansController extends Controller
 {
     public function banearPersona(){
-      $user_id = request()->input('user_id');
-      $description = request()->input('description');
-      $typeBan = TB::where('description',"=", $description)->first();
-      $meses = request()->input('meses');
-      $fecha = C::now()->addMonths($meses);
-      B::create([
-        'user_id' => $user_id,
-        'typeBan_id' => $typeBan,
-        'ban_date_end' => $fecha
-      ]);
+      BansAP::banearPersona();
       return redirect()->to('administrar/usuarios');
     }
 
@@ -30,4 +22,6 @@ class BansController extends Controller
       $usuario = U::find($user_id);
       return view('pages.baneo', compact('tiposBans','usuario'));
     }
+
+    public function
 }
