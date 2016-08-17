@@ -177,14 +177,14 @@
                           <i class=" fa fa-user"></i>
                           <span>Informacion</span>
                       </a>
-                      
+
                   </li>
                   <li class="sub-menu">
                       <a  href="javascript:;" >
                           <i class=" fa fa-user"></i>
                           <span>Crear un post</span>
                       </a>
-                      
+
                   </li>
 
               </ul>
@@ -216,9 +216,8 @@
                               <input type="hidden" name="user_id" value="{{$usuario->user_id}}">
                             </tr>
 
-
                             <tr>
-                              <td >Descripcion</td>
+                              <td >Tipo de Baneo</td>
                               <td > <select name = "description">
                                       @foreach ($tiposBans as $tipoBaneo)
                                         <option value="{{$tipoBaneo->description}}">{{$tipoBaneo->description}}</option>
@@ -226,15 +225,21 @@
                                   </select></td>
 
                             </tr>
+
                             <tr>
-                            <td>Tiempo</td>
-                            <td > <input type="text" placeholder="Tiempo en meses" name="meses" required></td>
+                              <td>Tiempo</td>
+                              <td > <input type="text" placeholder="Tiempo en meses" name="meses" required></td>
                             </tr>
+
                             <tr>
-                            <td>
-                             <button type="submit" > Enviar</button>
-                             </td>
-                             </tr>
+                              <td>Descripcion del baneo</td>
+                              <td > <input type="text" placeholder="Porque lo banea?" name="porque" required></td>
+                            </tr>
+
+                            <tr>
+                              <td><button type="submit" > Enviar</button></td>
+                            </tr>
+
                             </form>
 
 

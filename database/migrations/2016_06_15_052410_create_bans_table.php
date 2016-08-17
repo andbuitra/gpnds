@@ -18,6 +18,7 @@ class CreateBansTable extends Migration
             $table->date('ban_date_end');
             $table->integer('typeBan_id');
             $table->timestamps();
+            $table->string('description');
         });
     }
 

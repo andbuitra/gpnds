@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Bans extends Model
 {
-  protected $fillable = ['user_id','ban_date_end','typeBan_id'];
+  protected $fillable = ['user_id','ban_date_end','typeBan_id','description'];
   protected $primaryKey = 'ban_id';
 
   public function user(){
